@@ -1,0 +1,2 @@
+realclean::
+	rm -f *~
