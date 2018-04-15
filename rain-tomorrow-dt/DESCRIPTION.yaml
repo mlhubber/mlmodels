@@ -1,0 +1,17 @@
+-- # RAIN-TOMORROW-DT
+meta:
+  name         : rain-tomorrow
+  version      : 1.0.0
+  title        : Predict if it will rain tomorrow.
+  language     : Rscript
+  dependencies : R, rattle, rpart, magrittr
+  modeller     : Graham.Williams@togaware.com
+  author       : Graham.Williams@togaware.com
+  maintainer   : Graham.Williams@togaware.com
+  filename     : pool/main/r/rain-tomorrow-dt/rain-tomorrow-dt_1.0.0.mlm
+  date         : 2018-04-15 20:14:29
+commands:
+  demo:
+    script : demo.R
+    title  : Run the model and present its performance metrics on sample data.
+    
