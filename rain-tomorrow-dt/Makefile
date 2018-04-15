@@ -21,3 +21,8 @@ include ../mlhub.mk
 include ../git.mk
 include ../pandoc.mk
 
+clean::
+	rm -rf README.txt output
+
+realclean:: clean
+	rm -rf rain-tomorrow-dt_*.mlm
