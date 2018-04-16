@@ -74,14 +74,3 @@ $(MODEL_YAML): $(MODEL_YML)
 	tr -d "'" > $@
 	echo "" >> $@
 
-########################################################################
-# PACKAGES
-########################################################################
-
-.PHONY: Packages.twhub
-Packages.twhub: Packages.yml
-	rsync -avzh $^ $(TW_HOST):$(TW_REPO)/
-	ssh $(TW_HOST) chmod -R a+rX $(TW_REPO)
-
-Packages.yml: $(MODEL_YAML) $(IMAGE_YAML) $(IRIS_YAML)
-	cat $^ > $@
