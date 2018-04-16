@@ -11,9 +11,9 @@ frame <- model$frame
 leaves <- frame$var == "<leaf>"
 used <- unique(frame$var[!leaves])
 
-cat("\n=============================================\n",
+cat("\n============================================\n",
     "Variables actually used in the decision tree",
-    "\n=============================================\n\n",
+    "\n============================================\n\n",
     sep="")
 cat("  ", paste(sort(as.character(used)), collapse=", "), ".\n", sep="")
 
