@@ -18,7 +18,8 @@ Makefile for Hub of Machine Learning Models.
 
 Local targets:
 
-  target	Description
+  Packages	Generate and install Packages.yaml on mlhub.ai.
+  Packages.yaml Generate met-data file for the repository.
 
 endef
 export HELP
@@ -38,3 +39,21 @@ endif
 ifneq ("$(wildcard $(INC_CLEAN))","")
   include $(INC_CLEAN)
 endif
+
+########################################################################
+# PACKAGES
+########################################################################
+
+REPO_HOST = mlhub.ai
+BASE_PATH = /var/www/html
+REPO_PATH = pool/main
+REPO_USER = root
+REPO_SSH  = $(REPO_USER)@$(REPO_HOST)
+
+.PHONY: Packages
+Packages: Packages.yaml
+	rsync -avzh $^ $(REPO_SSH):$(BASE_PATH)/
+	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/$^
+
+Packages.yaml:
+	find . -name DESCRIPTION.yaml | xargs cat > $@
