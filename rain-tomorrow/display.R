@@ -5,7 +5,7 @@ source("rattle.R")
 
 if (Sys.getenv("DISPLAY") != "")
 {
-  load("rain-tomorrow-dt.RData")
+  load("rain-tomorrow.RData")
 
   output <- "output"
   fname <- file.path(output, "dtree.pdf")
@@ -23,5 +23,5 @@ if (Sys.getenv("DISPLAY") != "")
 
 # Suggest next step.
 
-cat("\nYou may like to build a decision tree model on your own csv file with:\n",
-    "\n  $ ml rebuild rain-tomorrow-dt mydata.csv\n\n")
+cat("\nYou may like to predict if it will rain tomorrow:\n",
+    "\n  $ ml score rain-tomorrow\n\n")

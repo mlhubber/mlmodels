@@ -2,7 +2,7 @@
 
 library(rpart)
 
-load("rain-tomorrow-dt.RData")
+load("rain-tomorrow.RData")
 
 # The following code based on rpart::printcp()
 # Copyright (c) Brian Ripley
@@ -38,5 +38,5 @@ print(model)
 # Suggest next step.
 
 cat("\nYou may next like to display a visual representation of the model:\n",
-    "\n  $ ml display rain-tomorrow-dt\n\n")
+    "\n  $ ml display rain-tomorrow\n\n")
 

@@ -2,7 +2,6 @@
 
 suppressMessages(
 {
-  library(rattle.data)
   library(magrittr)
   library(dplyr)
   library(rpart)
@@ -11,7 +10,7 @@ suppressMessages(
 
 set.seed(42)
 
-data(weatherAUS)
+load("weatherAUS.RData")
 
 dsname <- "weatherAUS"
 ds     <- get(dsname)
@@ -30,9 +29,9 @@ model <- rpart(target ~ ., data=ds, parms=list(prior=c(0.6, 0.4)))
 
 cat("====================\nModel Saved as RData\n====================\n\n")
 
-save(model, file="rain-tomorrow-dt.RData")
+save(model, file="rain-tomorrow.RData")
 
 # Suggest next step.
 
 cat("\nYou may like to evaluate the model performance by running the demo:\n",
-    "\n  $ ml demo rain-tomorrow-dt\n\n")
+    "\n  $ ml demo rain-tomorrow\n\n")

@@ -2,7 +2,6 @@
 
 suppressMessages(
 {
-  library(rattle.data)
   library(rpart)
   library(magrittr)
   library(dplyr)
@@ -12,11 +11,11 @@ suppressMessages(
 
 set.seed(423)
 
-load("rain-tomorrow-dt.RData")
+load("rain-tomorrow.RData")
 
 cat("\n=====================\nPredict Rain Tomorrow\n=====================\n\n")
 
-data(weatherAUS)
+load("weatherAUS.RData")
 
 dsname <- "weatherAUS"
 ds     <- get(dsname)

@@ -2,7 +2,6 @@
 
 suppressMessages(
 {
-  library(rattle.data)
   library(rpart)
   library(magrittr)
   library(dplyr)
@@ -10,7 +9,7 @@ suppressMessages(
   source("rattle.R")
 })
 
-data(weatherAUS)
+load("weatherAUS.RData")
 
 dsname <- "weatherAUS"
 ds     <- get(dsname)
@@ -23,7 +22,7 @@ ds %<>%
 
 names(ds)[which(names(ds) == "rain_tomorrow")] <- "target"
 
-load("rain-tomorrow-dt.RData")
+load("rain-tomorrow.RData")
 
 cat("\n===========================================\n",
     "Provide values for the following variables",
@@ -62,4 +61,4 @@ pr <- predict(model, newdata=newdata)[,"Yes"]
 
 cat(sprintf("\nI predict the chance of rain tomorrow to be %2.0f%%.\n", 100*pr))
 
-cat("\nThanks for exploring the rain-tomorrow-dt model.\n\n")
+cat("\nThanks for exploring the rain-tomorrow model.\n\n")
