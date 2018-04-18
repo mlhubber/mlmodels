@@ -18,7 +18,7 @@ Makefile for Hub of Machine Learning Models.
 
 Local targets:
 
-  Packages	Generate and install Packages.yaml on mlhub.ai.
+  mlhub		Generate and install Packages.yaml on mlhub.ai.
   Packages.yaml Generate met-data file for the repository.
 
 endef
@@ -50,10 +50,14 @@ REPO_PATH = pool/main
 REPO_USER = root
 REPO_SSH  = $(REPO_USER)@$(REPO_HOST)
 
-.PHONY: Packages
-Packages: Packages.yaml
-	rsync -avzh $^ $(REPO_SSH):$(BASE_PATH)/
-	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/$^
+#DESCRIPTIONS = */DESCRIPTION.yaml
+DESCRIPTIONS = rain-tomorrow/DESCRIPTION.yaml
 
-Packages.yaml:
-	find . -name DESCRIPTION.yaml | xargs cat > $@
+.PHONY: mlhub
+mlhub: Packages.yaml
+	rsync -avzh $< $(REPO_SSH):$(BASE_PATH)/
+	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/$<
+
+Packages.yaml: $(DESCRIPTIONS)
+	cat $^ > $@
+
