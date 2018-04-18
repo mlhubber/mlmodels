@@ -1,15 +1,15 @@
 --- # RAIN TOMORROW DECISION TREE
 meta:
-  name         : rain-tomorrow-dt
-  version      : 1.0.2
+  name         : rain-tomorrow
+  version      : 1.0.5
   title        : Predict rain tomorrow using decision tree.
   language     : Rscript
   dependencies : R, rattle, rpart, magrittr
   modeller     : Graham.Williams@togaware.com
   author       : Graham.Williams@togaware.com
   maintainer   : Graham.Williams@togaware.com
-  filename     : pool/main/r/rain-tomorrow-dt/rain-tomorrow-dt_1.0.1.mlm
-  date         : 2018-04-16 05:42:46
+  filename     : pool/main/r/rain-tomorrow/rain-tomorrow_1.0.5.mlm
+  date         : 2018-04-18 09:21:53
 commands:
   demo:
     script : demo.R
