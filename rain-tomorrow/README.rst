@@ -3,14 +3,15 @@ Predicting Rain Tomorrow
 ========================
 
 The weather dataset from R's rattle package was used to train a
-predictive model, predicting the probability of it raining tomorrow.
+predictive model, predicting the probability of it raining tomorrow
+based on today's weather observations.
 
 The training dataset consists of daily weather observations from
 weather stations across Australia, with a target (aka output,
 predicted or dependent) variable under the column *target* which has
 the values of Yes/No indicating if it rained the following day. The
 input variables in the actual dataset include measurements from today
-like the amount of sunshine, the humity at 3pm, the amount of rain
+like the amount of sunshine, the humidity at 3pm, the amount of rain
 recorded, etc.
 
 This pre-built model uses R's *rpart* package to build a decision tree
@@ -18,7 +19,7 @@ as its knowledge representation language. The knowledge is discovered
 using a so-called recursive partitioning algorithm. A mathematical
 measure of the information content of the model is used to guide the
 tree construction. Decision trees are a popular knowledge
-representation because they are usually easy to understand.
+representation because they are easy to understand and explain.
 
 The **demo** command applies the pre-built model to a dataset with
 known values of the target variable and presents an evaluation of the
