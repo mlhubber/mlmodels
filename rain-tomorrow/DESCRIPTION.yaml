@@ -1,7 +1,7 @@
 --- # RAIN TOMORROW DECISION TREE
 meta:
   name         : rain-tomorrow
-  version      : 1.0.5
+  version      : 1.0.6
   title        : Predict rain tomorrow using decision tree.
   language     : Rscript
   dependencies : R, rpart, magrittr
