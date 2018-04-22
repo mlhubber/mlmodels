@@ -12,7 +12,7 @@ leaves <- frame$var == "<leaf>"
 used <- unique(frame$var[!leaves])
 
 cat("\n============================================\n",
-    "Variables actually used in the decision tree",
+    "Variables Used in the Decision Tree",
     "\n============================================\n\n",
     sep="")
 cat("  ", paste(sort(as.character(used)), collapse=", "), ".\n", sep="")
@@ -24,13 +24,13 @@ varimp <- model$variable.importance
 varimp <- round(100 * varimp/sum(varimp))
 
 cat("\n==================\n",
-    "Variable imprtance",
+    "Variable Importance",
     "\n==================\n\n",
     sep="")
 print(varimp[varimp>0])
 
 cat("\n========================\n",
-    "The actual decision tree",
+    "Actual Decision Tree",
     "\n========================\n\n",
     sep="")
 print(model)
