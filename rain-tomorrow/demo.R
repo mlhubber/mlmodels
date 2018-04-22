@@ -15,6 +15,8 @@ load("rain-tomorrow.RData")
 
 cat("\n=====================\nPredict Rain Tomorrow\n=====================\n\n")
 
+cat("Applied to a validation dataset\nto estimate model accuracy.\n\n")
+
 load("weatherAUS.RData")
 
 dsname <- "weatherAUS"
