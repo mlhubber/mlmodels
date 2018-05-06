@@ -8,7 +8,7 @@
 
 MODEL_FILES = 			\
 	rain-tomorrow.RData	\
-	build.R			\
+	train.R			\
 	demo.R 			\
 	print.R			\
 	display.R		\
@@ -22,7 +22,7 @@ include ../mlhub.mk
 include ../git.mk
 include ../pandoc.mk
 
-rain-tomorrow.RData: build.R
+rain-tomorrow.RData: train.R
 	Rscript $<
 
 clean::
