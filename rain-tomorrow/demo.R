@@ -15,7 +15,7 @@ load("rain-tomorrow.RData")
 
 cat("\n=====================\nPredict Rain Tomorrow\n=====================\n\n")
 
-cat("Applied to a validation dataset\nto estimate model accuracy.\n\n")
+cat("The model is used to score a validation dataset so as\nto provide an estimate of the model's accuracy.\n\n")
 
 load("weatherAUS.RData")
 
@@ -58,6 +58,9 @@ cat(sprintf("\nOverall error: %d%%\n", 100-sum(diag(per), na.rm=TRUE)))
 # Calculate the averaged class error percentage.
 
 cat(sprintf("Average class error: %.1f%%\n", mean(per[,"Error"], na.rm=TRUE)))
+
+cat("\nNotice the model is not particularly accurate but could be useful still",
+    "\ngiving some indication of the prospect of it raining tomorrow.\n")
 
 # Suggest next step.
 
