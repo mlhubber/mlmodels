@@ -53,11 +53,13 @@ test:
 # Don't create YAML file, just a temporary file???
 
 
-local:
-	rsync -avzh $(MODEL_FILES) ~/.aipk/$(MODEL)/
+local: $(MODEL_MLM)
+	ml install $^
 
 cleanlocal:
 	rm -rf ~/.aipk/$(MODEL)/
+
+dist: $(MODEL_MLM)
 
 mlhub: $(MODEL_MLM)
 	ssh $(REPO_SSH) mkdir -p $(BASE_PATH)/$(MODEL_PATH)
