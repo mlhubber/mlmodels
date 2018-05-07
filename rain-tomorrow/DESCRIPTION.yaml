@@ -1,7 +1,7 @@
 --- # RAIN TOMORROW DECISION TREE
 meta:
   name         : rain-tomorrow
-  version      : 1.0.6
+  version      : 1.0.7
   license      : gpl3
   title        : Predict rain tomorrow using decision tree.
   description  :
@@ -12,13 +12,13 @@ meta:
     the rpart package of R. Performance evaluation and lVisualisations
     are provided.
     
-  language     : R
+  language     : Rscript
   dependencies : rpart, magrittr
   modeller     : Graham.Williams@togaware.com
   author       : Graham.Williams@togaware.com
   maintainer   : Graham.Williams@togaware.com
-  filename     : pool/main/r/rain-tomorrow/rain-tomorrow_1.0.6.mlm
-  date         : 2018-04-26 09:50:13
+  filename     : pool/main/r/rain-tomorrow/rain-tomorrow_1.0.7.mlm
+  date         : 2018-05-07 16:20:04
 commands:
   demo:
     script : demo.R
