@@ -9,7 +9,8 @@ Makefile for Managing ML Models
 
 Local targets:
 
-  mlhub		Update https://mlhub.ai/.
+  localhub      Update model to localhost 
+  mlhub		Update model to https://mlhub.ai/.
 
 endef
 export MLHUB_HELP
@@ -52,7 +53,6 @@ test:
 
 # Don't create YAML file, just a temporary file???
 
-
 local: $(MODEL_MLM)
 	ml install $^
 
@@ -61,6 +61,13 @@ cleanlocal:
 
 dist: $(MODEL_MLM)
 
+.PHONY: localhub
+localhub: $(MODEL_MLM)
+	sudo mkdir -p $(BASE_PATH)/$(MODEL_PATH)
+	sudo cp $^ $(BASE_PATH)/$(MODEL_PATH)/
+	sudo chmod -R a+rX $(BASE_PATH)/$(REPO_PATH)
+
+.PHONY: mlhub
 mlhub: $(MODEL_MLM)
 	ssh $(REPO_SSH) mkdir -p $(BASE_PATH)/$(MODEL_PATH)
 	rsync -avzh $^ $(REPO_SSH):$(BASE_PATH)/$(MODEL_PATH)/
