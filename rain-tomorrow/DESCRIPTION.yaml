@@ -12,13 +12,11 @@ meta:
     the rpart package of R. Performance evaluation and lVisualisations
     are provided.
     
-  language     : Rscript
-  dependencies : rpart, magrittr
   modeller     : Graham.Williams@togaware.com
   author       : Graham.Williams@togaware.com
   maintainer   : Graham.Williams@togaware.com
   filename     : pool/main/r/rain-tomorrow/rain-tomorrow_1.0.7.mlm
-  date         : 2018-05-07 16:20:04
+  date         : 2018-05-12 00:04:53
 commands:
   demo:
     script : demo.R
