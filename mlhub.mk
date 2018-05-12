@@ -53,6 +53,7 @@ test:
 
 # Don't create YAML file, just a temporary file???
 
+.PHONY: local
 local: $(MODEL_MLM)
 	ml install $^
 
