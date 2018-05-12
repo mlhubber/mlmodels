@@ -8,6 +8,7 @@
 
 MODEL_FILES = 			\
 	rain-tomorrow.RData	\
+	configure.sh		\
 	train.R			\
 	demo.R 			\
 	print.R			\
