@@ -4,19 +4,9 @@ meta:
   version      : 1.0.7
   license      : gpl3
   title        : Predict rain tomorrow using decision tree.
-  description  :
-
-    An example of a decision tree model for binary classification
-    where a collection of observations of the weather today are used
-    to predict whether it will rain tomorrow. Model is trained using
-    the rpart package of R. Performance evaluation and lVisualisations
-    are provided.
-    
-  modeller     : Graham.Williams@togaware.com
   author       : Graham.Williams@togaware.com
-  maintainer   : Graham.Williams@togaware.com
   filename     : pool/main/r/rain-tomorrow/rain-tomorrow_1.0.7.mlm
-  date         : 2018-05-12 00:04:53
+  date         : 2018-05-16 16:43:59
 commands:
   demo:
     script : demo.R
