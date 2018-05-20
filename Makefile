@@ -51,18 +51,26 @@ REPO_PATH = pool/main
 REPO_USER = root
 REPO_SSH  = $(REPO_USER)@$(REPO_HOST)
 
-DESCRIPTIONS = rain-tomorrow/DESCRIPTION.yaml
+DESCRIPTIONS = \
+	iris-r/DESCRIPTION.yaml \
+	rain-tomorrow/DESCRIPTION.yaml
 
 .PHONY: localhub
 localhub: Packages.yaml
 	sudo cp $< $(BASE_PATH)/
-	sudo chmod -R a+rX $(BASE_PATH)/$<
+	sudo chmod -R a+rX $(BASE_PATH)/
 
 .PHONY: mlhub
-mlhub: Packages.yaml
-	rsync -avzh $< $(REPO_SSH):$(BASE_PATH)/
-	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/$<
+mlhub: Packages.yaml Packages.html
+	rsync -avzh $^ $(REPO_SSH):$(BASE_PATH)/
+	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/
 
 Packages.yaml: $(DESCRIPTIONS)
 	cat $^ > $@
 
+Packages.rst:
+	echo "Pre-built machine learning models available here::\n" > $@
+	ml avail | grep ' : ' | sed 's/^/  /' >> $@
+
+realclean::
+	rm -f Packages.html Packages.yaml
