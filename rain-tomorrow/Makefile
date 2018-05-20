@@ -1,6 +1,6 @@
 ########################################################################
 #
-# Makefile for rain-tomorrow model
+# Makefile for rain-tomorrow pre-built ML model
 #
 ########################################################################
 
@@ -19,11 +19,13 @@ MODEL_FILES = 			\
 	README.txt		\
 	DESCRIPTION.yaml
 
+# Include standard Makefile templates.
+
 include ../mlhub.mk
 include ../git.mk
 include ../pandoc.mk
 
-rain-tomorrow.RData: train.R
+$(MODEL).RData: train.R
 	Rscript $<
 
 clean::
