@@ -20,7 +20,7 @@ Local targets:
 
   localhub	Generate and install Packages.yaml on localhost.
   mlhub		Generate and install Packages.yaml on mlhub.ai.
-  Packages.yaml Generate met-data file for the repository.
+  Packages.yaml Generate meta-data file for the repository.
 
 endef
 export HELP
@@ -73,4 +73,4 @@ Packages.rst:
 	ml avail | grep ' : ' | sed 's/^/  /' >> $@
 
 realclean::
-	rm -f Packages.html Packages.yaml
+	rm -f Packages.html Packages.yaml Packages.rst
