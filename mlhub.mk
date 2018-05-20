@@ -73,6 +73,7 @@ mlhub: $(MODEL_MLM)
 	ssh $(REPO_SSH) mkdir -p $(BASE_PATH)/$(MODEL_PATH)
 	rsync -avzh $^ $(REPO_SSH):$(BASE_PATH)/$(MODEL_PATH)/
 	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/$(REPO_PATH)
+	(cd ..; make mlhub)
 
 $(MODEL_MLM): $(MODEL_FILES)
 	perl -pi -e 's|  filename.*$$|$(MODEL_FILENAME)|' $(DESCRIPTION)
