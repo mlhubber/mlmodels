@@ -6,7 +6,7 @@
 
 # List the files to be included in the .aipk package.
 
-AIPACK_FILES = 			\
+MODEL_FILES = 			\
 	demo.R  		\
 	merge.R  		\
 	movie-recommender-r.R 	\
