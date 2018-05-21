@@ -1,12 +1,12 @@
 ########################################################################
 #
-# Makefile for AI Hub Repository for image-classification
+# Makefile for movie-recommender-r pre-built ML model
 #
 ########################################################################
 
-# List the files to be included in the .aipk package.
+# List the files to be included in the .mlm package.
 
-AIPACK_FILES = 			\
+MODEL_FILES = 			\
 	demo.R  		\
 	merge.R  		\
 	movie-recommender-r.R 	\
@@ -19,10 +19,14 @@ AIPACK_FILES = 			\
 	DESCRIPTION.yml 	\
 	data
 
-# Include the standard template for managing ai packages.
+# Include the standard Makefile template.
 
-include ../aipk.mk
+include ../mlm.mk
 include ../git.mk
+include ../pandoc.mk
 
-README.txt: README.md
-	pandoc $^ -o $@
+clean::
+	rm -rf README.txt output
+
+realclean:: clean
+	rm -rf movie-recommender-r_*.mlm
