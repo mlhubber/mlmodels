@@ -4,7 +4,7 @@
 #
 ########################################################################
 
-# List the files to be included in the .aipk package.
+# List the files to be included in the .mlm package.
 
 MODEL_FILES = 			\
 	demo.R  		\
