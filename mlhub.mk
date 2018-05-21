@@ -9,8 +9,9 @@ Makefile for Managing ML Models
 
 Local targets:
 
+  dist          Build the model zip archive as .mlm file
   localhub      Update model to localhost 
-  mlhub		Update model to https://mlhub.ai/.
+  mlhub		Update model to https://mlhub.ai/
 
 endef
 export MLHUB_HELP
