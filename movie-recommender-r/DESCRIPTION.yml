@@ -5,7 +5,7 @@ meta:
   language    : Rscript
   modeller    : SAR
   type        : SAR local count
-  version     : 1.0.5
+  version     : 1.0.8
   section     : ecommence, entertainment
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, SAR, caret, plyr, dplyr
