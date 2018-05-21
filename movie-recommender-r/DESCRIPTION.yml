@@ -9,6 +9,8 @@ meta:
   section     : ecommence, entertainment
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, SAR, caret, plyr, dplyr
+  filename    : pool/main/m/movie-recommender-r/movie-recommender-r_1.0.8.mlm
+  date        : 2018-05-21 16:59:49
 commands:
   print:
     script      : print.R
