@@ -21,7 +21,7 @@ MODEL_FILES = 			\
 
 # Include the standard Makefile template.
 
-include ../mlm.mk
+include ../mlhub.mk
 include ../git.mk
 include ../pandoc.mk
 
