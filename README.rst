@@ -6,8 +6,9 @@ This repository collects together an archive of pre-built machine
 learning models that can be readily shared for individuals to download
 and to demonstrate the model in action. 
 
-The sample R model *rain-tomorrow* is a template which other model
-package authors can mimic.
+The sample R pre-built models *rain-tomorrow*, *iris-r*, and
+*clothes-recommender* serve as templates which model package authors
+can mimic.
 
 DESCRIPTION.yaml
 ================
