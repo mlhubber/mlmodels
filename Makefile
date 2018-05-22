@@ -51,8 +51,9 @@ REPO_PATH = pool/main
 REPO_USER = root
 REPO_SSH  = $(REPO_USER)@$(REPO_HOST)
 
-DESCRIPTIONS = \
-	iris-r/DESCRIPTION.yaml \
+DESCRIPTIONS = 					\
+	iris-r/DESCRIPTION.yaml 		\
+	movie-recommender-r/DESCRIPTION.yaml	\
 	rain-tomorrow/DESCRIPTION.yaml
 
 .PHONY: localhub
