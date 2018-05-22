@@ -7,6 +7,7 @@
 # List the files to be included in the .mlm package.
 
 MODEL_FILES = 			\
+	configure.sh		\
 	demo.R  		\
 	merge.R  		\
 	movie-recommender-r.R 	\
@@ -16,7 +17,7 @@ MODEL_FILES = 			\
 	score.R			\
 	train.R			\
 	README.txt		\
-	DESCRIPTION.yml 	\
+	DESCRIPTION.yaml 	\
 	data
 
 # Include the standard Makefile template.
