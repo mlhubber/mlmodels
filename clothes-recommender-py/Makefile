@@ -6,7 +6,7 @@
 
 # List the files to be included in the .aipk package.
 
-AIPACK_FILES = 		\
+MODEL_FILES = 		\
 	configure.sh	\
 	demo.py		\
 	display.py	\
@@ -16,14 +16,15 @@ AIPACK_FILES = 		\
 	score.py	\
 	PARAMETERS.py	\
 	README.txt	\
-	DESCRIPTION.yml \
+	DESCRIPTION.yaml\
 	data		\
 	proc
 
 # Include the standard template for managing ai packages.
 
-include ../aipk.mk
+include ../mlhub.mk
 include ../git.mk
+include ../clean.mk
 
 README.txt: README.md
 	pandoc $^ -o $@
