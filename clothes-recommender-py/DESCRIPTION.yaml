@@ -5,10 +5,10 @@ meta:
   language    : python
   dependencies: python3, cv2, metrics, calibration, cntk
   modeller    : cnn & svm
-  version     : 1.0.13
+  version     : 1.0.14
   section     : ecommerce, fashion
   maintainer  : Fang Zhou <zhouf@microsoft.com>
-  filename    : pool/main/c/clothes/clothes-recommender-py_1.0.13.mlm
+  filename    : pool/main/c/clothes/clothes-recommender-py_1.0.14.mlm
   date        : 2018-05-23 10:37:44
 commands:
   print:
