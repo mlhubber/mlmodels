@@ -59,7 +59,7 @@ local: $(MODEL_MLM)
 	ml install $^
 
 cleanlocal:
-	rm -rf ~/.aipk/$(MODEL)/
+	rm -rf ~/.mlhub/$(MODEL)/
 
 dist: $(MODEL_MLM)
 

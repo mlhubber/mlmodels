@@ -52,6 +52,7 @@ REPO_USER = root
 REPO_SSH  = $(REPO_USER)@$(REPO_HOST)
 
 DESCRIPTIONS = 					\
+	clothes-recommender-py/DESCRIPTION.yaml \
 	iris-r/DESCRIPTION.yaml 		\
 	movie-recommender-r/DESCRIPTION.yaml	\
 	rain-tomorrow/DESCRIPTION.yaml

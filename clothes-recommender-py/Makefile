@@ -1,10 +1,10 @@
 ########################################################################
 #
-# Makefile for AI Hub Repository for image-classification
+# Makefile for clothes-recommender-py pre-build ML model
 #
 ########################################################################
 
-# List the files to be included in the .aipk package.
+# List the files to be included in the .mlm package.
 
 MODEL_FILES = 		\
 	configure.sh	\
@@ -20,11 +20,15 @@ MODEL_FILES = 		\
 	data		\
 	proc
 
-# Include the standard template for managing ai packages.
+# Include the standard Makefile template.
 
 include ../mlhub.mk
 include ../git.mk
 include ../clean.mk
+include ../pandoc.mk
 
-README.txt: README.md
-	pandoc $^ -o $@
+clean::
+	rm -rf README.txt output
+
+realclean:: clean
+	rm -rf clothes-recommender-py_*.mlm

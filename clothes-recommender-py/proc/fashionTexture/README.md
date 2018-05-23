@@ -1,10 +1,10 @@
 ### Directory contents
 
-This file list the contents to be placed under the folder in this AI Pack.
+This file list the contents to be placed under the folder.
 
 #### List of contents
 
-- The pre-trained AI models
+- The pre-trained ML models
   
   cntk.model;
   svm.np
