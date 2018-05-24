@@ -81,6 +81,7 @@ print("[Complete] Featurization")
 ####################################
 # Score SVM
 ####################################
+
 # Parameter
 
 distMethods = ['random', 'L1', 'L2', 'weighted'+svm_featureDifferenceMetric]  #'cosine', 'correlation', 'chiSquared', 'normalizedChiSquared']
@@ -135,7 +136,7 @@ for queryIndex, queryImgInfo in enumerate(imgInfos):
     minDistImgName   = imgInfos[queryIndex].children[minDistIndex].fname
     correctImgName   = imgInfos[queryIndex].children[correctIndex].fname
     queryLabel = queryImgInfo.subdir
-    minDistLabel = imgInfos[queryIndex].children[minDistIndex].subdir
+    minDistLabel = imgInfos[queryIndex].children[minDistIndex].subdir    
     correctLabel = queryLabel
     print(fmt.format(queryImgName, queryLabel, minDistImgName, minDistLabel, minDist, correctImgName, correctLabel, correctDist))
 
@@ -188,7 +189,7 @@ if (displayAvailable):
     msg = """
 The individual classified images can be displayed:
 
- $ aipk display clothes-design-similarity demo {}
+ $ ml display clothes-recommender-py
 """.format(fn)
     print(msg)
 else:

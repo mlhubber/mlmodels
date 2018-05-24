@@ -126,7 +126,6 @@ for queryIndex, queryImgInfo in enumerate(imgInfos):
         for distMethod in distMethods:
             dist = computeVectorDistance(queryFeat, refFeat, distMethod, svm_boL2Normalize, svmWeights, svmBias)
             allDists[queryIndex][distMethod].append(dist)
-
 # Find match with minimum distance (rank 1)
 print("[InProgress] Showing matching image with minimum weightedl2 distance for query image: ")
 fmt = "{0:<15.15} : {1:<15.15} : {2:<15.15} : {3:<15.15} : {4:<10.10}"
@@ -183,7 +182,7 @@ if (displayAvailable):
     msg = """
 The individual classified images, such as the final image, can be displayed:
 
- $ aipk display clothes-design-similarity score {}
+ $ ml display clothes-design-similarity score {}
 """.format(queryImgInfo.fname.replace('/','-'))
     print(msg)
 else:
