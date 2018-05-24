@@ -1,15 +1,15 @@
 --- # Clothes Recommender Py
 meta:
   name        : clothes-recommender-py
-  description : clothes recommendation using CNN/SVM
+  description : Clothes recommendation using CNN/SVM.
   language    : python
   dependencies: python3, cv2, metrics, calibration, cntk
   modeller    : cnn & svm
   version     : 1.0.14
   section     : ecommerce, fashion
-  maintainer  : Fang Zhou <zhouf@microsoft.com>
+  maintainer  : Fang.Zhou@microsoft.com
   filename     : pool/main/c/clothes-recommender-py/clothes-recommender-py_1.0.13.mlm
-  date         : 2018-05-23 16:00:34
+  date         : 2018-05-23 09:33:18
 commands:
   print:
     script      : print.py
