@@ -7,7 +7,7 @@ meta:
   type        : Vgg16
   version     : 1.0.1
   section     : image
-  maintainer  : Fang Zhou <zhouf@microsoft.com>
+  maintainer  : Fang.Zhou@microsoft.com
   dependencies: R, keras, magrittr, dplyr, caret, e1017
   filename     : pool/main/i/image-classification-r/image-classification-r_1.0.1.mlm
   date         : 2018-06-05 22:35:19
