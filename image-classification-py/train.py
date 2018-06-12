@@ -87,7 +87,7 @@ def train_top_model():
         [0] * int(nb_validation_samples / 2) + [1] * int(nb_validation_samples / 2))
 
     model = Sequential()
-    model.add(Flatten())
+    model.add(Flatten(input_shape=train_data.shape[1:]))
     model.add(Dense(256, activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(1, activation='sigmoid'))
