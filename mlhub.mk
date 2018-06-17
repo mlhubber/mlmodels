@@ -89,5 +89,5 @@ $(MODEL_YAML): $(MODEL_YML)
 	echo "" >> $@
 
 .PHONY: clean
-clean:
+clean::
 	rm -f $(MODEL_MLM) README.txt README.html
