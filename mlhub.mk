@@ -44,6 +44,8 @@ MODEL_VERSION = $(shell grep version $(DESCRIPTION) | awk '{print $$NF}')
 MODEL_FILENAME = \ \ filename     : $(REPO_PATH)/$(INIT_CHAR)/$(MODEL)/$(MODEL_MLM)
 MODEL_DATE =     \ \ date         : $(shell date +"%F %T")
 
+README_HTML = README.html
+
 test:
 	@echo $(MODEL)
 	@echo $(MODEL_PATH)
@@ -70,7 +72,7 @@ localhub: $(MODEL_MLM)
 	sudo chmod -R a+rX $(BASE_PATH)/$(REPO_PATH)
 
 .PHONY: mlhub
-mlhub: $(MODEL_MLM)
+mlhub: $(MODEL_MLM) $(README_HTML)
 	ssh $(REPO_SSH) mkdir -p $(BASE_PATH)/$(MODEL_PATH)
 	rsync -avzh $^ $(REPO_SSH):$(BASE_PATH)/$(MODEL_PATH)/
 	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/$(REPO_PATH)
@@ -86,3 +88,6 @@ $(MODEL_YAML): $(MODEL_YML)
 	tr -d "'" > $@
 	echo "" >> $@
 
+.PHONY: clean
+clean:
+	rm -f $(MODEL_MLM) README.txt README.html
