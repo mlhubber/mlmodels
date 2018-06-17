@@ -7,6 +7,13 @@
 APP=mlmodels
 VER=1.0.0
 
+DESCRIPTIONS = 					\
+	clothes-recommender-py/DESCRIPTION.yaml \
+	iris-r/DESCRIPTION.yaml 		\
+	movie-recommender-r/DESCRIPTION.yaml	\
+	rain-tomorrow/DESCRIPTION.yaml		\
+	resnet152/DESCRIPTION.yaml		\
+
 INC_BASE    = .
 INC_PANDOC  = $(INC_BASE)/pandoc.mk
 INC_GIT     = $(INC_BASE)/git.mk
@@ -51,12 +58,6 @@ REPO_PATH = pool/main
 REPO_USER = root
 REPO_SSH  = $(REPO_USER)@$(REPO_HOST)
 
-DESCRIPTIONS = 					\
-	clothes-recommender-py/DESCRIPTION.yaml \
-	iris-r/DESCRIPTION.yaml 		\
-	movie-recommender-r/DESCRIPTION.yaml	\
-	rain-tomorrow/DESCRIPTION.yaml
-
 .PHONY: localhub
 localhub: Packages.yaml
 	sudo cp $< $(BASE_PATH)/
@@ -73,6 +74,8 @@ Packages.yaml: $(DESCRIPTIONS)
 Packages.rst:
 	echo "Pre-built machine learning models available here::\n" > $@
 	ml avail | grep ' : ' | sed 's/^/  /' >> $@
+
+Packages.html: pandoc.css
 
 realclean::
 	rm -f Packages.html Packages.yaml Packages.rst
