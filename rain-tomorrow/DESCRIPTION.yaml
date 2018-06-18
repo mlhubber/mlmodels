@@ -2,6 +2,7 @@
 meta:
   name         : rain-tomorrow
   version      : 1.0.7
+  keywords     : r, prediction, classification, decision tree, introductory
   license      : gpl3
   title        : Predict rain tomorrow using decision tree.
   author       : Graham.Williams@togaware.com

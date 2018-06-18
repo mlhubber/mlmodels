@@ -2,6 +2,7 @@
 meta:
   name        : iris-r
   title       : Classical iris plant species classifier.
+  keywords    : r, iris, biology, decision tree, rpart, classification
   language    : Rscript
   modeller    : rpart
   type        : decision tree

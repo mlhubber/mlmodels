@@ -71,7 +71,7 @@ mlhub: Packages.yaml Packages.html
 Packages.yaml: $(DESCRIPTIONS)
 	cat $^ > $@
 
-Packages.html: pkgidx pandoc.css
+Packages.html: pkgidx pandoc.css Packages.yaml
 	./pkgidx > $@
 
 realclean::

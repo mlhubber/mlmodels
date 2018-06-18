@@ -2,6 +2,7 @@
 meta:
   name        : clothes-recommender-py
   description : Clothes recommendation using CNN/SVM.
+  keywords    : python3, computer vision, recommendation, dnn
   language    : python
   dependencies: python3, cv2, metrics, calibration, cntk
   modeller    : cnn & svm
