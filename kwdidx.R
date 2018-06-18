@@ -23,14 +23,16 @@ kwd
       
 current <- ""
 sep <- ""
+pend <- ""
 
 for (k in kwd)
 {
   if (k[1] != current)
   {
     current <- k[1]
-    cat(sprintf("\n<h2>%s</h2>\n\n", k[1]))
+    cat(sprintf('%s\n<h2>%s</h2>\n\n<p class="shade">\n', pend, k[1]))
     sep <- ""
+    pend <- "</p>\n"
   }
   else
   {
@@ -39,3 +41,5 @@ for (k in kwd)
   l1 <- str_sub(k[2], 1, 1)
   cat(sprintf('%s<a href="https://mlhub.ai/pool/main/%s/%s/">%s</a>\n', sep, l1, k[2], k[2]))
 }
+
+cat(pend)
