@@ -1,0 +1,56 @@
+#! /bin/bash
+# -*- sh-mode -*-
+
+cat <<HEAD
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+HEAD
+
+cat pandoc.css
+
+cat <<BODY
+</head>
+<body>
+
+<h1 id="mlhub-pre-built-model-catalogue">MLHub Pre Built Model Catalogue</h1>
+
+<p>This repository hosts the following pre-built machine learning models:</p>
+
+<table>
+<thead>
+<tr class="header">
+<th align="left">Title</th>
+<th align="left">Version</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+BODY
+
+ml avail |\
+  grep ' : ' |\
+  sed 's/ : /  /g' |\
+  sed 's/^/<tr>\n<td align="left"><a href="https://mlhub.ai/pool/main/'
+
+cat <<KWD
+</tbody>
+</table>
+
+<h1 id="keywords">Packages by Keyword</h1>
+KWD
+
+# Add Keywords
+
+
+
+cat <<EOF
+</body>
+EOF
+
+
