@@ -71,11 +71,8 @@ mlhub: Packages.yaml Packages.html
 Packages.yaml: $(DESCRIPTIONS)
 	cat $^ > $@
 
-Packages.rst:
-	echo "Pre-built machine learning models available here::\n" > $@
-	ml avail | grep ' : ' | sed 's/^/  /' >> $@
-
-Packages.html: pandoc.css
+Packages.html: pkgidx pandoc.css
+	./pkgidx > $@
 
 realclean::
 	rm -f Packages.html Packages.yaml Packages.rst

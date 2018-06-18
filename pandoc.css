@@ -15,6 +15,10 @@
 {
     text-align: center;
 }
+.header
+{
+    text-align: left;
+}
 body
 {
     padding-right: 1em;
