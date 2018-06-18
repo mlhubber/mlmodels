@@ -2,6 +2,7 @@
 meta:
   name        : movie-recommender-r
   description : Movie recommendation using SAR package
+  keywords    : recommendation, r, sar, movies
   language    : Rscript
   modeller    : SAR
   type        : SAR local count
@@ -10,7 +11,7 @@ meta:
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, SAR, caret, plyr, dplyr
   filename     : pool/main/m/movie-recommender-r/movie-recommender-r_1.0.9.mlm
-  date         : 2018-05-22 14:00:19
+  date         : 2018-06-18 20:58:10
 commands:
   print:
     script      : print.R

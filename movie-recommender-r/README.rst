@@ -1,3 +1,4 @@
+====================
 Movie Recommendation 
 ====================
 
@@ -14,8 +15,8 @@ model to represent the knowledge discovered using a so-called Smart
 Adaptive Recommendations (SAR) algorithm. The knowledge representation
 is easy to understand.
 
-The *demo* applies the pre-built model to a demo data set with records
+The **demo** applies the pre-built model to a demo data set with records
 from 10 users and shows the recommendation results for 2 users.
 
-The *print* will display a textual summary of the model and its build
+The **print** will display a textual summary of the model and its build
 parameters.

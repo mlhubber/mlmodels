@@ -25,7 +25,10 @@ cat <<BODY
 
 <h1 id="mlhub-pre-built-model-catalogue">MLHub Pre Built Model Catalogue</h1>
 
-<p>This repository hosts the following pre-built machine learning models:</p>
+<p>This repository hosts the following pre-built machine learning
+models.  Please try them out and let us know of any issues you have in
+easily and quickly exploring the models. Feedback is welcome through
+<a href="https://github.com/mlhubber/mlmodels">github</a>.</p>
 
 <table>
 <thead>

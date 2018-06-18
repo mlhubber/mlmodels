@@ -1,3 +1,4 @@
+==============================
 Classifying Iris Plant Species
 ==============================
 
@@ -14,10 +15,10 @@ tree model to represent the knowledge discovered using a so-called
 recursive partitioning algorithm. The knowledge representation is easy
 to understand.
 
-The *demo* applies the pre-built model to a same data set and
+The **demo** applies the pre-built model to a same data set and
 illustrates that quite an accurate model can be readily built from
 this historic data.
 
-The *print* will display a textual summary of the model and its build
+The **print** will display a textual summary of the model and its build
 parameters. The textual presentation can be difficult to take in at
-first and so the *display* will draw the model as a decision tree.
+first and so the **display** will draw the model as a decision tree.

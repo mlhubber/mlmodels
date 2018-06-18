@@ -18,6 +18,9 @@ PANDOC_TEX_OPTIONS=$(PANDOC_PDF_OPTIONS) --standalone
 
 PANDOC_CSS=pandoc.css
 PANDOC_HTML_OPTIONS=--standalone --self-contained
+ifneq ("$(wildcard ../$(PANDOC_CSS))","")
+  PANDOC_HTML_OPTIONS := $(PANDOC_HTML_OPTIONS) --include-in-header=../$(PANDOC_CSS)
+endif
 ifneq ("$(wildcard $(PANDOC_CSS))","")
   PANDOC_HTML_OPTIONS := $(PANDOC_HTML_OPTIONS) --include-in-header=$(PANDOC_CSS)
 endif

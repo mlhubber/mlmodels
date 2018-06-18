@@ -7,7 +7,7 @@ meta:
   title        : Image classification using the resnet152 model.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/r/resnet152/resnet152_1.0.1.mlm
-  date         : 2018-06-17 16:51:57
+  date         : 2018-06-18 20:56:07
 commands:
   demo:
     script : demo.py
