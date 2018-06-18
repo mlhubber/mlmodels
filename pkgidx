@@ -8,7 +8,7 @@ cat <<HEAD
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
   <title></title>
-  <style type="text/css">code{white-space: pre;}a{text-decoration: none;}table{border-spacing: 5px 0;}</style>
+  <style type="text/css">code{white-space: pre;}a{text-decoration: none;}table{border-spacing: 5px 0;background-color: #eee;}</style>
 HEAD
 
 cat pandoc.css
