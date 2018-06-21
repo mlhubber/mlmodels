@@ -9,7 +9,7 @@ meta:
   section     : image
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, keras, magrittr, dplyr, caret, e1017
-  filename     : pool/main/i/dogs-cats-r/dogs-cats-r_1.0.1.mlm
+  filename     : pool/main/d/dogs-cats-r/dogs-cats-r_1.0.1.mlm
   date         : 2018-06-21 22:35:19
 commands:
   print:
