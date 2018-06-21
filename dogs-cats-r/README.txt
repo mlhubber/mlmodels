@@ -39,4 +39,5 @@ The model performance could be further improved by fine-tuning some of the layer
 
 This image classificaition example could be easily adapted to other types of images. 
 
-You can go through the full tutorial keras-image-classification-on-small-datasets`<https://tensorflow.rstudio.com/blog/keras-image-classification-on-small-datasets>`_ on Rstudio tensorflow `<https://tensorflow.rstudio.com>`_ website.
+You can go through the full tutorial `keras-image-classification-on-small-datasets <https://tensorflow.rstudio.com/blog/keras-image-classification-on-small-datasets>`_ 
+on `Rstudio tensorflow <https://tensorflow.rstudio.com>`_ website.
