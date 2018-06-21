@@ -1,5 +1,5 @@
 ========================
-Image Classification using keras
+Dogs and Cats Image Classification using keras
 ========================
 
 The Dogs-vs-Cats dataset from Kaggle computer vision competition was 

@@ -11,7 +11,7 @@ library(keras)
 
 # data directory
 
-base_dir <- "~/.mlhub/image-classification-r/data/cats_and_dogs_small"
+base_dir <- "~/.mlhub/dogs-cats-r-r/data/cats_and_dogs_small"
 train_dir <- file.path(base_dir, "train")
 validation_dir <- file.path(base_dir, "validation")
 
@@ -96,15 +96,19 @@ plot(history)
 cat("====================\nModel Saved as HDF5\n====================\n\n")
 
 save_model_hdf5(model, 
-                filepath="image-classification-vgg16-model.hdf5", 
+                filepath = "dogs-cats-r-vgg16-model.hdf5", 
                 overwrite = TRUE,
                 include_optimizer = FALSE)
 
 # Q: how to save model with training configuration?
 
+save_model_weights_hdf5(model,
+                        filepath = "dogs-cats-r-vgg16-model-weights.hdf5",
+                        overwrite=TRUE)
+
 cat("====================\nHistory Saved as RData and PNG\n====================\n\n")
 
-save(history, file="image-classification-vgg16-history.RData")
+save(history, file="dogs-cats-r-vgg16-history.RData")
 
 png(filename = "history.png")
 plot(history)

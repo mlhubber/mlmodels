@@ -11,17 +11,20 @@ library(e1071)
 # load model
 
 model <- 
-load_model_hdf5(filepath = "image-classification-vgg16-model.hdf5", 
+load_model_hdf5(filepath = "dogs-cats-vgg16-model.hdf5", 
                 custom_objects = NULL, 
                 compile = TRUE)
+model.weights <-
+load_model_weights_hdf5(model,
+                        filepath = "dogs-cats-vgg16-model-weights.hdf5")
 
 # Q: how to load model with training configuration?
 
-load("image-classification-vgg16-history.RData")
+load("dogs-cats-vgg16-history.RData")
 
 # get demo data
 
-base_dir <- "~/.mlhub/image-classification-r/data/cats_and_dogs_small"
+base_dir <- "~/.mlhub/dogs-cats-r/data/cats_and_dogs_small"
 test_dir <- file.path(base_dir, "test")
 test_datagen <- image_data_generator(rescale = 1/255)
 
@@ -42,15 +45,17 @@ model %>% compile(
 )
 
 pred_score <- model %>% predict_generator(test_generator, steps = 50)
-pred_class <- ifelse(pred_score > 0.5, 1, 0)
+pred_class <- ifelse(pred_score > 0.5, "dogs", "cats")
 
+actual_class <- ifelse(test_generator$classes == 1, "dogs", "cats")
+  
 img_names <- c(list.files(path = file.path(test_dir, "cats")), 
                list.files(path = file.path(test_dir, "dogs")))
 
 img_names %>%
   as.data.frame() %>% 
   cbind(Predicted = pred_class) %>%
-  cbind(Actual = test_generator$classes) %>%
+  cbind(Actual = actual_class) %>%
   set_names(c("Image", "Predicted", "Actual")) %>%
   mutate(Error = ifelse(Predicted == Actual, "", "<----")) %>%
   head(n = 20) %T>%
@@ -63,4 +68,6 @@ model %>% evaluate_generator(test_generator, steps = 50)
 
 cat("====================\nConfusion Matrix\n====================\n\n")
 
-confusionMatrix(data = pred_class, reference = test_generator$classes, positive = "1")
+confusionMatrix(data = pred_class, 
+                reference = actual_class, 
+                positive = "dogs")

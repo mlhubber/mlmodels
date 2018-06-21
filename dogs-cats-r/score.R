@@ -9,7 +9,7 @@ library(dplyr)
 # load model
 
 model <-
-load_model_hdf5(filepath = "image-classification-vgg16-model.hdf5", 
+load_model_hdf5(filepath = "dogs-cats-vgg16-model.hdf5", 
                 custom_objects = NULL, 
                 compile = TRUE)
 
@@ -20,7 +20,7 @@ fname <- args[1]
 
 # get score data
 
-base_dir <- "~/.mlhub/image-classification-r/data/cats_and_dogs_small"
+base_dir <- "~/.mlhub/dogs-cats-r/data/cats_and_dogs_small"
 test_dir <- file.path(base_dir, fname)
 test_datagen <- image_data_generator(rescale = 1/255)
 
