@@ -1,7 +1,7 @@
---- # Image Classification R
+--- # Dogs Cats R
 meta:
-  name        : image-classification-r
-  description : Image classification using keras package
+  name        : dogs-cats-r
+  description : Dogs and Cats image classification using keras package
   language    : Rscript
   modeller    : CNN
   type        : Vgg16
@@ -9,8 +9,8 @@ meta:
   section     : image
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, keras, magrittr, dplyr, caret, e1017
-  filename     : pool/main/i/image-classification-r/image-classification-r_1.0.1.mlm
-  date         : 2018-06-05 22:35:19
+  filename     : pool/main/i/dogs-cats-r/dogs-cats-r_1.0.1.mlm
+  date         : 2018-06-21 22:35:19
 commands:
   print:
     script      : print.R
