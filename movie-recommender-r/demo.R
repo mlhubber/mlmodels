@@ -1,8 +1,4 @@
-#################################################################################
-# Title: Movie Recommender with SAR
-# Author: Fang Zhou, Data Scientist, Microsoft
-# Function: apply the SAR model to a sample dataset
-#################################################################################
+## apply the SAR model to a sample dataset
 
 # load the package
 
@@ -17,16 +13,16 @@ load("sar_model.RData")
 
 # load the demo data
 
-ms_dir <- "data/ml-latest-small"
-dfu <- read.csv(file.path(ms_dir, "user10.csv"), header = TRUE)
+data_dir <- "data"
+dfu <- read.csv(file.path(data_dir, "ml-latest-small/user10.csv"), header = TRUE)
 names(dfu) <- c("user", "item",  "rating", "time", "title", "genres")
 dfu$time <- as.POSIXct(as.numeric(as.character(dfu$time)), origin="1970-01-01", tz="GMT")
 
-# Number of users.
+# number of users.
 
 nid <- dfu$user %>% unique() %>% length()
 
-# prediction per user (userId)
+# prediction per user (user)
 
 nrec <- 2
 recu <- user_predict(loc_count, userdata=dfu, n=nrec)
@@ -42,8 +38,8 @@ recu2$user <- rep(as.numeric(recu$user), each=nrec)
 recu2$item <- as.vector(t(as.matrix(recu[, 2:(nrec+1)])))
 recu2 <- as.data.frame(recu2)
 
-ms_map <- read.csv(file.path(ms_dir, "map.csv"), header = TRUE)
-mapu <- join(ms_map, recu2, type="right")
+map <- read.csv(file.path(data_dir, "/ml-latest-small/map.csv"), header = TRUE)
+mapu <- join(map, recu2, type="right")
 recu2$title <- mapu$title
 
 nuser <- 2
