@@ -11,7 +11,7 @@ library(keras)
 
 # data directory
 
-base_dir <- "~/.mlhub/image-classification-r/data/cats_and_dogs_small"
+base_dir <- "data/cats_and_dogs_small"
 train_dir <- file.path(base_dir, "train")
 validation_dir <- file.path(base_dir, "validation")
 
