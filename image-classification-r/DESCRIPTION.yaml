@@ -2,6 +2,7 @@
 meta:
   name        : image-classification-r
   description : Image classification using keras package
+  keywords    : r, computer vision, image classification
   language    : Rscript
   modeller    : CNN
   type        : Vgg16
