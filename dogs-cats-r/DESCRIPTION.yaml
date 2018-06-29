@@ -1,0 +1,32 @@
+--- # Dogs Cats R
+meta:
+  name        : dogs-cats-r
+  description : Dogs and Cats image classification using keras package
+  keywords    : r, computer vision, image classification
+  language    : Rscript
+  modeller    : CNN
+  type        : Vgg16
+  version     : 1.0.1
+  section     : image
+  maintainer  : Fang Zhou <zhouf@microsoft.com>
+  dependencies: R, keras, magrittr, dplyr, caret, e1017
+  filename     : pool/main/d/dogs-cats-r/dogs-cats-r_1.0.1.mlm
+  date         : 2018-06-21 22:35:19
+commands:
+  print:
+    script      : print.R
+    description : print a textual summary of the model
+  display:
+    script      : display.R
+    description : display a graphical representaiton of the model
+  demo:
+    script      : demo.R
+    description : apply the model to a sample dataset
+  score:
+    script      : score.R
+    required    : the directory of an image files containing dogs and cats
+    description : apply the model to a supplied dataset
+  train:
+    script      : train.R
+    optional    : directories pointing to training set and validation set
+    description : build a new model on your own image data with training set and validation set provided

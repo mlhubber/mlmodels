@@ -13,6 +13,7 @@ DESCRIPTIONS = 					\
 	movie-recommender-r/DESCRIPTION.yaml	\
 	rain-tomorrow/DESCRIPTION.yaml		\
 	resnet152/DESCRIPTION.yaml		\
+	scatter-plot-r/DESCRIPTION.yaml		\
 
 INC_BASE    = .
 INC_PANDOC  = $(INC_BASE)/pandoc.mk

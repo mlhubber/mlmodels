@@ -21,3 +21,7 @@ sample known images to classify them.
 
 The **display** command will present a visualisation of the
 classifications.
+
+Visit the `github
+repository<https://github.com/mlhubber/mlmodels/tree/master/resnet152>`_
+for the sample code.

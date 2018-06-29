@@ -13,9 +13,9 @@ library(SAR)
 
 # local copy of movielens data from https://grouplens.org/datasets/movielens/
 
-ms_dir <- "C:/Users/dlvmadmin/.aipk/movie-recommender-r/data"
-ms_ratings <- read.csv(file.path(ms_dir, "/ml-latest-small/ratings.csv"), header=TRUE)
-ms_movies <- read.csv(file.path(ms_dir, "/ml-latest-small/movies.csv"), header=TRUE)
+ms_dir <- "~/.mlhub/movie-recommender-r/data"
+ratings <- read.csv(file.path(ms_dir, "/ml-latest-small/ratings.csv"), header=TRUE)
+movies <- read.csv(file.path(ms_dir, "/ml-latest-small/movies.csv"), header=TRUE)
 
 ms_movie <- join(ms_ratings, ms_movies, type="left")
 head(ms_movie)

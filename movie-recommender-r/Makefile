@@ -8,14 +8,15 @@
 
 MODEL_FILES = 			\
 	configure.sh		\
-	demo.R  		\
-	merge.R  		\
-	movie-recommender-r.R 	\
+	data.R  		\
+        train.R			\
 	print.R			\
-	SAR_0.0.1.tar.gz	\
-	sar_model.RData		\
+        demo.R  		\
 	score.R			\
-	train.R			\
+        configure.R             \
+        movie-recommender-r.R 	\
+        SAR_0.0.1.tar.gz	\
+	sar_model.RData		\
 	README.txt		\
 	DESCRIPTION.yaml 	\
 	data

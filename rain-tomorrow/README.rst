@@ -38,3 +38,6 @@ You can **retrain** the model on your own csv dataset containing a
 *target* variable. The dataset can be any data really, as long as one
 column has the name *target*.
 
+Visit the `github
+repository<https://github.com/mlhubber/mlmodels/tree/master/rain-tomorrow>`_
+for the sample code.

@@ -1,8 +1,4 @@
-#################################################################################
-# Title: Movie Recommender with SAR
-# Author: Fang Zhou, Data Scientist, Microsoft
-# Function: build a SAR model on movielens dataset and save it for later usage
-#################################################################################
+## build a SAR model on movielens dataset and save it for later usage
 
 # load package
 
@@ -12,27 +8,42 @@ library(dplyr)
 library(SAR)
 
 # local copy of movielens data from https://grouplens.org/datasets/movielens/
+# load data
 
-ms_dir <- "C:/Users/dlvmadmin/.aipk/movie-recommender-r/data"
-ms_ratings <- read.csv(file.path(ms_dir, "/ml-latest-small/ratings.csv"), header=TRUE)
-ms_movies <- read.csv(file.path(ms_dir, "/ml-latest-small/movies.csv"), header=TRUE)
+data_dir <- "~/.mlhub/movie-recommender-r/data"
+movielens <- read.csv(file.path(data_dir, "/ml-latest-small/movielens.csv"), header=TRUE)
+head(movielens)
 
-ms_movie <- join(ms_ratings, ms_movies, type="left")
-head(ms_movie)
+names(movielens) <- c("user", "item",  "rating", "time", "title", "genres")
+movielens$time <- as.POSIXct(as.numeric(as.character(movielens$time)), origin="1970-01-01", tz="GMT")
+head(movielens)
 
-names(ms_movie) <- c("user", "item",  "rating", "time", "title", "genres")
-ms_movie$time <- as.POSIXct(as.numeric(as.character(ms_movie$time)), origin="1970-01-01", tz="GMT")
-head(ms_movie)
+# split data into train and test
 
-# build models with R_SAR package
+intrain <- createDataPartition(y=movielens$user, p=0.8, list=FALSE)
+train <- movielens[intrain, ]
+test <- movielens[-intrain, ]
 
-loc_count <- sar(ms_movie, support_threshold=3, similarity="count")
+# build models with SAR package
+
+loc_count <- sar(train, support_threshold=3, similarity="count")
 
 # display model
 
 loc_count
 
-# Identify the location of this script file and use that to know from
+# prediction per user (user)
+
+nrec <- 2
+rect <- user_predict(loc_count, userdata=test, n=nrec)
+head(rect)
+
+# evaluation
+
+metrics <- user_pred_metrics(rect, test)
+metrics
+
+# identify the location of this script file and use that to know from
 # where to load the actual model.
 
 argv <- commandArgs(trailingOnly=FALSE)
