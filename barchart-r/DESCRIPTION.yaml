@@ -1,0 +1,20 @@
+--- # BARCHARTS R
+meta:
+  name         : barchart-r
+  version      : 1.0.0
+  keywords     : r, graphics, visualisation, plot, car chart, basics
+  license      : gpl3
+  title        : Demostrate the concept of barcharts.
+  author       : Graham.Williams@togaware.com
+  filename     : pool/main/b/barchart-r/barchart-r_1.0.0.mlm
+  date         : 2018-06-29 22:04:29
+commands:
+  demo:
+    script : demo.R
+    title  : Step through alternative options.
+  print:
+    script : print.R
+    title  : Display the code.
+  score:
+    script : score.R
+    title  : Plot data from supplied CSV file.

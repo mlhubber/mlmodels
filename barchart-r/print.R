@@ -11,7 +11,7 @@ txt <- txt[!str_detect(txt, '^system')]
 txt <- txt[!str_detect(txt, '^suppress')]
 txt <- txt[!str_detect(txt, '^\\{')]
 txt <- txt[!str_detect(txt, '^\\}\\)')]
-txt <- txt[!str_detect(txt, '^ +"')]
+txt <- txt[!str_detect(txt, '^ +"')]       # Remove trace statements.
 txt <- txt[!str_detect(txt, '^# Suggest next step.')]
 
 # Remove duplicate empty lines.

@@ -37,7 +37,7 @@ ds %>%
   ggplot(aes(x=sepal_length, y=sepal_width)) +
   geom_point()
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE)
+system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 ########################################################################
 # Add a line to the scatter plot.
@@ -52,7 +52,7 @@ ds %>%
   geom_point() +
   geom_line()
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE)
+system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 ########################################################################
 # Add a smoothed fitted line to the scatter plot.
@@ -67,7 +67,7 @@ ds %>%
   geom_point() +
   stat_smooth(method="loess")
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE)
+system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 ########################################################################
 # Colour the dots on the scatter plot.
@@ -81,7 +81,7 @@ ds %>%
   ggplot(aes(x=sepal_length, y=sepal_width, colour=species)) +
   geom_point()
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE)
+system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 ########################################################################
 # Identify the weatherAUS dataset as the template dataset now.
@@ -123,7 +123,7 @@ ds %>%
   geom_point() +
   scale_colour_brewer(palette="Set2")
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE)
+system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 ########################################################################
 # Identify structure in the data from a scatter plot.
@@ -140,7 +140,7 @@ ds %>%
   geom_point(shape=".") +
   geom_smooth(method="gam", formula=y~s(x, bs="cs"))
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE)
+system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 ########################################################################
 # A faceted plot of scatter plots.
@@ -157,7 +157,7 @@ ds %>%
   facet_wrap(~location) +
   theme(axis.text.x=element_text(angle=45, hjust=1))
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE)
+system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 ########################################################################
 # Suggest next step.

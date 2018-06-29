@@ -8,6 +8,7 @@ APP=mlmodels
 VER=1.0.0
 
 DESCRIPTIONS = 					\
+	barchart-r/DESCRIPTION.yaml		\
 	clothes-recommender-py/DESCRIPTION.yaml \
 	iris-r/DESCRIPTION.yaml 		\
 	movie-recommender-r/DESCRIPTION.yaml	\

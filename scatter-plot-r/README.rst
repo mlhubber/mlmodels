@@ -13,6 +13,5 @@ The **print** command displays the code used.
 Run the **score** command to generate a scatter plot on the first two
 columns of a supplied CSV dataset.
 
-Visit the `github
-repository<https://github.com/mlhubber/mlmodels/tree/master/scatter-plots-r>`_
-for the sample code.
+For the sample code visit the github repository at:
+`<https://github.com/mlhubber/mlmodels/tree/master/scatter-plot-r>`_
