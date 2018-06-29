@@ -1,7 +1,7 @@
---- # Dogs Cats R
+--- # Dogs versus Cats R
 meta:
   name        : dogs-cats-r
-  description : Dogs and Cats image classification using keras package
+  description : Dogs versus Cats image classification using keras package
   keywords    : r, computer vision, image classification
   language    : Rscript
   modeller    : CNN
@@ -11,7 +11,7 @@ meta:
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, keras, magrittr, dplyr, caret, e1017
   filename     : pool/main/d/dogs-cats-r/dogs-cats-r_1.0.1.mlm
-  date         : 2018-06-21 22:35:19
+  date         : 2018-06-29 11:36:10
 commands:
   print:
     script      : print.R
