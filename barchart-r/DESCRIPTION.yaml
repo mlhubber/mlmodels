@@ -7,7 +7,7 @@ meta:
   title        : Demostrate the concept of barcharts.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/b/barchart-r/barchart-r_1.0.0.mlm
-  date         : 2018-06-29 22:04:29
+  date         : 2018-06-30 06:52:50
 commands:
   demo:
     script : demo.R

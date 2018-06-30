@@ -1,36 +1,41 @@
-# Demonstrate a series of bar charts.
-
 ########################################################################
+# Introduce the concept of bar charts through MLHub
+#
+# Copyright 2018 Graham.Williams@togaware.com
+
+#-----------------------------------------------------------------------
 # Load required packages from local library into the R session.
+#-----------------------------------------------------------------------
 
 suppressMessages(
 {
-library(magrittr)
-library(rattle)
-library(rattle.data)
-library(ggplot2)
-library(dplyr)
-library(randomForest)
+library(magrittr)     # Data pipelines: %>% %<>% %T>% equals().
+library(rattle)       # Support: normVarNames(). 
+library(rattle.data)  # Datasets: weatherAUS. 
+library(ggplot2)      # Visualise data.
+library(dplyr)        # Wrangling: tbl_df(), group_by(), print().
+library(randomForest) # Model: randomForest() na.roughfix() for missing data.
 library(RColorBrewer) # Choose different colors.
 library(scales)       # Include commas in numbers.
 library(stringi)      # String concat operator %s+%.
 })
 
-########################################################################
-# Identify the weatherAUS dataset as the template dataset now.
-
-cat("\n===================================",
-    "\nBar Charts from the Weather Dataset",
-    "\n===================================\n\n")
+cat("\n=====================================",
+    "\nIntroducing Bar Charts with R ggplot2",
+    "\n=====================================\n\n")
 
 cat("The Australian weather dataset from the Rattle package is used",
     "to illustrate bar charts.\n\n")
 
+cat("These examples come from the book, Essentials of Data Science, by Graham Williams.\n")
+cat("Used with permission. Visit https://essentials.togaware.com\n\n")
+
 cat("Press the <Enter> key after each message to display the referenced plot.\n")
 cat("Close the graphic window to continue on to the next plot.\n\n")
 
-########################################################################
-# Prepare the dataset.
+#-----------------------------------------------------------------------
+# Prepare the Weather dataset.
+#-----------------------------------------------------------------------
 
 cat("A bar chart showing frequency of wind direction in the dataset: ")
 invisible(readChar("stdin", 1))
@@ -52,8 +57,9 @@ vars   <- setdiff(vars, ignore)
 
 ds[vars] %<>% na.roughfix()
 
-########################################################################
+#-----------------------------------------------------------------------
 # A simple bar chart.
+#-----------------------------------------------------------------------
 
 fname <- "weather_bar_basic.pdf"
 pdf(file=fname, width=8)
@@ -63,8 +69,9 @@ ds %>%
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
-########################################################################
+#-----------------------------------------------------------------------
 # Incorporate stacked bars.
+#-----------------------------------------------------------------------
 
 cat("\nA stacked bar chart can show an extra dimension (variable): ")
 invisible(readChar("stdin", 1))
@@ -77,8 +84,9 @@ ds %>%
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
-########################################################################
+#-----------------------------------------------------------------------
 # Replace stacked bars with dodged bars.
+#-----------------------------------------------------------------------
 
 cat("\nDodged bars in the chart may be more informative: ")
 invisible(readChar("stdin", 1))
@@ -91,8 +99,9 @@ ds %>%
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
-########################################################################
+#-----------------------------------------------------------------------
 # A carefully crafted bar chart.
+#-----------------------------------------------------------------------
 
 cat("\nA much more carefully crafted bar chart: ")
 invisible(readChar("stdin", 1))
@@ -126,8 +135,9 @@ ds %>%
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
-########################################################################
+#-----------------------------------------------------------------------
 # Suggest next step.
+#-----------------------------------------------------------------------
 
 cat("\nYou may like to view the code for this demo with:\n",
     "\n  $ ml print scatter-plot-r\n\n")

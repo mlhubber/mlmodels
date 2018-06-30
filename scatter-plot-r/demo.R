@@ -1,26 +1,37 @@
-# Demonstrate a series of scatter plots.
-
 ########################################################################
+# Introduce the concept of scatter plots through ML Hub
+#
+# Copyright 2018 Graham.Williams@togaware.com
+
+#-----------------------------------------------------------------------
 # Load required packages from local library into the R session.
+#-----------------------------------------------------------------------
 
 suppressMessages(
 {
-library(magrittr)
-library(rattle)
-library(rattle.data)
-library(ggplot2)
-library(dplyr)
-library(randomForest)
+library(magrittr)     # Data pipelines: %>% %<>% %T>% equals().
+library(rattle)       # Support: normVarNames(). 
+library(rattle.data)  # Datasets: weatherAUS. 
+library(ggplot2)      # Visualise data.
+library(dplyr)        # Wrangling: tbl_df(), group_by(), print().
+library(randomForest) # Model: randomForest() na.roughfix() for missing data.
 })
 
-cat("\n=================\nPlot Iris Dataset\n=================\n\n")
-cat("The iris dataset can be used to explore scatter plots and their different options.\n\n")
+cat("\n========================================",
+    "\nIntroducing Scatter Plots with R ggplot2",
+    "\n========================================\n\n")
+
+cat("The iris dataset is used to introduce scatter plots.\n\n")
+
+cat("These examples come from the book, Essentials of Data Science, by Graham Williams.\n")
+cat("Used with permission. Visit https://essentials.togaware.com\n\n")
 
 cat("Press the <Enter> key after each message to progress through each plot.\n")
 cat("Close the graphic window to continue on to the next plot.\n\n")
 
-########################################################################
+#-----------------------------------------------------------------------
 # Identify the data source and refence using template variables.
+#-----------------------------------------------------------------------
 
 dsname    <- "iris"
 ds        <- get(dsname)
@@ -39,8 +50,9 @@ ds %>%
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
-########################################################################
+#-----------------------------------------------------------------------
 # Add a line to the scatter plot.
+#-----------------------------------------------------------------------
 
 cat("\nNext we can add a line to the plot though it is rather jagged: ")
 invisible(readChar("stdin", 1))
@@ -54,8 +66,9 @@ ds %>%
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
-########################################################################
+#-----------------------------------------------------------------------
 # Add a smoothed fitted line to the scatter plot.
+#-----------------------------------------------------------------------
 
 cat("\nThe line can be smoothed using a statistical fit function: ")
 invisible(readChar("stdin", 1))
@@ -69,8 +82,9 @@ ds %>%
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
-########################################################################
+#-----------------------------------------------------------------------
 # Colour the dots on the scatter plot.
+#-----------------------------------------------------------------------
 
 cat("\nWe can choose to colour the points on the plot accroding to the species: ")
 invisible(readChar("stdin", 1))
@@ -83,14 +97,16 @@ ds %>%
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
-########################################################################
+#-----------------------------------------------------------------------
 # Identify the weatherAUS dataset as the template dataset now.
+#-----------------------------------------------------------------------
 
 cat("\n====================\nPlot Weather Dataset\n====================\n\n")
 cat("The Australian weather dataset from the Rattle package provides more data to explore.\n")
 
-########################################################################
+#-----------------------------------------------------------------------
 # Prepare the dataset.
+#-----------------------------------------------------------------------
 
 cat("\nA scatter plot can get clutterd with many points so this is a sample of 1000: ")
 invisible(readChar("stdin", 1))
@@ -112,8 +128,9 @@ vars   <- setdiff(vars, ignore)
 
 ds[vars] %<>% na.roughfix()
 
-########################################################################
+#-----------------------------------------------------------------------
 # A simple scatter plot of the data.
+#-----------------------------------------------------------------------
 
 fname <- "weather_scatter_colour.pdf"
 pdf(file=fname, width=8)
@@ -125,8 +142,9 @@ ds %>%
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
-########################################################################
+#-----------------------------------------------------------------------
 # Identify structure in the data from a scatter plot.
+#-----------------------------------------------------------------------
 
 cat("\nA scatter plot can clearly convey some kinds of structure",
     "(e.g., seasonality) in the data: ")
@@ -142,8 +160,9 @@ ds %>%
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
-########################################################################
+#-----------------------------------------------------------------------
 # A faceted plot of scatter plots.
+#-----------------------------------------------------------------------
 
 cat("\nNext we present multiple scatter plots for different regions as a faceted plot: ")
 invisible(readChar("stdin", 1))
@@ -159,8 +178,9 @@ ds %>%
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
-########################################################################
+#-----------------------------------------------------------------------
 # Suggest next step.
+#-----------------------------------------------------------------------
 
 cat("\nYou may like to view the code for this demo with:\n",
     "\n  $ ml print scatter-plot-r\n\n")
