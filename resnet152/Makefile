@@ -17,4 +17,4 @@ MODEL_FILES = 			\
 include ../mlhub.mk
 include ../git.mk
 include ../pandoc.mk
-
+include ../clean.mk

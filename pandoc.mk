@@ -68,6 +68,9 @@ help::
 
 %.html: %.rst
 	pandoc $(PANDOC_HTML_OPTIONS) -o $@ $<
+ifneq ("$(HTML_MSG)","")
+	sed -i -e "s|</body>|$(HTML_MSG)\n</body>|g" $@
+endif
 
 %.html: %.md
 	pandoc $(PANDOC_HTML_OPTIONS) -o $@ $<
