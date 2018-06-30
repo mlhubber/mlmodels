@@ -5,8 +5,9 @@ Using Australian Ports Dataset to Visualise Data
 This is a demonstration "model" showing the concepts of visualising
 data in order to better understand our data.
 
-The examples come from chapter 5 the book Essentials of Data Science,
-by Graham Williams `<https://bit.ly/essentials_data_science>`_.
+The examples come from chapter 5 of the book Essentials of Data
+Science, by Graham Williams
+`<https://bit.ly/essentials_data_science>`_.
 
 The data used comes from
 `<https://essentials.togaware.com/ports.xlsx>`_.
