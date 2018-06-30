@@ -17,6 +17,7 @@ MODEL_FILES = 			\
 	display.R		\
 	score.R			\
 	configure.R		\
+	showImg.js              \
 	dogs-cats-vgg16-history.RData	\
         history.png             \
 	README.txt		\
