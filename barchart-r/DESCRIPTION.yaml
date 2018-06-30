@@ -2,12 +2,12 @@
 meta:
   name         : barchart-r
   version      : 1.0.0
-  keywords     : r, graphics, visualisation, plot, car chart, basics
+  keywords     : r, graphics, visualisation, plot, bar chart, basics
   license      : gpl3
   title        : Demostrate the concept of barcharts.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/b/barchart-r/barchart-r_1.0.0.mlm
-  date         : 2018-06-30 06:52:50
+  date         : 2018-06-30 17:02:38
 commands:
   demo:
     script : demo.R

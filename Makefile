@@ -31,6 +31,8 @@ Local targets:
   localhub	Generate and install Packages.yaml on localhost.
   mlhub		Generate and install Packages.yaml on mlhub.ai.
   Packages.yaml Generate meta-data file for the repository.
+  allclean	Clean all package subfolders.
+  all		Update all packages and upload to mlhub.
 
 endef
 export HELP
@@ -50,6 +52,18 @@ endif
 ifneq ("$(wildcard $(INC_CLEAN))","")
   include $(INC_CLEAN)
 endif
+
+.PHONY: all
+all:
+	for p in $(DESCRIPTIONS:/DESCRIPTION.yaml=); do \
+	  (cd $$p; make mlhub); \
+	done
+
+allclean: realclean
+	for p in $(DESCRIPTIONS:/DESCRIPTION.yaml=); do \
+	  (cd $$p; make realclean); \
+	done
+
 
 ########################################################################
 # PACKAGES

@@ -47,6 +47,8 @@ MODEL_DATE =     \ \ date         : $(shell date +"%F %T")
 
 README_HTML = README.html
 
+HTML_MSG = <p>This package is part of the <a href="https://mlhub.ai">Machine Learning Hub</a> repository.</p>
+
 test: demo.R print.R
 	Rscript demo.R
 	Rscript print.R > TMP.R
