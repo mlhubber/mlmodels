@@ -12,6 +12,7 @@ Local targets:
   dist          Build the model zip archive as .mlm file
   localhub      Update model to localhost 
   mlhub		Update model to https://mlhub.ai/
+  test		Test the demo and print scripts.
 
 endef
 export MLHUB_HELP
@@ -46,13 +47,10 @@ MODEL_DATE =     \ \ date         : $(shell date +"%F %T")
 
 README_HTML = README.html
 
-test:
-	@echo $(MODEL)
-	@echo $(MODEL_PATH)
-	@echo $(MODEL_VERSION)
-	@echo $(MODEL_FILENAME)
-	@echo $(MODEL_DATE)
-
+test: demo.R print.R
+	Rscript demo.R
+	Rscript print.R > TMP.R
+	Rscript TMP.R
 
 # Don't create YAML file, just a temporary file???
 
@@ -90,4 +88,4 @@ $(MODEL_YAML): $(MODEL_YML)
 
 .PHONY: clean
 clean::
-	rm -f $(MODEL_MLM) README.txt README.html
+	rm -f $(MODEL_MLM) README.txt README.html TMP.R
