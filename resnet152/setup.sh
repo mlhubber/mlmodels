@@ -3,6 +3,9 @@
 # Setup the model package. This is not required for the user
 # deployment but included in the model package for reference. It can
 # be run multiple times without issue.
+#
+# We download the required pre-built model files but do not include
+# them in github due tho their size and redundancy.
 
 ########################################################################
 # Resources
