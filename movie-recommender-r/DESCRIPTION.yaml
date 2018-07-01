@@ -10,7 +10,7 @@ meta:
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, SAR, caret, plyr, dplyr
   filename     : pool/main/m/movie-recommender-r/movie-recommender-r_1.0.10.mlm
-  date         : 2018-06-30 17:03:07
+  date         : 2018-06-30 21:50:07
 commands:
   print:
     script      : print.R
