@@ -1,4 +1,4 @@
-packages <- c("magrittr", "dplyr", "caret", "e1071")
+packages <- c("magrittr", "dplyr", "caret", "e1071", "shiny", "shinyjs", "V8")
 install <- packages[!(packages %in% installed.packages()[, "Package"])]
 if (length(install)) install.packages(install, lib=Sys.getenv("R_LIBS_USER"))
 
