@@ -7,8 +7,6 @@
 # List the files to be included in the .mlm package.
 
 MODEL_FILES = 			\
-	dogs-cats-vgg16-model.hdf5	\
-	dogs-cats-vgg16-model-weights.hdf5 \
 	configure.sh		\
 	data.R                  \
         train.R			\
@@ -19,6 +17,8 @@ MODEL_FILES = 			\
 	configure.R		\
 	showImg.js              \
 	dogs-cats-vgg16-history.RData	\
+	dogs-cats-vgg16-model.hdf5	\
+	dogs-cats-vgg16-model-weights.hdf5 \
         history.png             \
 	README.txt		\
 	DESCRIPTION.yaml
