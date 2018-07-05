@@ -3,6 +3,7 @@ meta:
   name        : movie-recommender-r
   description : Movie recommendation using SAR package
   language    : Rscript
+  keywords    : recommendation, R, SAR, movie recommendation
   modeller    : SAR
   type        : SAR local count
   version     : 1.0.10
