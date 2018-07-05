@@ -178,8 +178,7 @@ invisible(readChar("stdin", 1))
 
 # Build the main faceted plot.
 
-p1 <- 
-  ds[20:36, 1:13] %>%
+ds[20:36, 1:13] %>%
   set_names(c("port", ds[19, 2:13])) %>% 
   gather(period, calls, -port) %>%
   mutate(calls=as.integer(calls)) %>%
@@ -188,12 +187,12 @@ p1 <-
   facet_wrap(~port) +
   labs(x="", y="Number of Calls") +
   theme(axis.text.x=element_text(angle=90, hjust=1, size=8)) +
-  scale_y_continuous(labels=comma)
+  scale_y_continuous(labels=comma) ->
+p1
 
 # Generate the second plot.
 
-p2 <- 
-  ds[20:36, 1:13] %>%
+ds[20:36, 1:13] %>%
   set_names(c("port", ds[19, 2:13])) %>%
   select(port, 2, 13) %>%
   set_names(c('port', 'start', 'end')) %>%
@@ -206,19 +205,20 @@ p2 <-
   geom_bar(stat="identity", 
            position="identity", 
            fill="#6AADD6") +
-  theme(axis.text.x=element_text(angle=45, hjust=1, size=8), 
+  theme(axis.text.x=element_text(angle=45, hjust=1, size=6), 
         axis.text.y=element_text(size=8), 
         axis.title=element_text(size=10),
         plot.title=element_text(size=8),
         plot.background = element_blank()) +
   labs(x="", 
        y="Per cent",
-       title="Average Annual Growth, 2001-02 to 2012-13")
+       title="Average Annual Growth, 2001-02 to 2012-13") ->
+p2
 
 fname <- "ports_faceted.pdf"
 pdf(file=fname, height=6, width=8)
 print(p1)
-print(p2, vp=viewport(x=0.72, y=0.13, height=0.28, width=0.54))
+print(p2, vp=viewport(x=0.72, y=0.11, height=0.28, width=0.54))
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
