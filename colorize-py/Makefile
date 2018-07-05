@@ -7,7 +7,12 @@
 # List the files to be included in the .mlm package.
 
 MODEL_FILES = 			\
+	configure.sh		\
 	demo.py			\
+	display.py		\
+	utils.py		\
+	images			\
+	data/pts_in_hull.npy	\
 	README.txt		\
 	DESCRIPTION.yaml
 
