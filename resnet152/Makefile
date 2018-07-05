@@ -18,3 +18,6 @@ include ../mlhub.mk
 include ../git.mk
 include ../pandoc.mk
 include ../clean.mk
+
+realclean::
+	rm README.txt README.html
