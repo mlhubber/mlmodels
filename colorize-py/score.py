@@ -5,7 +5,7 @@ import cv2 as cv
 import glob
 import sys
 
-#from utils import predict
+from utils import predict
 
 if __name__ == '__main__':
     image_folder = sys.argv[1]
@@ -17,11 +17,17 @@ if __name__ == '__main__':
         print("Colorize " + image)
         gray = cv.imread(image, 0)
         out = predict(gray)
-        cv.imwrite(image.replace(".png", "_color.png"), out)
+        color_image = image.replace(".png", "_color.png")
+        cv.imwrite(color_image, out)
+        print("         " + color_image)
 
 msg = """
 The individual colorized images can be displayed from
 the folder '{}'
-""".format(image_folder)
+
+On linux you might try
+
+  $ eom {}
+""".format(image_folder, image_folder)
 print(msg)
 
