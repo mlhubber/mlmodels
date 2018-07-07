@@ -10,6 +10,7 @@ MODEL_FILES = 			\
 	configure.sh		\
 	demo.py			\
 	display.py		\
+	score.py		\
 	utils.py		\
 	images			\
 	data/pts_in_hull.npy	\
