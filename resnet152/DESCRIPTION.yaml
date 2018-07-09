@@ -2,12 +2,12 @@
 meta:
   name         : resnet152
   version      : 1.0.1
-  keywords     : python3, computer vision, imagenet, resnet, dnn, prediction, image classification, classification
+  keywords     : image classification, python3, computer vision, imagenet, resnet, dnn, prediction, classification
   license      : gpl3
-  title        : Image classification using the resnet152 model.
+  title        : Image classification using resnet152.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/r/resnet152/resnet152_1.0.1.mlm
-  date         : 2018-06-21 15:45:20
+  date         : 2018-07-07 10:46:03
 commands:
   demo:
     script : demo.py

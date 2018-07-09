@@ -8,7 +8,7 @@ meta:
   title        : Demonstrate the concept of photo colorization.
   author       : Yang Liu
   filename     : pool/main/c/colorize-py/colorize-py_1.0.1.mlm
-  date         : 2018-07-07 20:36:00
+  date         : 2018-07-07 21:16:23
 commands:
   demo:
     script : demo.py

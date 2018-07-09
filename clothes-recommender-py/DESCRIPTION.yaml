@@ -10,7 +10,7 @@ meta:
   section     : ecommerce, fashion
   maintainer  : Fang.Zhou@microsoft.com
   filename     : pool/main/c/clothes-recommender-py/clothes-recommender-py_1.0.15.mlm
-  date         : 2018-06-30 21:48:43
+  date         : 2018-07-07 10:45:22
 commands:
   print:
     script      : print.py
