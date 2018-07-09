@@ -26,6 +26,7 @@ body
     max-width: 50em; 
     font-family: Verdana, sans-serif;
     font-size: 100%;
+    margin: auto;
 }
 h1
 {
