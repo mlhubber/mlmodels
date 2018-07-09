@@ -10,7 +10,7 @@ meta:
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, keras, magrittr, dplyr, caret, e1017, shiny, shinyjs, V8
   filename     : pool/main/d/dogs-cats-r/dogs-cats-r_1.0.2.mlm
-  date         : 2018-07-07 10:45:34
+  date         : 2018-07-09 17:14:43
 commands:
   print:
     script      : print.R
