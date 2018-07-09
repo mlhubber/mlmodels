@@ -8,7 +8,6 @@
 
 MODEL_FILES = 		\
 	iris_model.RData\
-	configure.sh 	\
 	configure.R 	\
 	demo.R 		\
 	score.R 	\

@@ -9,7 +9,6 @@
 MODEL_FILES = 			\
 	demo.R 			\
 	print.R			\
-	configure.sh		\
 	configure.R		\
 	README.txt		\
 	DESCRIPTION.yaml

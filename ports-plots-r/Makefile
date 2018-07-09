@@ -10,7 +10,6 @@ MODEL_FILES = 			\
 	demo.R 			\
 	print.R			\
 	ports.xlsx		\
-	configure.sh		\
 	configure.R		\
 	README.txt		\
 	DESCRIPTION.yaml
