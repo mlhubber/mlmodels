@@ -1,17 +1,10 @@
 # load packages
 
-library(httr)
-set_config(config(ssl_verifypeer=0L))
-
-#library(tfruns)
-#library(reticulate)
-#use_virtualenv("r-tensorflow", required = TRUE)
-
 library(keras)
 
 # data directory
 
-base_dir <- "data/cats_and_dogs_small"
+base_dir <- "~/.mlhub/dogs-cats-r-r/data/cats_and_dogs_small"
 train_dir <- file.path(base_dir, "train")
 validation_dir <- file.path(base_dir, "validation")
 
