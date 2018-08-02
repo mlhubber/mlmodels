@@ -1,3 +1,9 @@
+# Model demonstrator. The aim is to demonstrate "something" about the
+# model. In this case it is simply to run the model and evaluate its
+# performance on a small dataset. For other models this might be
+# limited to demonstrating the model in action on some actual data and
+# impress the user!
+
 # Load model, predict on a small dataset, present evaluation.
 
 suppressMessages(
@@ -62,7 +68,7 @@ cat(sprintf("Average class error: %.1f%%\n", mean(per[,"Error"], na.rm=TRUE)))
 cat("\nNotice the model is not particularly accurate but could be useful still",
     "\ngiving some indication of the prospect of it raining tomorrow.\n")
 
-# Suggest next step.
+# It is always polite to suggest the next step for the user.
 
 cat("\nYou may like to view a summary of the model with:\n",
     "\n  $ ml print rain-tomorrow\n\n")
