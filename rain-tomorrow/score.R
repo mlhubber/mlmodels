@@ -1,6 +1,15 @@
-# SCORE
+# The score command in general will allow the user to score their own
+# data. For some models, this might mean they can apply a colourising
+# model to their own black and white photos, for example.
 #
-# Load model, interactively request data, predict.
+# For this mode we will interactively request some data and report the
+# prediction of rain tomorrow.
+#
+# TODO An extension to this command will allow a CSV file containing
+# observations to be scored, returning the prediciton of rain for each
+# observation.
+
+# Overall: Load model, interactively request data, predict.
 
 suppressMessages(
 {
@@ -31,7 +40,7 @@ cat("\n===========================================\n",
     "\n===========================================\n\n")
 
 # The following code based on rpart::printcp()
-# Copyright (c) Brian Ripley
+# Copyright (c) Brian Ripley, GPLv2 License.
 
 frame <- model$frame
 leaves <- frame$var == "<leaf>"
