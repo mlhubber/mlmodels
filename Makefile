@@ -8,16 +8,17 @@ APP=mlmodels
 VER=1.0.0
 
 DESCRIPTIONS = 					\
-	barchart-r/DESCRIPTION.yaml		\
-	clothes-recommender-py/DESCRIPTION.yaml \
-	colorize-py/DESCRIPTION.yaml 		\
-	dogs-cats-r/DESCRIPTION.yaml 		\
-	iris-r/DESCRIPTION.yaml 		\
-	movie-recommender-r/DESCRIPTION.yaml	\
-	ports-plots-r/DESCRIPTION.yaml		\
-	rain-tomorrow/DESCRIPTION.yaml		\
-	resnet152/DESCRIPTION.yaml		\
-	scatter-plot-r/DESCRIPTION.yaml		\
+	barchart/DESCRIPTION.yaml		\
+
+#	clothes-recommender-py/DESCRIPTION.yaml \
+#	colorize-py/DESCRIPTION.yaml 		\
+#	dogs-cats-r/DESCRIPTION.yaml 		\
+#	iris-r/DESCRIPTION.yaml 		\
+#	movie-recommender-r/DESCRIPTION.yaml	\
+#	ports-plots-r/DESCRIPTION.yaml		\
+#	rain-tomorrow/DESCRIPTION.yaml		\
+#	resnet152/DESCRIPTION.yaml		\
+#	scatter-plot-r/DESCRIPTION.yaml		\
 
 INC_BASE    = .
 INC_PANDOC  = $(INC_BASE)/pandoc.mk
@@ -71,10 +72,13 @@ allclean: realclean
 # PACKAGES
 ########################################################################
 
-REPO_HOST = mlhub.ai
-BASE_PATH = /var/www/html
+#REPO_HOST = mlhub.ai
+REPO_HOST = mlhub.togaware.com
+#BASE_PATH = /var/www/html
+BASE_PATH = webapps/mlhub2
 REPO_PATH = pool/main
-REPO_USER = root
+#REPO_USER = root
+REPO_USER = gjw
 REPO_SSH  = $(REPO_USER)@$(REPO_HOST)
 
 .PHONY: localhub
