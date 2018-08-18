@@ -24,10 +24,13 @@ help::
 # REPOSITORY
 ########################################################################
 
-REPO_HOST = mlhub.ai
-BASE_PATH = /var/www/html
+#REPO_HOST = mlhub.ai
+REPO_HOST = mlhub.togaware.com
+#BASE_PATH = /var/www/html
+BASE_PATH = webapps/mlhub2
 REPO_PATH = pool/main
-REPO_USER = root
+#REPO_USER = root
+REPO_USER = gjw
 REPO_URL  = https://$(REPO_HOST)$(BASE_PATH)$(REPO_PATH)
 REPO_SSH  = $(REPO_USER)@$(REPO_HOST)
 
