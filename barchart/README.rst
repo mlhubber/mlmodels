@@ -9,6 +9,6 @@ approach to understanding the narrative the data is trying to tell us.
 
 The examples in this model come from the Essentials of Data
 Science by Graham Williams
-`<https://bit.ly/essentials_data_science>`_. Ffurther support
+`<https://bit.ly/essentials_data_science>`_. Further support
 material is also available from `<https://essentials.togaware.com/>`_.
 
