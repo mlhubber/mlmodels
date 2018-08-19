@@ -9,6 +9,7 @@ VER=1.0.0
 
 DESCRIPTIONS = 					\
 	barchart/DESCRIPTION.yaml		\
+	rain-tomorrow/DESCRIPTION.yaml		\
 
 #	clothes-recommender-py/DESCRIPTION.yaml \
 #	colorize-py/DESCRIPTION.yaml 		\
@@ -16,7 +17,6 @@ DESCRIPTIONS = 					\
 #	iris-r/DESCRIPTION.yaml 		\
 #	movie-recommender-r/DESCRIPTION.yaml	\
 #	ports-plots-r/DESCRIPTION.yaml		\
-#	rain-tomorrow/DESCRIPTION.yaml		\
 #	resnet152/DESCRIPTION.yaml		\
 #	scatter-plot-r/DESCRIPTION.yaml		\
 
