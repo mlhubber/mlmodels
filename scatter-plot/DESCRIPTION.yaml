@@ -1,0 +1,20 @@
+--- # SCATTER PLOT R
+meta:
+  name         : scatter-plot-r
+  version      : 1.0.0
+  keywords     : r, graphics, visualisation, plot, scatter plot, basics
+  license      : gpl3
+  title        : Demostrate the concept of scatter plots.
+  author       : Graham.Williams@togaware.com
+  filename     : pool/main/s/scatter-plot-r/scatter-plot-r_1.0.0.mlm
+  date         : 2018-07-09 17:16:14
+commands:
+  demo:
+    script : demo.R
+    title  : Step through alternative options.
+  print:
+    script : print.R
+    title  : Display the code.
+  score:
+    script : score.R
+    title  : Plot two columns from supplied CSV file.
