@@ -5,12 +5,10 @@ suppressMessages(
   library(magrittr)
   library(dplyr)
   library(rpart)
-  source("rattle.R")
+  library(rattle)
 })
 
 set.seed(42)
-
-load("weatherAUS.RData")
 
 dsname <- "weatherAUS"
 ds     <- get(dsname)

@@ -1,20 +1,32 @@
 # Ubuntu system dependencies for the pre-built model. We choose to
 # install user local packages rather than OS supplied packages to
-# avoid the need for sys admin access from within mlhub. Nontheless we
-# assume R is operating system installed.
+# avoid the need for sys admin access from within mlhub. R is
+# often operating system installed.
 
 # Identify the required packages.
 
-packages <- c("rpart", "magrittr")
+packages <- c("rpart", "magrittr", "dplyr", "tidyr", "rattle")
 
 # Determine which need to be installed.
 
 install  <- packages[!(packages %in% installed.packages()[,"Package"])]
 
+# Identify where they will be installed - the user's local R library.
+
+lib <- Sys.getenv("R_LIBS_USER")
+
 # Ensure the user's local R library exists.
 
-dir.create(Sys.getenv("R_LIBS_USER"), showWarnings=FALSE, recursive=TRUE)
+dir.create(lib, showWarnings=FALSE, recursive=TRUE)
 
-# Install the packages local to the user.
+# Install the packages into the local R library.
 
-if (length(install)) install.packages(install, lib=Sys.getenv("R_LIBS_USER"))
+if (length(install))
+{
+  cat(sprintf("\nInstalling '%s' into '%s'...", paste(install, collapse="', '"), lib))
+  install.packages(install, lib=lib)
+} else
+{
+  cat("\nNo additional R packages need to be installed.")
+}
+cat("\n\n")

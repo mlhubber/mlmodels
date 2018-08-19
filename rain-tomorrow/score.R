@@ -17,10 +17,8 @@ suppressMessages(
   library(magrittr)
   library(dplyr)
   library(tidyr)
-  source("rattle.R")
+  library(rattle)
 })
-
-load("weatherAUS.RData")
 
 dsname <- "weatherAUS"
 ds     <- get(dsname)
