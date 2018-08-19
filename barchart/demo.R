@@ -102,7 +102,7 @@ system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 # A carefully crafted bar chart.
 #-----------------------------------------------------------------------
 
-cat("\nA much more carefully crafted bar chart: ")
+cat("\nA more carefully crafted bar chart: ")
 invisible(readChar("stdin", 1))
 
 blues2 <- brewer.pal(4, "Paired")[1:2]
