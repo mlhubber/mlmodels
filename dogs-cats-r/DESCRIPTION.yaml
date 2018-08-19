@@ -5,12 +5,12 @@ meta:
   language    : Rscript
   modeller    : CNN
   type        : Vgg16
-  version     : 1.0.2
+  version     : 1.0.3
   section     : image
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, tfruns, reticulate, keras, magrittr, dplyr, caret, e1017, shiny, shinyjs, V8, devtools, httr, python-tensorflow, python-keras, python-Image
-  filename     : pool/main/d/dogs-cats-r/dogs-cats-r_1.0.2.mlm
-  date         : 2018-06-30 22:35:19
+  filename     : pool/main/d/dogs-cats-r/dogs-cats-r_1.0.3.mlm
+  date         : 2018-08-01 09:46:55
 commands:
   print:
     script      : print.R
