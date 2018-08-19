@@ -27,7 +27,7 @@ $(MODEL).RData: train.R
 	Rscript $<
 
 clean::
-	rm -rf README.txt output
+	rm -rf README.txt dtree.pdf varimp.pdf
 
 realclean:: clean
 	rm -rf rain-tomorrow_*.mlm
