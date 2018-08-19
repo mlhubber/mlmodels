@@ -14,8 +14,6 @@ MODEL_FILES = 			\
 	print.R			\
 	display.R		\
 	score.R			\
-	rattle.R		\
-	weatherAUS.RData	\
 	README.txt		\
 	DESCRIPTION.yaml
 
