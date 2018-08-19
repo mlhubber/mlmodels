@@ -10,8 +10,7 @@
 suppressMessages(
 {
 library(magrittr)     # Data pipelines: %>% %<>% %T>% equals().
-library(rattle)       # Support: normVarNames(). 
-library(rattle.data)  # Datasets: weatherAUS. 
+library(rattle)       # Support: normVarNames(), weatherAUS. 
 library(ggplot2)      # Visualise data.
 library(dplyr)        # Wrangling: tbl_df(), group_by(), print().
 library(randomForest) # Model: randomForest() na.roughfix() for missing data.
