@@ -10,4 +10,4 @@ if (length(install))
 {
   cat("\nNo additional R packages need to be installed.")
 }
-cat("\n")
+cat("\n\n")
