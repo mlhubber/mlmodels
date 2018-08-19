@@ -8,11 +8,8 @@ meta:
   title        : Demostrate the concept of barcharts.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/b/barchart/barchart_1.0.0.mlm
-  date         : 2018-08-18 21:36:32
+  date         : 2018-08-18 21:56:09
 commands:
-  demo:
-    title  : Step through alternative options for barcharts
-  print:
-    title  : Display the code.
-  score:
-    title  : Plot data from a user supplied CSV file.
+  demo  : Step through alternative options for barcharts.
+  print : Display the code.
+  score : TODO Plot data from a user supplied CSV file.
