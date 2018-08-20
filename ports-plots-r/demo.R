@@ -9,18 +9,18 @@
 
 suppressMessages(
 {
-library(directlabels) # Dodging labels for ggplot2.
-library(dplyr)        # Data wrangling.
-library(ggplot2)      # Visualise data.
-library(grid)         # Layout of plots: viewport().
-library(magrittr)     # Use pipelines for data processing.
-library(rattle)       # normVarNames().
-library(readr)        # Modern data reader.
-library(readxl)       # Read Excel spreadsheets.
-library(scales)       # Include commas in numbers.
-library(stringi)      # The string concat operator %s+%.
-library(stringr)      # String manpiulation.
-library(tidyr)        # Tidy the dataset.
+  library(directlabels) # Dodging labels for ggplot2.
+  library(dplyr)        # Data wrangling.
+  library(ggplot2)      # Visualise data.
+  library(grid)         # Layout of plots: viewport().
+  library(magrittr)     # Use pipelines for data processing.
+  library(rattle)       # normVarNames().
+  library(readr)        # Modern data reader.
+  library(readxl)       # Read Excel spreadsheets.
+  library(scales)       # Include commas in numbers.
+  library(stringi)      # The string concat operator %s+%.
+  library(stringr)      # String manpiulation.
+  library(tidyr)        # Tidy the dataset.
 })
 
 cat("\n========================================",
@@ -356,4 +356,4 @@ system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 #-----------------------------------------------------------------------
 
 cat("\nYou may like to view the code for this demo with:\n",
-    "\n  $ ml print scatter-plot-r\n\n")
+    "\n  $ ml print ports-plots\n\n")
