@@ -23,7 +23,9 @@ The **demo** command applies the pre-built model to a test dataset with
 known values of the labels and presents an evaluation of the
 performance of the model in terms of loss, accuracy, and confusion matrix. 
 Errors in the predictions are highlighted in the output. The model using 
-feature extraction with a pretrained network results in an accuracy of 90%.
+feature extraction with a pretrained network results in an accuracy of 90% 
+on the test set from Kaggle. Here, we replace the test set with 50 samples 
+of each class from PEXELS for demonstraction purpose to avoid licensing issue.
 
 The **print** command displays a textual summary of the model and its
 model parameters. A textual presentation is not always easy to read
