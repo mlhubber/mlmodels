@@ -1,31 +1,19 @@
---- # Dogs Cats R
+--- # Dogs Cats
 meta:
-  name        : dogs-cats-r
+  name        : dogs-cats
   description : Dogs and Cats image classification using keras package
-  language    : Rscript
+  languages    : R
   modeller    : CNN
   type        : Vgg16
-  version     : 1.0.3
+  version     : 1.1.0
   section     : image
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, tfruns, reticulate, keras, magrittr, dplyr, caret, e1017, shiny, shinyjs, V8, devtools, httr, python-tensorflow, python-keras, python-Image
-  filename     : pool/main/d/dogs-cats-r/dogs-cats-r_1.0.3.mlm
-  date         : 2018-08-01 09:46:55
+  filename     : pool/main/d/dogs-cats/dogs-cats_1.1.0.mlm
+  date         : 2018-08-21 19:38:31
 commands:
-  print:
-    script      : print.R
-    description : print a textual summary of the model
-  display:
-    script      : display.R
-    description : display a graphical representaiton of the model
-  demo:
-    script      : demo.R
-    description : apply the model to a sample dataset
-  score:
-    script      : score.R
-    required    : the directory of an image files containing dogs and cats
-    description : apply the model to a supplied dataset and show result via shiny
-  train:
-    script      : train.R
-    optional    : directories pointing to training set and validation set
-    description : build a new model on your own image data with training set and validation set provided
+  print : print a textual summary of the model
+  display : display a graphical representaiton of the model
+  demo : apply the model to a sample dataset
+  score : apply the model to a supplied dataset and show result via shiny
+  train : build a new model on your own image data with training set and validation set provided

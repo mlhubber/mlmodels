@@ -1,22 +1,17 @@
 --- # SIMPLE COLOURIZER
 meta:
-  name         : colorize-py
-  version      : 1.0.1
+  name         : colorize
+  version      : 1.1.0
   keywords     : python, graphics, colorize
+  languages    : py
   dependencies : numpy, tensorflow, keras, opencv
   license      : gpl3
   title        : Demonstrate the concept of photo colorization.
   author       : Yang Liu
-  filename     : pool/main/c/colorize-py/colorize-py_1.0.1.mlm
-  date         : 2018-07-09 17:14:30
+  filename     : pool/main/c/colorize/colorize_1.1.0.mlm
+  date         : 2018-08-21 19:40:05
 commands:
-  demo:
-    script : demo.py
-    title  : Colourize a sample image.
-  display:
-    script : display.py
-    title  : Display the colorized image.
-  score:
-    script : score.py
-    title  : Colorize a folder of user supplied images.
+  demo : Colourize a sample image.
+  display  : Display the colorized image.
+  score  : Colorize a folder of user supplied images.
 

@@ -1,32 +1,27 @@
---- # Iris R
+--- # Iris
 meta:
-  name        : iris-r
+  name        : iris
   title       : Classical iris plant species classifier.
   keywords    : r, iris, biology, decision tree, rpart, classification
-  language    : Rscript
+  languages   : R
   modeller    : rpart
   type        : decision tree
   version     : 1.1.0
   maintainer  : Graham Williams <Graham.Williams@microsoft.com>
   dependencies: rpart, magrittr, caret, rpart.plot, RColorBrewer
-  filename     : pool/main/i/iris-r/iris-r_1.1.0.mlm
-  date         : 2018-07-09 17:15:05
+  filename     : pool/main/i/iris/iris_1.1.0.mlm
+  date         : 2018-08-21 19:45:04
 commands:
   demo:
-    script      : demo.R
     description : apply the model to a sample dataset
   print:
-    script      : print.R
     description : print a textual summary of the model
   display:
-    script      : display.R
     description : display a graphical representaiton of the model
   score:
-    script      : score.R
     required    : the name of a CSV file containing a header and 4 numeric columns
     description : apply the model to a supplied dataset
   train:
-    script      : train.R
     optional    : a CSV file with columns including a Species column
     description : build a new model on your own data with a target column Species
 

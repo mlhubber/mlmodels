@@ -1,32 +1,27 @@
---- # Movie Recommender R
+--- # Movie Recommender
 meta:
-  name        : movie-recommender-r
+  name        : movie-recommender
   description : Movie recommendation using SAR package
-  language    : Rscript
+  languages   : R
   keywords    : recommendation, R, SAR, movie recommendation
   modeller    : SAR
   type        : SAR local count
-  version     : 1.0.10
+  version     : 1.1.0
   section     : ecommence, entertainment
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, SAR, caret, plyr, dplyr
-  filename     : pool/main/m/movie-recommender-r/movie-recommender-r_1.0.10.mlm
-  date         : 2018-07-09 17:15:17
+  filename     : pool/main/m/movie-recommender/movie-recommender_1.1.0.mlm
+  date         : 2018-08-21 19:46:18
 commands:
   print:
-    script      : print.R
     description : print a textual summary of the model
   display:
-    script      : display.R
     description : display a graphical representaiton of the model
   demo:
-    script      : demo.R
     description : apply the model to a sample dataset
   score:
-    script      : score.R
     required    : the name of a CSV file containing a header and 6 columns
     description : apply the model to a supplied dataset
   train:
-    script      : train.R
     optional    : a CSV file containing columns representing userid, itemid, rating, time, title, genres.
     description : build a new model on your own data with columns representing userid, itemid, rating, time, title, genres.

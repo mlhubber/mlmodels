@@ -1,27 +1,18 @@
 --- # Clothes Recommender Py
 meta:
-  name        : clothes-recommender-py
-  description : Clothes recommendation using CNN/SVM.
-  keywords    : python3, computer vision, recommendation, dnn
-  language    : python
-  dependencies: python3, cv2, metrics, calibration, cntk
-  modeller    : cnn & svm
-  version     : 1.0.15
-  section     : ecommerce, fashion
-  maintainer  : Fang.Zhou@microsoft.com
-  filename     : pool/main/c/clothes-recommender-py/clothes-recommender-py_1.0.15.mlm
-  date         : 2018-07-09 17:14:12
+  name         : clothes-recommender
+  description  : Clothes recommendation using CNN/SVM.
+  keywords     : computer vision, recommendation, dnn
+  languages    : py
+  dependencies : python3, cv2, metrics, calibration, cntk
+  modeller     : cnn & svm
+  version      : 1.1.0
+  section      : ecommerce, fashion
+  maintainer   : Fang.Zhou@microsoft.com
+  filename     : pool/main/c/clothes-recommender/clothes-recommender_1.1.0.mlm
+  date         : 2018-08-21 19:36:33
 commands:
-  print:
-    script      : print.py
-    description : visualize the structure of the model
-  demo:
-    script      : demo.py
-    description : apply the model to a sample image dataset
-  score:
-    script      : score.py
-    required    : a folder of images
-    description : apply the model to the supplied images
-  display:
-    script      : display.py
-    description : display the demo image recommendation
+  print : visualize the structure of the model
+  demo : apply the model to a sample image dataset
+  score : apply the model to the supplied images
+  display : display the demo image recommendation

@@ -9,16 +9,15 @@ VER=1.0.0
 
 DESCRIPTIONS = 					\
 	barchart/DESCRIPTION.yaml		\
-	rain-tomorrow/DESCRIPTION.yaml		\
+	clothes-recommender/DESCRIPTION.yaml \
+	colorize/DESCRIPTION.yaml 		\
+	dogs-cats/DESCRIPTION.yaml 		\
+	iris/DESCRIPTION.yaml	 		\
+	movie-recommender/DESCRIPTION.yaml	\
 	ports-plots/DESCRIPTION.yaml		\
-
-#	clothes-recommender-py/DESCRIPTION.yaml \
-#	colorize-py/DESCRIPTION.yaml 		\
-#	dogs-cats-r/DESCRIPTION.yaml 		\
-#	iris-r/DESCRIPTION.yaml 		\
-#	movie-recommender-r/DESCRIPTION.yaml	\
-#	resnet152/DESCRIPTION.yaml		\
-#	scatter-plot-r/DESCRIPTION.yaml		\
+	rain-tomorrow/DESCRIPTION.yaml		\
+	resnet152/DESCRIPTION.yaml		\
+	scatter-plot/DESCRIPTION.yaml		\
 
 INC_BASE    = .
 INC_PANDOC  = $(INC_BASE)/pandoc.mk
