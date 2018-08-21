@@ -7,8 +7,8 @@ meta:
   license      : gpl3
   title        : Image classification using resnet152.
   author       : Graham.Williams@togaware.com
-  filename     : pool/main/r/resnet152/resnet152_1.0.1.mlm
-  date         : 2018-08-21 19:48:01
+  filename     : pool/main/r/resnet152/resnet152_1.1.0.mlm
+  date         : 2018-08-21 20:02:20
 commands:
   demo:
     title  : Run the model on sample images and review its performance.

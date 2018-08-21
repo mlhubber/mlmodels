@@ -13,7 +13,7 @@ install  <- packages[!(packages %in% installed.packages()[,"Package"])]
 
 # Identify where they will be installed - the user's local R library.
 
-lib <- Sys.getenv("R_LIBS_USER")
+lib <- file.path(Sys.getenv("HOME"), ".mlhub", "R")
 
 # Ensure the user's local R library exists.
 
@@ -27,6 +27,20 @@ if (length(install))
   install.packages(install, lib=lib)
 } else
 {
-  cat("\nNo additional R packages need to be installed.")
+  cat("\nNo additional generic R packages need to be installed.")
 }
 cat("\n\n")
+
+# Additional specific packages, often as an interim measure.
+
+cat("We also need to install these specific packages...\n")
+
+pkgs <- c("https://togaware.com/access/rattle_5.2.1.tar.gz",
+          "https://cran.r-project.org/src/contrib/rpart.plot_3.0.4.tar.gz")
+for (pkg in pkgs)
+{
+  cat("  ", pkg, "\n")
+  install.packages(pkg, repos=NULL, lib=lib)
+}
+
+cat("\n")

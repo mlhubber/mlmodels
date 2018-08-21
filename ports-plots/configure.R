@@ -15,7 +15,7 @@ install  <- packages[!(packages %in% installed.packages()[,"Package"])]
 
 # Identify where they will be installed - the user's local R library.
 
-lib <- Sys.getenv("R_LIBS_USER")
+lib <- file.path(Sys.getenv("HOME"), ".mlhub", "R")
 
 # Ensure the user's local R library exists.
 
@@ -25,10 +25,10 @@ dir.create(lib, showWarnings=FALSE, recursive=TRUE)
 
 if (length(install))
 {
-  cat(sprintf("\nInstalling '%s' into '%s'...", paste(install, collapse="', '"), lib))
+  cat(sprintf("\nInstalling '%s' into '%s'...\n", paste(install, collapse="', '"), lib))
   install.packages(install, lib=lib)
+  cat("\n")
 } else
 {
-  cat("\nNo additional R packages need to be installed.")
+  cat("\nNo additional generic R packages need to be installed.\n\n")
 }
-cat("\n\n")
