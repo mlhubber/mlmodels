@@ -10,8 +10,7 @@
 suppressMessages(
 {
 library(magrittr)     # Data pipelines: %>% %<>% %T>% equals().
-library(rattle)       # Support: normVarNames(). 
-library(rattle.data)  # Datasets: weatherAUS. 
+library(rattle)       # Support: normVarNames(), weatherAUS. 
 library(ggplot2)      # Visualise data.
 library(dplyr)        # Wrangling: tbl_df(), group_by(), print().
 library(randomForest) # Model: randomForest() na.roughfix() for missing data.
@@ -27,7 +26,7 @@ cat("These examples come from the book, Essentials of Data Science, by Graham Wi
 cat("Used with permission. Visit https://essentials.togaware.com\n\n")
 
 cat("Press the <Enter> key after each message to progress through each plot.\n")
-cat("Close the graphic window to continue on to the next plot.\n\n")
+cat("Close the graphic window (Ctrl-W) to continue on to the next plot.\n\n")
 
 #-----------------------------------------------------------------------
 # Identify the data source and refence using template variables.

@@ -1,14 +1,14 @@
 --- # SCATTER PLOT
 meta:
   name         : scatter-plot
-  version      : 1.1.0
+  version      : 1.1.1
   keywords     : r, graphics, visualisation, plot, scatter plot, basics
   languages    : R
   license      : gpl3
   title        : Demostrate the concept of scatter plots.
   author       : Graham.Williams@togaware.com
-  filename     : pool/main/s/scatter-plot/scatter-plot_1.1.0.mlm
-  date         : 2018-08-21 19:48:34
+  filename     : pool/main/s/scatter-plot/scatter-plot_1.1.1.mlm
+  date         : 2018-08-21 22:23:47
 commands:
   demo:
     title  : Step through alternative options.
