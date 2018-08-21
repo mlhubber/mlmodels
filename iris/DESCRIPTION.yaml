@@ -6,11 +6,11 @@ meta:
   languages   : R
   modeller    : rpart
   type        : decision tree
-  version     : 1.1.0
+  version     : 1.1.1
   maintainer  : Graham Williams <Graham.Williams@microsoft.com>
   dependencies: rpart, magrittr, caret, rpart.plot, RColorBrewer
-  filename     : pool/main/i/iris/iris_1.1.0.mlm
-  date         : 2018-08-21 19:45:04
+  filename     : pool/main/i/iris/iris_1.1.1.mlm
+  date         : 2018-08-21 22:42:53
 commands:
   demo:
     description : apply the model to a sample dataset

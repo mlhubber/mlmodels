@@ -1,8 +1,7 @@
 library(rpart)
 library(magrittr)
 library(dplyr)
-
-source("rattle.R")
+library(rattle)
 
 load("iris_model.RData")
 
@@ -37,4 +36,4 @@ cat(sprintf("Average class error: %.1f%%\n", mean(per[,"Error"], na.rm=TRUE)))
 # Informative next step suggestion.
 
 cat("\nYou may next like to view a txtual summary of the model itself:\n",
-    "\n  $ aipk print iris-r\n\n")
+    "\n  $ aipk print iris\n\n")

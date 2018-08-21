@@ -1,6 +1,6 @@
 ########################################################################
 #
-# Makefile for iris-r pre-build ML model
+# Makefile for iris r pre-build ML model
 #
 ########################################################################
 
@@ -14,7 +14,6 @@ MODEL_FILES = 		\
 	print.R 	\
 	display.R 	\
 	train.R		\
-	rattle.R	\
 	iris.csv	\
 	data.csv 	\
 	README.txt	\

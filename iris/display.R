@@ -1,4 +1,4 @@
-source("rattle.R")
+library(rattle)
 
 if (Sys.getenv("DISPLAY") != "")
 {
