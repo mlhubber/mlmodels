@@ -5,10 +5,10 @@ meta:
   keywords     : graphics, visualisation, plot, bar chart, basics
   languages    : R
   license      : gpl3
-  title        : Demostrate the concept of barcharts.
+  title        : Demonstrate the concept of barcharts.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/b/barchart/barchart_1.1.0.mlm
-  date         : 2018-08-19 15:58:19
+  date         : 2018-08-21 16:08:17
 commands:
   demo  : Step through alternative options for barcharts.
   print : Display the code.

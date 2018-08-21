@@ -1,5 +1,5 @@
 ########################################################################
-# Introduce the concept of bar charts through MLHub
+# Introduce the concept of telling the data narative through plots
 #
 # Copyright 2018 Graham.Williams@togaware.com
 

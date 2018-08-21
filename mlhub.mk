@@ -93,4 +93,4 @@ $(MODEL_YAML): $(MODEL_YML)
 
 .PHONY: clean
 clean::
-	rm -f $(MODEL_MLM) README.txt README.html TMP.R
+	rm -f $(MODEL)_*.mlm README.txt README.html TMP.R

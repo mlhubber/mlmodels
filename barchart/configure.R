@@ -5,7 +5,8 @@
 
 # Identify the required packages.
 
-packages <- c("rpart", "magrittr", "RColorBrewer")
+packages <- c("magrittr", "rpart", "RColorBrewer", "rattle",
+              "ggplot2", "randomForest", "scales", "stringi")
 
 # Determine which need to be installed.
 
