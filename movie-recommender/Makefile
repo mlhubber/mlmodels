@@ -7,14 +7,13 @@
 # List the files to be included in the .mlm package.
 
 MODEL_FILES = 			\
-	configure.sh		\
+	configure.R		\
 	data.R  		\
         train.R			\
 	print.R			\
         demo.R  		\
 	score.R			\
-        configure.R             \
-        movie-recommender-r.R 	\
+        movie-recommender.R 	\
         SAR_0.0.1.tar.gz	\
 	sar_model.RData		\
 	README.txt		\
@@ -31,4 +30,4 @@ clean::
 	rm -rf README.txt output
 
 realclean:: clean
-	rm -rf movie-recommender-r_*.mlm
+	rm -rf movie-recommender*.mlm

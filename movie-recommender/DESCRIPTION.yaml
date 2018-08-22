@@ -1,17 +1,17 @@
 --- # Movie Recommender
 meta:
   name        : movie-recommender
-  description : Movie recommendation using SAR package
+  title       : Movie recommendation using SAR package.
   languages   : R
   keywords    : recommendation, R, SAR, movie recommendation
   modeller    : SAR
   type        : SAR local count
-  version     : 1.1.0
+  version     : 1.1.1
   section     : ecommence, entertainment
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, SAR, caret, plyr, dplyr
-  filename     : pool/main/m/movie-recommender/movie-recommender_1.1.0.mlm
-  date         : 2018-08-21 19:46:18
+  filename     : pool/main/m/movie-recommender/movie-recommender_1.1.1.mlm
+  date         : 2018-08-22 17:47:26
 commands:
   print:
     description : print a textual summary of the model
