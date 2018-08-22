@@ -9,7 +9,7 @@ meta:
   title        : Demonstrate the concept of photo colorization.
   author       : Yang Liu
   filename     : pool/main/c/colorize/colorize_1.1.0.mlm
-  date         : 2018-08-21 19:40:05
+  date         : 2018-08-22 20:57:34
 commands:
   demo : Colourize a sample image.
   display  : Display the colorized image.

@@ -8,7 +8,7 @@ meta:
   title        : Predict rain tomorrow using decision tree.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/r/rain-tomorrow/rain-tomorrow_1.1.1.mlm
-  date         : 2018-08-21 21:44:02
+  date         : 2018-08-22 20:59:31
 commands:
   demo   : Run the model, present performance metrics.
   print  : Text view of the model itself.

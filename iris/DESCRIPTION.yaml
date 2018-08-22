@@ -10,7 +10,7 @@ meta:
   maintainer  : Graham Williams <Graham.Williams@microsoft.com>
   dependencies: rpart, magrittr, caret, rpart.plot, RColorBrewer
   filename     : pool/main/i/iris/iris_1.1.1.mlm
-  date         : 2018-08-21 22:42:53
+  date         : 2018-08-22 20:58:29
 commands:
   demo:
     description : apply the model to a sample dataset

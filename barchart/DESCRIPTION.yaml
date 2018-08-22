@@ -8,7 +8,7 @@ meta:
   title        : Demonstrate the concept of barcharts.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/b/barchart/barchart_1.1.1.mlm
-  date         : 2018-08-21 21:34:28
+  date         : 2018-08-22 20:56:47
 commands:
   demo  : Step through alternative options for barcharts.
   print : Display the code.

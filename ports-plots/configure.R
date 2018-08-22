@@ -15,7 +15,7 @@ install  <- packages[!(packages %in% installed.packages()[,"Package"])]
 
 # Identify where they will be installed - the user's local R library.
 
-lib <- file.path(Sys.getenv("HOME"), ".mlhub", "R")
+lib <- file.path("./R")
 
 # Ensure the user's local R library exists.
 
