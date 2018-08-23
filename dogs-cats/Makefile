@@ -1,6 +1,6 @@
 ########################################################################
 #
-# Makefile for dogs-cats-r pre-built DL model
+# Makefile for dogs-cats pre-built DL model
 #
 ########################################################################
 
@@ -20,6 +20,7 @@ MODEL_FILES = 			\
 	dogs-cats-vgg16-model.hdf5	\
 	dogs-cats-vgg16-model-weights.hdf5 \
         history.png             \
+	data                    \
 	README.txt		\
 	DESCRIPTION.yaml
 
@@ -36,4 +37,4 @@ clean::
 	rm -rf README.txt output
 
 realclean:: clean
-	rm -rf dogs-cats-r_*.mlm
+	rm -rf dogs-cats*.mlm

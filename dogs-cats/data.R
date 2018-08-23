@@ -2,7 +2,7 @@
 
 original_dataset_dir <- "/home/dlvmadmin/Downloads/kaggle_original_data"
 
-base_dir <- "~/.mlhub/dogs-cats-r/data/cats_and_dogs_small"
+base_dir <- "data/cats_and_dogs_small"
 dir.create(base_dir)
 
 train_dir <- file.path(base_dir, "train")

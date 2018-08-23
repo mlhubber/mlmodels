@@ -23,7 +23,7 @@ load("dogs-cats-vgg16-history.RData")
 
 # get demo data
 
-base_dir <- "~/.mlhub/dogs-cats-r/data/cats_and_dogs_small"
+base_dir <- "data/cats_and_dogs_small"
 test_dir <- file.path(base_dir, "test")
 test_datagen <- image_data_generator(rescale = 1/255)
 
