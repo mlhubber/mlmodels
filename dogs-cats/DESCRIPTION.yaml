@@ -1,16 +1,16 @@
 --- # Dogs Cats
 meta:
   name        : dogs-cats
-  description : Dogs and Cats image classification using keras package
-  languages    : R
+  title       : Dogs and Cats image classification using keras package
+  languages   : R
   modeller    : CNN
   type        : Vgg16
-  version     : 1.1.0
+  version     : 1.1.1
   section     : image
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, tfruns, reticulate, keras, magrittr, dplyr, caret, e1017, shiny, shinyjs, V8, devtools, httr, python-tensorflow, python-keras, python-Image
   filename     : pool/main/d/dogs-cats/dogs-cats_1.1.0.mlm
-  date         : 2018-08-23 13:36:43
+  date         : 2018-09-11 09:58:33
 commands:
   print : print a textual summary of the model
   display : display a graphical representaiton of the model
