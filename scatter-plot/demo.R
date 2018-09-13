@@ -182,4 +182,4 @@ system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 #-----------------------------------------------------------------------
 
 cat("\nYou may like to view the code for this demo with:\n",
-    "\n  $ ml print scatter-plot-r\n\n")
+    "\n  $ ml print scatter-plot\n\n")
