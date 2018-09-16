@@ -34,6 +34,7 @@ cat("These examples come from the book, Essentials of Data Science, by Graham Wi
 cat("Used with permission. Visit https://essentials.togaware.com\n\n")
 
 cat("Press the <Enter> key after each message to display the referenced plot.\n")
+cat("Review the plot and discern the story the data it is telling us.\n")
 cat("Close the graphic window (Ctrl-W) to continue on to the next plot.\n")
 
 #-----------------------------------------------------------------------
