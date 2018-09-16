@@ -1,12 +1,12 @@
 --- # Clothes Recommender Py
 meta:
   name         : clothes-recommender
-  description  : Clothes recommendation using CNN/SVM.
+  title        : Clothes recommendation using CNN/SVM.
   keywords     : computer vision, recommendation, dnn
   languages    : py
   dependencies : python3, cv2, metrics, calibration, cntk
   modeller     : cnn & svm
-  version      : 1.1.0
+  version      : 1.1.1
   section      : ecommerce, fashion
   maintainer   : Fang.Zhou@microsoft.com
   filename     : pool/main/c/clothes-recommender/clothes-recommender_1.1.0.mlm
