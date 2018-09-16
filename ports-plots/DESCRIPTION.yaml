@@ -1,14 +1,14 @@
 --- # AUSTRALIAN PORTS PLOTS
 meta:
   name         : ports-plots
-  version      : 1.1.1
+  version      : 1.1.2
   keywords     : graphics, visualisation, plot, bar chart, scatter plot, ggplot2, ports
   languages    : R
   license      : gpl3
   title        : Demostrate the concept of visualising data.
   author       : Graham.Williams@togaware.com
-  filename     : pool/main/p/ports-plots/ports-plots_1.1.1.mlm
-  date         : 2018-08-22 21:01:53
+  filename     : pool/main/p/ports-plots/ports-plots_1.1.2.mlm
+  date         : 2018-09-16 10:19:31
 commands:
   demo  : Step through the various plots.
   print : Display the code.
