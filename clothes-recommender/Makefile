@@ -1,6 +1,6 @@
 ########################################################################
 #
-# Makefile for clothes-recommender-py pre-build ML model
+# Makefile for clothes-recommender pre-build ML model
 #
 ########################################################################
 
@@ -31,4 +31,4 @@ clean::
 	rm -rf README.txt output
 
 realclean:: clean
-	rm -rf clothes-recommender-py_*.mlm
+	rm -rf clothes-recommender_*.mlm

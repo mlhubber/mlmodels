@@ -22,7 +22,7 @@ if __name__ == '__main__':
 msg = """
 The individual colorized images can be displayed:
 
- $ ml display colorize-py
+ $ ml display colorize
 """
 print(msg)
 

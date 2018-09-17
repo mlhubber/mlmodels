@@ -1,6 +1,6 @@
 ########################################################################
 #
-# Makefile for rain-tomorrow pre-built ML model
+# Makefile for colourize pre-built ML model
 #
 ########################################################################
 
