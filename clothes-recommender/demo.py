@@ -189,7 +189,7 @@ if (displayAvailable):
     msg = """
 The individual classified images can be displayed:
 
- $ ml display clothes-recommender-py
+ $ ml display clothes-recommender
 """.format(fn)
     print(msg)
 else:
