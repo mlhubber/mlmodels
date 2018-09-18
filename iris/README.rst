@@ -10,15 +10,13 @@ petal length and width and the sepal length and width, together with
 the known class. The goal is to build a classification model to
 classify new observations of flowers.
 
-This pre-built model has used the R language to build a classification
-tree model to represent the knowledge discovered using a so-called
-recursive partitioning algorithm. The knowledge representation is easy
-to understand.
+This `MLHub <https://mlhub.ai>`_ pre-built model package uses the R
+language to build a classification (decision) tree model to represent
+the knowledge discovered using a so-called recursive partitioning
+algorithm. The knowledge representation is easy to understand.
 
-The **demo** applies the pre-built model to a same data set and
-illustrates that quite an accurate model can be readily built from
-this historic data.
+To install and run the pre-built model::
 
-The **print** will display a textual summary of the model and its build
-parameters. The textual presentation can be difficult to take in at
-first and so the **display** will draw the model as a decision tree.
+  $ pip install mlhub
+  $ ml install iris
+  $ ml demo iris
