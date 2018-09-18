@@ -55,7 +55,7 @@ packages were found for the dependencies.
 display
 -------
 
-A list of commands which will use a graphic display to present some visual results.  It help mlhub to check if there is a display available.
+A list of commands which implemented by the model package that require a graphic display to present visual results.  MLHub will check if there is a display available and if not the user is informed and given the option to exit or continue.
 
 Examples::
 
