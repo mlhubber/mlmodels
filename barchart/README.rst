@@ -2,7 +2,7 @@
 Visualise Data Through Barcharts
 ================================
 
-This `<https://mlhub.ai>MLHub`_ package provides a simple
+This `MLHub<https://mlhub.ai>`_ package provides a simple
 demonstration "model" showing the concept of bar charts. This is
 useful for the new data scientist learning the power of visualising
 data. Barcharts are one simple yet effective approach to understanding
