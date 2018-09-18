@@ -52,6 +52,16 @@ For Windows this might be translated to::
 The latter is also what would have been run if for Ubuntu no OS
 packages were found for the dependencies.
 
+display
+-------
+
+A list of commands which will use a graphic display to present some visual results.  It help mlhub to check if there is a display available.
+
+Examples::
+
+  display: demo display
+
+
 modeller
 --------
 
