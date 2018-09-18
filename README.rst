@@ -52,6 +52,16 @@ For Windows this might be translated to::
 The latter is also what would have been run if for Ubuntu no OS
 packages were found for the dependencies.
 
+display
+-------
+
+A list of commands which implemented by the model package that require a graphic display to present visual results.  MLHub will check if there is a display available and if not the user is informed and given the option to exit or continue.
+
+Examples::
+
+  display: demo display
+
+
 modeller
 --------
 
