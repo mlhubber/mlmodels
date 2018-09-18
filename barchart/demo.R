@@ -64,6 +64,7 @@ fname <- "weather_bar_basic.pdf"
 pdf(file=fname, width=8)
 ds %>%
   ggplot(aes(x=wind_dir_3pm)) +
+  scale_y_continuous(labels=comma) +
   geom_bar()
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
@@ -79,6 +80,7 @@ fname <- "weather_bar_stacked.pdf"
 pdf(file=fname, width=8)
 ds %>%
   ggplot(aes(x=wind_dir_3pm, fill=rain_tomorrow)) +
+  scale_y_continuous(labels=comma) +
   geom_bar()
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
@@ -94,6 +96,7 @@ fname <- "weather_bar_dodged.pdf"
 pdf(file=fname, width=8)
 ds %>%
   ggplot(aes(x=wind_dir_3pm, fill=rain_tomorrow)) +
+  scale_y_continuous(labels=comma) +
   geom_bar(position="dodge")
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)

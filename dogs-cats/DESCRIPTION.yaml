@@ -10,8 +10,8 @@ meta:
   section     : image
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, tfruns, reticulate, keras, magrittr, dplyr, caret, e1017, shiny, shinyjs, V8, devtools, httr, python-tensorflow, python-keras, python-Image
-  filename     : pool/main/d/dogs-cats/dogs-cats_1.1.0.mlm
-  date         : 2018-09-11 09:58:33
+  filename     : pool/main/d/dogs-cats/dogs-cats_1.1.1.mlm
+  date         : 2018-09-18 09:21:09
 commands:
   demo    : apply the model to a sample dataset
   print   : print a textual summary of the model

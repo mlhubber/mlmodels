@@ -6,10 +6,10 @@ meta:
   languages    : R
   license      : gpl3
   display      : demo
-  title        : Demostrate the concept of scatter plots.
+  title        : Demonstrate the concept of scatter plots.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/s/scatter-plot/scatter-plot_1.1.2.mlm
-  date         : 2018-09-13 14:27:05
+  date         : 2018-09-18 11:11:30
 commands:
   demo  : step through alternative options for scatter plots
   print : display the actual code

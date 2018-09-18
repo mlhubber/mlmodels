@@ -11,7 +11,7 @@ meta:
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, SAR, caret, plyr, dplyr
   filename     : pool/main/m/movie-recommender/movie-recommender_1.1.1.mlm
-  date         : 2018-08-22 20:58:49
+  date         : 2018-09-18 09:22:31
 commands:
   print:
     description : print a textual summary of the model
