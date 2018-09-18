@@ -5,14 +5,12 @@ meta:
   keywords     : r, graphics, visualisation, plot, scatter plot, basics
   languages    : R
   license      : gpl3
+  display      : demo
   title        : Demostrate the concept of scatter plots.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/s/scatter-plot/scatter-plot_1.1.2.mlm
   date         : 2018-09-13 14:27:05
 commands:
-  demo:
-    title  : Step through alternative options.
-  print:
-    title  : Display the code.
-  score:
-    title  : Plot two columns from supplied CSV file.
+  demo  : step through alternative options for scatter plots
+  print : display the actual code
+  score : plot two columns from supplied CSV file

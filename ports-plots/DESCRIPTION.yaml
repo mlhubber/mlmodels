@@ -5,10 +5,11 @@ meta:
   keywords     : graphics, visualisation, plot, bar chart, scatter plot, ggplot2, ports
   languages    : R
   license      : gpl3
+  display      : demo
   title        : Demostrate the concept of visualising data.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/p/ports-plots/ports-plots_1.1.2.mlm
   date         : 2018-09-16 10:19:31
 commands:
-  demo  : Step through the various plots.
-  print : Display the code.
+  demo  : step through the various plots
+  print : display the actual code

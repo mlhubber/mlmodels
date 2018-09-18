@@ -36,7 +36,7 @@ cat("\n\n")
 
 cat("We also need to install these specific packages...\n")
 
-pkgs <- c("https://togaware.com/access/rattle_5.2.1.tar.gz")
+pkgs <- c("https://togaware.com/access/rattle_5.2.3.tar.gz")
 for (pkg in pkgs)
 {
 cat("  ", pkg, "\n")
