@@ -32,30 +32,25 @@ dependencies
 A list of other packages (and optionally versions) that the model
 depends on. For python these might form the contents of
 requirements.txt for a pip install, for example. On Ubuntu, specific
-OS packages are searched for to be installed before using pip
+OS packages might be searched for to be installed before using pip
 install. Similarly for R packages, OS distributed versions of the
 packages are sought first and then R's own package installer is used
-if no OS version found.
+if no OS version found. In general, we are moving to perform the
+dependency install within a local container for each model so as to
+not require sys admin access nor to affect other users.
 
 Examples::
 
-  dependencies: rpart, magrittr
+  dependencies: rattle, rpart, magrittr
 
-For Ubuntu this might be translated to::
-
-  wajig install r-cran-rpart r-cran-magrittr
-
-For Windows this might be translated to::
-
-  Rscript -e 'install.packages(c("rpart", "magrittr"))'
-
-The latter is also what would have been run if for Ubuntu no OS
-packages were found for the dependencies.
 
 display
 -------
 
-A list of commands which implemented by the model package that require a graphic display to present visual results.  MLHub will check if there is a display available and if not the user is informed and given the option to exit or continue.
+A list of commands which implemented by the model package that require
+a graphic display to present visual results.  MLHub will check if
+there is a display available and if not the user is informed and given
+the option to exit or continue.
 
 Examples::
 
