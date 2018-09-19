@@ -1,5 +1,5 @@
 ==============================
-ResNet152 Image Classification
+Object Classification
 ==============================
 
 This model is based on the `deep learning kubernetes
@@ -16,12 +16,6 @@ The pre-trained
 model is used. Sample images are provided, pre-processed to the required
 format and classified using the model.
 
-The **demo** command applies the pre-built model to the collection of
-sample known images to classify them.
-
-The **display** command will present a visualisation of the
-classifications.
-
 Visit the `github
-repository<https://github.com/mlhubber/mlmodels/tree/master/resnet152>`_
+repository<https://Github.com/mlhubber/mlmodels/tree/master/resnet152>`_.
 for the sample code.

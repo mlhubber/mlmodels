@@ -14,9 +14,9 @@ DESCRIPTIONS = 					\
 	dogs-cats/DESCRIPTION.yaml 		\
 	iris/DESCRIPTION.yaml	 		\
 	movie-recommender/DESCRIPTION.yaml	\
+	object-recognition/DESCRIPTION.yaml	\
 	ports-plots/DESCRIPTION.yaml		\
 	rain-tomorrow/DESCRIPTION.yaml		\
-	resnet152/DESCRIPTION.yaml		\
 	scatter-plot/DESCRIPTION.yaml		\
 
 INC_BASE    = .
