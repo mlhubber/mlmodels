@@ -11,5 +11,5 @@ meta:
   filename     : pool/main/p/ports-plots/ports-plots_1.1.2.mlm
   date         : 2018-09-18 09:22:55
 commands:
-  demo  : step through the various plots
-  print : display the actual code
+  demo  : Step through the various plots.
+  print : Display the actual code.

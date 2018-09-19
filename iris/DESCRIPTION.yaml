@@ -13,8 +13,8 @@ meta:
   filename     : pool/main/i/iris/iris_1.1.2.mlm
   date         : 2018-09-18 11:09:30
 commands:
-  demo    : apply the model to a sample dataset
-  print   : print a textual summary of the model
-  display : display a graphical representation of the model
-  score   : apply model to your data (CSV with header and 4 numeric columns)
-  train   : build a model on your data (CSV with a target column Species)
+  demo    : Apply the model to a sample dataset.
+  print   : Print a textual summary of the model.
+  display : Display a graphical representation of the model.
+  score   : Apply model to your data (CSV with header and 4 numeric columns).
+  train   : Build a model on your data (CSV with a target column Species).

@@ -11,7 +11,7 @@ meta:
   filename     : pool/main/r/rain-tomorrow/rain-tomorrow_1.1.2.mlm
   date         : 2018-09-18 11:10:39
 commands:
-  demo   : run the model and present performance metrics
-  print  : view a textual representation of the model
-  display: view a graphic represetnation of the model
-  score  : predict rain tomorrow on your data
+  demo   : Run the model and present performance metrics.
+  print  : View a textual representation of the model.
+  display: View a graphic represetnation of the model.
+  score  : Predict rain tomorrow on your data.

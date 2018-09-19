@@ -10,6 +10,7 @@
 suppressMessages(
 {
 library(magrittr)     # Data pipelines: %>% %<>% %T>% equals().
+library(rattle.data)  # Until rattle is updated on DSVM.
 library(rattle)       # Support: normVarNames(), weatherAUS. 
 library(ggplot2)      # Visualise data.
 library(dplyr)        # Wrangling: tbl_df(), group_by(), print().

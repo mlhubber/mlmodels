@@ -3,10 +3,12 @@
 # avoid the need for sys admin access from within mlhub. R is
 # often operating system installed.
 
-# Identify the required packages.
+# Identify the required packages. Remove rattle.data eventually as
+# datasets moved back into rattle. 20180918.
 
 packages <- c("magrittr", "rpart", "RColorBrewer", "rattle",
-              "ggplot2", "randomForest", "scales", "stringi")
+              "rattle.data", "ggplot2", "randomForest", "scales",
+              "stringi")
 
 # Determine which need to be installed.
 

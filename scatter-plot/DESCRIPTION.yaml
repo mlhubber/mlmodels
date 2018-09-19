@@ -11,6 +11,6 @@ meta:
   filename     : pool/main/s/scatter-plot/scatter-plot_1.1.2.mlm
   date         : 2018-09-18 11:11:30
 commands:
-  demo  : step through alternative options for scatter plots
-  print : display the actual code
-  score : plot two columns from supplied CSV file
+  demo  : Step through alternative options for scatter plots.
+  print : Display the actual code.
+  score : Plot two columns from supplied CSV file.
