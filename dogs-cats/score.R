@@ -75,7 +75,7 @@ server <- function(input, output){
       img_dir,
       img_datagen,
       target_size = c(150, 150),
-      batch_size = 20,
+      batch_size = 1,
       class_mode = "binary"
     )
     

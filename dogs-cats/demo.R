@@ -43,7 +43,7 @@ model %>% compile(
   metrics = c("accuracy")
 )
 
-pred_score <- model %>% predict_generator(test_generator, steps = 50)
+pred_score <- model %>% predict_generator(test_generator, steps = 5)
 pred_class <- ifelse(pred_score > 0.5, "dogs", "cats")
 
 actual_class <- ifelse(test_generator$classes == 1, "dogs", "cats")
@@ -63,7 +63,7 @@ ev
 
 cat("====================\nModel Loss and Accuracy\n====================\n\n")
 
-model %>% evaluate_generator(test_generator, steps = 50)
+model %>% evaluate_generator(test_generator, steps = 5)
 
 cat("====================\nConfusion Matrix\n====================\n\n")
 
