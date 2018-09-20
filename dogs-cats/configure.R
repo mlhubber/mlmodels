@@ -13,7 +13,9 @@ install  <- packages[!(packages %in% installed.packages()[,"Package"])]
 
 # Identify where they will be installed - the user's local R library.
 
-#lib <- file.path("./R") # we do not set this R directory, because install_github will always install packages into .libPaths()[1]
+#lib <- file.path("./R") 
+# we do not set this R directory, because install_github will always install packages into .libPaths()[1]
+
 lib <- .libPaths()[1]
 
 # Ensure the user's local R library exists.
