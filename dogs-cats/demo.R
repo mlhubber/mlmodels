@@ -38,7 +38,8 @@ test_generator <- flow_images_from_directory(
   test_datagen,
   target_size = c(150, 150),
   batch_size = 20,
-  class_mode = "binary"
+  class_mode = "binary",
+  shuffle = FALSE
 )
 
 model %>% compile(
@@ -47,7 +48,7 @@ model %>% compile(
   metrics = c("accuracy")
 )
 
-pred_score <- model %>% predict_generator(test_generator, steps = 5)
+pred_score <- model %>% predict_generator(test_generator, steps = 5, workers = 1)
 pred_class <- ifelse(pred_score > 0.5, "dogs", "cats")
 
 actual_class <- ifelse(test_generator$classes == 1, "dogs", "cats")
@@ -71,7 +72,7 @@ cat("\n=======================",
     "\nModel Loss and Accuracy",
     "\n=======================\n\n")
 
-model %>% evaluate_generator(test_generator, steps = 5)
+model %>% evaluate_generator(test_generator, steps = 5, workers = 1)
 
 cat("================",
     "\nConfusion Matrix",
@@ -80,3 +81,4 @@ cat("================",
 confusionMatrix(data = factor(pred_class), 
                 reference = factor(actual_class), 
                 positive = "dogs")
+
