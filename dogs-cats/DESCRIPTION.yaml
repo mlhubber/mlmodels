@@ -15,7 +15,7 @@ meta:
       github: rstudio/tfruns, rstudio/reticulate, rstudio/keras
     python: tensorflow, keras, Image
   filename     : pool/main/d/dogs-cats/dogs-cats_1.1.4.mlm
-  date         : 2018-09-20 21:26:55
+  date         : 2018-09-20 21:50:21
 commands:
   demo    : apply the model to a sample dataset
   print   : print a textual summary of the model
