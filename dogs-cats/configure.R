@@ -13,8 +13,13 @@ install  <- packages[!(packages %in% installed.packages()[,"Package"])]
 
 # Identify where they will be installed - the user's local R library.
 
-#lib <- file.path("./R") 
-# we do not set this R directory, because install_github will always install packages into .libPaths()[1]
+# lib <- file.path("./R")
+
+# We do not set this R directory, because install_github will always
+# install packages into .libPaths()[1]. An alternative may be to add
+# ./R as the first path in .libPaths(). Eventually this is something
+# mlhub itself should handle for the model packager, based on the
+# dependencies listed in DESCRTIPTION.yaml.
 
 lib <- .libPaths()[1]
 
