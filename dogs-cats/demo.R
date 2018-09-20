@@ -67,11 +67,15 @@ img_names %>%
   print() ->
 ev
 
-cat("\n=======================\nModel Loss and Accuracy\n=======================\n\n")
+cat("\n=======================",
+    "\nModel Loss and Accuracy",
+    "\n=======================\n\n")
 
 model %>% evaluate_generator(test_generator, steps = 5)
 
-cat("================\nConfusion Matrix\n================\n\n")
+cat("================",
+    "\nConfusion Matrix",
+    "\n================\n\n")
 
 confusionMatrix(data = factor(pred_class), 
                 reference = factor(actual_class), 
