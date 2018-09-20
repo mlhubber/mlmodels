@@ -1,9 +1,5 @@
 # Load model, predict on a small dataset, present evaluation.
 
-cat("============================================",
-    "\nPredict Image Classes: Is it a Dog or a Cat?",
-    "\n============================================\n\n")
-
 # load library
 
 library(keras)
@@ -31,7 +27,7 @@ base_dir <- "data/cats_and_dogs_small"
 test_dir <- file.path(base_dir, "test")
 test_datagen <- image_data_generator(rescale = 1/255)
 
-cat("Images located in '", getwd(), "/", test_dir, "'.\n\n", sep="")
+cat("=====================\nPredict Image Classes\n=====================\n\n")
 
 test_generator <- flow_images_from_directory(
   test_dir,
@@ -55,24 +51,22 @@ actual_class <- ifelse(test_generator$classes == 1, "dogs", "cats")
 img_names <- c(list.files(path = file.path(test_dir, "cats")), 
                list.files(path = file.path(test_dir, "dogs")))
 
-cat("\nHere's a random sample showing predicted versus actual:\n\n")
-
 img_names %>%
   as.data.frame() %>% 
   cbind(Predicted = pred_class) %>%
   cbind(Actual = actual_class) %>%
   set_names(c("Image", "Predicted", "Actual")) %>%
   mutate(Error = ifelse(Predicted == Actual, "", "<----")) %>%
-  sample_n(20) %T>%
+  head(n = 20) %T>%
   print() ->
 ev
 
-cat("\n=======================\nModel Loss and Accuracy\n=======================\n\n")
+cat("=======================\nModel Loss and Accuracy\n=======================\n\n")
 
 model %>% evaluate_generator(test_generator, steps = 5)
 
 cat("================\nConfusion Matrix\n================\n\n")
 
-confusionMatrix(data = pred_class, 
-                reference = actual_class, 
+confusionMatrix(data = factor(pred_class), 
+                reference = factor(actual_class), 
                 positive = "dogs")
