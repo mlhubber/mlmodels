@@ -8,6 +8,6 @@ meta:
   title        : Image object recognition using resnet152.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/o/object-recognition/object-recognition_1.1.0.mlm
-  date         : 2018-09-19 14:22:43
+  date         : 2018-09-21 17:10:39
 commands:
   demo : Run the model on sample images.
