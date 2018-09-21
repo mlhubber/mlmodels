@@ -1,23 +1,25 @@
-========================
+==============================================
 Dogs and Cats Image Classification using keras
-========================
+==============================================
 
-The Dogs-vs-Cats dataset from Kaggle computer vision competition was 
-used to train a deep learning model, predicting the probability of the
-image belonging to dogs or cats using a pretrained convnet.
+The Dogs-vs-Cats dataset from the Kaggle computer vision competition
+was used to train a deep neural network model, predicting the
+probability of the image being a dog or a cat using a pretrained
+convnet model.
 
-The newly created small dataset consists of 2,000 images of dogs and cats
-(1000 from each class). It contains three subsets: a training set with 
-1,000 samples of each class, a validation set with 500 samples of each class, 
-and a test set with 500 samples of each class.
+A newly created small dataset consists of 2,000 images of dogs and
+cats (1000 from each class) is used to train the model. It contains
+three subsets: a training set with 1,000 samples chosen from each
+class, a validation set with 500 samples chosen from each class, and a
+test set with 500 samples.
 
-This pre-built model uses R's *keras* package to build a convolutional 
-neural network as its knowledge representation language. The knowledge is 
-discovered using a keras sequential model constructed by adding a pretrained 
-vgg16 model as convolutional base and adding dense layers on top. A mathematical
-measure of the information content of the model is used to guide the network 
-construction. CNNs are a popular deep learning model for image classification
-because they are highly repurposable.
+The pre-built model uses R's *keras* package to build a convolutional
+neural network (CNN). The knowledge is discovered using a keras
+sequential model constructed by using a pretrained vgg16 model as the
+convolutional base and adding dense layers on top. A mathematical
+measure of the information content of the model is used to guide the
+network construction. CNNs are a popular deep neural network learner
+for image classification because they are highly reusable.
 
 The **demo** command applies the pre-built model to a test dataset with
 known values of the labels and presents an evaluation of the
