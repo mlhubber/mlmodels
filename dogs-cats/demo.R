@@ -60,10 +60,10 @@ cat("\nHere's a random sample showing predicted versus actual:\n\n")
 
 img_names %>%
   as.data.frame() %>% 
-  cbind(Predicted = pred_class) %>%
-  cbind(Actual = actual_class) %>%
-  set_names(c("Image", "Predicted", "Actual")) %>%
-  mutate(Error = ifelse(Predicted == Actual, "", "<----")) %>%
+  set_names("Image") %>%
+  mutate(Predicted = as.character(pred_class),
+         Actual    = actual_class,
+         Error     = ifelse(Predicted == Actual, "", "<----")) %>%
   sample_n(20) %T>%
   print() ->
 ev
