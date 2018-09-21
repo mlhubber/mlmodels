@@ -30,14 +30,6 @@ for (l in 2:length(txt))
 }
 txt <- txt[-dup]
 
-# Remove duplicate comment separators as is usual at end of file with
-# the Next Action comment that gets removed.
-
-dup <- c()
-for (l in 2:length(txt))
-{
-  if (str_detect(txt[l], "^#----") && str_detect(txt[l-1], "^#----")) dup <- c(dup, l)
-}
-txt <- txt[-dup]
-
 paste(txt, collapse="\n") %>% cat()
+
+cat("\n")
