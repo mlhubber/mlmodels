@@ -1,8 +1,8 @@
 --- # Dogs Cats
 meta:
   name        : dogs-cats
-  title       : Dogs and Cats image classification using keras package
-  version     : 1.1.4
+  title       : Dogs and cats image classification using keras.
+  version     : 1.1.5
   display     : display
   languages   : R
   modeller    : CNN
@@ -14,11 +14,11 @@ meta:
       CRAN: magrittr, dplyr, caret, e1017, shiny, shinyjs, V8, devtools, httr
       github: rstudio/tfruns, rstudio/reticulate, rstudio/keras
     python: tensorflow, keras, Image
-  filename     : pool/main/d/dogs-cats/dogs-cats_1.1.4.mlm
-  date         : 2018-09-20 21:50:21
+  filename     : pool/main/d/dogs-cats/dogs-cats_1.1.5.mlm
+  date         : 2018-09-21 09:28:37
 commands:
-  demo    : apply the model to a sample dataset
-  print   : print a textual summary of the model
-  display : display a graphical representation of the model
-  score   : apply the model to a supplied dataset and show result via shiny
-  train   : build a new model on your own image data with training set and validation set provided
+  demo    : Apply the model to a supplied dataset of images of dogs and cats.
+  print   : Print a textual summary of the model.
+  display : Display a graphical representation of the model.
+  score   : Apply the model to a supplied dataset and show result via shiny.
+  train   : Build a new model on your own image data with training set and validation set provided.

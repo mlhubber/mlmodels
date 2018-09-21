@@ -46,4 +46,3 @@ This image classificaition example could be easily adapted to other types of ima
 You can go through the full tutorial 
 `keras-image-classification-on-small-datasets <https://tensorflow.rstudio.com/blog/keras-image-classification-on-small-datasets>`_
 on `Rstudio tensorflow <https://tensorflow.rstudio.com>`_ website.
-
