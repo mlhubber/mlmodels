@@ -7,11 +7,11 @@ meta:
   modeller    : rpart
   type        : decision tree
   display     : display
-  version     : 1.1.2
+  version     : 1.1.3
   maintainer  : Graham Williams <Graham.Williams@microsoft.com>
   dependencies: rpart, magrittr, caret, rpart.plot, RColorBrewer
   filename     : pool/main/i/iris/iris_1.1.2.mlm
-  date         : 2018-09-18 11:09:30
+  date         : 2018-09-21 15:32:38
 commands:
   demo    : Apply the model to a sample dataset.
   print   : Print a textual summary of the model.

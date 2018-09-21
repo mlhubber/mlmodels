@@ -12,7 +12,6 @@ txt <- txt[!str_detect(txt, '^suppress')]
 txt <- txt[!str_detect(txt, '^\\{')]
 txt <- txt[!str_detect(txt, '^\\}\\)')]
 txt <- txt[!str_detect(txt, '^ +"\\\\n')]       # Remove trace statements.
-txt <- txt[!str_detect(txt, '^# Suggest next step.')]
 
 model <- basename(getwd())
 msg <- sprintf("#\n# This script generated from mlhub.ai:/pool/main/%s/%s/",
@@ -30,18 +29,4 @@ for (l in 2:length(txt))
 }
 txt <- txt[-dup]
 
-# Remove duplicate comment separators as is usual at end of file with
-# the Next Action comment that gets removed.
-
-dup <- c()
-for (l in 2:length(txt))
-{
-  if (str_detect(txt[l], "^#----") && str_detect(txt[l-1], "^#----")) dup <- c(dup, l)
-}
-txt <- txt[-dup]
-
-paste(txt, collapse="\n") %>% cat()
-
-#-----------------------------------------------------------------------
-# Suggest next step.
-#-----------------------------------------------------------------------
+paste(txt, collapse="\n") %>% cat("\n")

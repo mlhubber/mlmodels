@@ -137,10 +137,3 @@ ds %>%
        fill     = "Tomorrow")
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
-
-#-----------------------------------------------------------------------
-# Suggest next step.
-#-----------------------------------------------------------------------
-
-cat("\nYou may like to view the code for this demo with:\n",
-    "\n  $ ml print barchart\n\n")

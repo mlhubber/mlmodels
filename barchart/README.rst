@@ -17,4 +17,3 @@ To install and run the pre-built model::
 The examples come from the Essentials of Data Science by Graham
 Williams `<https://bit.ly/essentials_data_science>`_. Further support
 material is also available from `<https://essentials.togaware.com/>`_.
-

@@ -1,15 +1,15 @@
 --- # BARCHARTS
 meta:
   name         : barchart
-  version      : 1.1.3
+  version      : 1.1.4
   keywords     : graphics, visualisation, plot, bar chart, basics
   languages    : R
   license      : gpl3
   title        : Demonstrate the concept of barcharts.
   display      : demo
   author       : Graham.Williams@togaware.com
-  filename     : pool/main/b/barchart/barchart_1.1.3.mlm
-  date         : 2018-09-18 13:59:57
+  filename     : pool/main/b/barchart/barchart_1.1.4.mlm
+  date         : 2018-09-20 10:28:50
 commands:
   demo  : Step through alternative options for barcharts.
   print : Display the code used for the demo.

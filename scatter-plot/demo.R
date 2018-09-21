@@ -11,6 +11,7 @@ suppressMessages(
 {
 library(magrittr)     # Data pipelines: %>% %<>% %T>% equals().
 library(rattle)       # Support: normVarNames(), weatherAUS. 
+library(rattle.data)  # Temporaray - weatherAUS.
 library(ggplot2)      # Visualise data.
 library(dplyr)        # Wrangling: tbl_df(), group_by(), print().
 library(randomForest) # Model: randomForest() na.roughfix() for missing data.
@@ -85,7 +86,7 @@ system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 # Colour the dots on the scatter plot.
 #-----------------------------------------------------------------------
 
-cat("\nWe can choose to colour the points on the plot accroding to the species: ")
+cat("\nWe can choose to colour the points on the plot according to the species: ")
 invisible(readChar("stdin", 1))
 
 fname <- "iris_scatter_colour.pdf"
@@ -176,10 +177,3 @@ ds %>%
   theme(axis.text.x=element_text(angle=45, hjust=1))
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
-
-#-----------------------------------------------------------------------
-# Suggest next step.
-#-----------------------------------------------------------------------
-
-cat("\nYou may like to view the code for this demo with:\n",
-    "\n  $ ml print scatter-plot\n\n")

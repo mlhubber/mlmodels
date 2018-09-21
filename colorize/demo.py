@@ -19,10 +19,3 @@ if __name__ == '__main__':
         out = predict(gray)
         cv.imwrite(image.replace("bw", "color"), out)
 
-msg = """
-The individual colorized images can be displayed:
-
- $ ml display colorize
-"""
-print(msg)
-
