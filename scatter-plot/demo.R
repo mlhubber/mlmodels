@@ -176,10 +176,3 @@ ds %>%
   theme(axis.text.x=element_text(angle=45, hjust=1))
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
-
-#-----------------------------------------------------------------------
-# Suggest next step.
-#-----------------------------------------------------------------------
-
-cat("\nYou may like to view the code for this demo with:\n",
-    "\n  $ ml print scatter-plot\n\n")
