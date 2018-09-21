@@ -32,8 +32,3 @@ cat(sprintf("\nOverall error: %d%%\n", 100-sum(diag(per), na.rm=TRUE)))
 # Calculate the averaged class error percentage.
 
 cat(sprintf("Average class error: %.1f%%\n", mean(per[,"Error"], na.rm=TRUE)))
-
-# Informative next step suggestion.
-
-cat("\nYou may next like to view a txtual summary of the model itself:\n",
-    "\n  $ aipk print iris\n\n")
