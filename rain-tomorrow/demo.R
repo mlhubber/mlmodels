@@ -65,8 +65,3 @@ cat(sprintf("Average class error: %.1f%%\n", mean(per[,"Error"], na.rm=TRUE)))
 
 cat("\nNotice the model's error rate and note that the model is useful in",
     "\ngiving an indication of the prospect of it raining tomorrow.\n")
-
-# It is always polite to suggest the next step for the user.
-
-cat("\nYou may like to view a summary of the model with:\n",
-    "\n  $ ml print rain-tomorrow\n\n")
