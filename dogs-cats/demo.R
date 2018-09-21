@@ -14,6 +14,9 @@ library(e1071)
 
 # load model
 
+dog <- "dog"
+cat <- "cat"
+
 model <- load_model_hdf5(filepath       = "dogs-cats-vgg16-model.hdf5", 
                          custom_objects = NULL, 
                          compile        = TRUE)
@@ -49,9 +52,9 @@ model %>% compile(
 )
 
 pred_score <- model %>% predict_generator(test_generator, steps=5, workers=1)
-pred_class <- ifelse(pred_score > 0.5, "dogs", "cats")
+pred_class <- ifelse(pred_score > 0.5, dog, cat)
 
-actual_class <- ifelse(test_generator$classes == 1, "dogs", "cats")
+actual_class <- ifelse(test_generator$classes == 1, dog, cat)
   
 img_names <- c(list.files(path=file.path(test_dir, "cats")), 
                list.files(path=file.path(test_dir, "dogs")))
@@ -80,4 +83,4 @@ cat("================",
 
 confusionMatrix(data      = factor(pred_class), 
                 reference = factor(actual_class), 
-                positive  = "dogs")
+                positive  = dog)
