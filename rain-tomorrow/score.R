@@ -69,5 +69,3 @@ newdata[1,unusedi] <- NA
 pr <- predict(model, newdata=newdata)[,"Yes"]
 
 cat(sprintf("\nI predict the chance of rain tomorrow to be %2.0f%%.\n", 100*pr))
-
-cat("\nThank you for exploring the rain-tomorrow model.\n\n")

@@ -34,9 +34,3 @@ cat("\n====================\n",
     "\n====================\n\n",
     sep="")
 print(model)
-
-# Suggest next step.
-
-cat("\nYou may next like to display a visual representation of the model:\n",
-    "\n  $ ml display rain-tomorrow\n\n")
-
