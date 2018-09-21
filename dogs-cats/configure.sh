@@ -10,5 +10,3 @@ pip install --ignore-installed --upgrade tensorflow
 conda install -c conda-forge keras
 
 pip install Image
-
-Rscript configure.R
