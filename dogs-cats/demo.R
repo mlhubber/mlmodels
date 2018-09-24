@@ -64,8 +64,8 @@ cat("\nHere's a random sample showing predicted versus actual:\n\n")
 img_names %>%
   as.data.frame() %>% 
   set_names("Image") %>%
-  mutate(Predicted = as.character(pred_class),
-         Actual    = actual_class,
+  mutate(Actual    = actual_class,
+         Predicted = as.character(pred_class),
          Error     = ifelse(Predicted == Actual, "", "<----")) %>%
   sample_n(20) %T>%
   print() ->
