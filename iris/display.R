@@ -9,5 +9,5 @@ if (!dir.exists(results)) dir.create(results)
 
 pdf(fname)
 fancyRpartPlot(m$finalModel, sub="")
-dev.off()
+tmp <- dev.off() # Assign to avoid output.
 system(paste("display -background white -flatten", fname))

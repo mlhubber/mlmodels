@@ -2,7 +2,7 @@
 Classifying Iris Plant Species
 ==============================
 
-The famous IRIS dataset is a traditional statistics demonstration
+The famous iris dataset is a traditional statistics demonstration
 dataset for building classification models. It contains data for 3
 different class of iris (Setosa, Versicolour, and Virginica) with 50
 observations of each class. Each observation records the flower's

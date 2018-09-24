@@ -41,5 +41,3 @@ for (pkg in pkgs)
   cat("  ", pkg, "\n")
   install.packages(pkg, repos=NULL, lib=lib)
 }
-
-cat("\n")
