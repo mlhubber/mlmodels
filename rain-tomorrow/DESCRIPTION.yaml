@@ -1,15 +1,15 @@
 --- # RAIN TOMORROW DECISION TREE
 meta:
   name         : rain-tomorrow
-  version      : 1.1.3
+  version      : 1.1.4
   keywords     : prediction, classification, decision tree, introductory
   languages    : R
   license      : gpl3
   title        : Predict rain tomorrow using decision tree.
   display      : display
   author       : Graham.Williams@togaware.com
-  filename     : pool/main/r/rain-tomorrow/rain-tomorrow_1.1.3.mlm
-  date         : 2018-09-21 17:11:52
+  filename     : pool/main/r/rain-tomorrow/rain-tomorrow_1.1.4.mlm
+  date         : 2018-09-25 13:52:27
 commands:
   demo   : Run the model and present performance metrics.
   print  : View a textual representation of the model.

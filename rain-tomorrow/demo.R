@@ -43,6 +43,7 @@ predict(model, newdata=ds, type="class") %>%
   as.data.frame() %>%
   cbind(Actual=ds$target) %>%
   set_names(c("Predicted", "Actual")) %>%
+  select(Actual, Predicted) %>%
   mutate(Error=ifelse(Predicted==Actual, "", "<----")) %T>%
   print() ->
 ev

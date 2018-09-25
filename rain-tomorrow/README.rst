@@ -27,6 +27,7 @@ To install and run the pre-built model::
 
   $ pip install mlhub
   $ ml install rain-tomorrow
+  $ ml configure rain-tomorrow
   $ ml demo rain-tomorrow
 
 This model comes from the Essentials of Data Science by Graham

@@ -27,8 +27,7 @@ if (length(install))
 {
   cat(sprintf("\nInstalling '%s' into '%s'...\n", paste(install, collapse="', '"), lib))
   install.packages(install, lib=lib)
-  cat("\n")
 } else
 {
-  cat("\nNo additional generic R packages need to be installed.\n\n")
+  cat("\nNo additional generic R packages need to be installed.\n")
 }

@@ -27,13 +27,13 @@ if (length(install))
   install.packages(install, lib=lib)
 } else
 {
-  cat("\nNo additional generic R packages need to be installed.")
+  cat("\nNo additional OS-based R packages need to be installed.")
 }
 cat("\n\n")
 
 # Additional specific packages, often as an interim measure.
 
-cat("We also need to install these specific packages...\n")
+cat("We also need to install these non-OS available R packages...\n")
 
 pkgs <- c("https://cran.r-project.org/src/contrib/rpart.plot_3.0.4.tar.gz")
 for (pkg in pkgs)
@@ -41,5 +41,3 @@ for (pkg in pkgs)
   cat("  ", pkg, "\n")
   install.packages(pkg, repos=NULL, lib=lib)
 }
-
-cat("\n")
