@@ -24,11 +24,12 @@ cat("\n=====================================",
     "\nIntroducing Bar Charts with R ggplot2",
     "\n=====================================\n\n")
 
-cat("The Australian weather dataset from the Rattle package is used",
-    "to illustrate bar charts.\n\n")
+cat("The Australian weather dataset from the Rattle package (from R)\n")
+cat("is used to illustrate bar charts.\n\n")
 
-cat("These examples come from the book, Essentials of Data Science, by Graham Williams.\n")
-cat("Used with permission. Visit https://essentials.togaware.com\n\n")
+cat("These examples come from the book, Essentials of Data Science,\n")
+cat("by Graham Williams. Used with permission.\n")
+cat("Visit https://essentials.togaware.com for more details.\n\n")
 
 cat("Press the <Enter> key after each message to display the referenced plot.\n")
 cat("Close the graphic window (Ctrl-W) to continue on to the next plot.\n\n")
@@ -37,7 +38,7 @@ cat("Close the graphic window (Ctrl-W) to continue on to the next plot.\n\n")
 # Prepare the Weather dataset.
 #-----------------------------------------------------------------------
 
-cat("A bar chart showing frequency of wind direction in the dataset: ")
+cat("Plot a bar chart to show the frequency of wind direction in the dataset: ")
 invisible(readChar("stdin", 1))
 
 dsname <- "weatherAUS"
@@ -74,7 +75,7 @@ system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 # Incorporate stacked bars.
 #-----------------------------------------------------------------------
 
-cat("\nA stacked bar chart can show an extra dimension (variable): ")
+cat("\nPlot a stacked bar chart to include an extra dimension (variable): ")
 invisible(readChar("stdin", 1))
 
 fname <- "weather_bar_stacked.pdf"
@@ -90,7 +91,7 @@ system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 # Replace stacked bars with dodged bars.
 #-----------------------------------------------------------------------
 
-cat("\nDodged bars in the chart may be more informative: ")
+cat("\nPlotting dodged bars in the chart may be more informative: ")
 invisible(readChar("stdin", 1))
 
 fname <- "weather_bar_dodged.pdf"
@@ -106,7 +107,7 @@ system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 # A carefully crafted bar chart.
 #-----------------------------------------------------------------------
 
-cat("\nA more carefully crafted bar chart: ")
+cat("\nPlot a more carefully crafted bar chart: ")
 invisible(readChar("stdin", 1))
 
 blues2 <- brewer.pal(4, "Paired")[1:2]

@@ -10,8 +10,8 @@ meta:
   version     : 1.1.4
   maintainer  : Graham Williams <Graham.Williams@microsoft.com>
   dependencies: rpart, magrittr, caret, rpart.plot, RColorBrewer
-  filename     : pool/main/i/iris/iris_1.1.3.mlm
-  date         : 2018-09-24 09:19:25
+  filename     : pool/main/i/iris/iris_1.1.4.mlm
+  date         : 2018-09-24 09:48:42
 commands:
   demo    : Apply the model to a sample dataset.
   print   : Print a textual summary of the model.
