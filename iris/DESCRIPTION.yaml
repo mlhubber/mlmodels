@@ -7,14 +7,12 @@ meta:
   modeller    : rpart
   type        : decision tree
   display     : display
-  version     : 1.1.5
+  version     : 1.1.6
   maintainer  : Graham Williams <Graham.Williams@microsoft.com>
   dependencies: rpart, magrittr, caret, rpart.plot, RColorBrewer
-  filename     : pool/main/i/iris/iris_1.1.5.mlm
-  date         : 2018-09-25 09:49:27
+  filename     : pool/main/i/iris/iris_1.1.6.mlm
+  date         : 2018-09-25 13:46:13
 commands:
   demo    : Apply the model to a sample dataset.
   print   : Print a textual summary of the model.
   display : Display a graphical representation of the model.
-  score   : Apply the model to a dataset (CSV with header and 4 numeric columns).
-  train   : Build a model on your data (CSV with a target column Species).
