@@ -10,7 +10,7 @@ library(SAR)
 # local copy of movielens data from https://grouplens.org/datasets/movielens/
 # load data
 
-data_dir <- "~/.mlhub/movie-recommender-r/data"
+data_dir <- "data"
 movielens <- read.csv(file.path(data_dir, "/ml-latest-small/movielens.csv"), header=TRUE)
 head(movielens)
 
