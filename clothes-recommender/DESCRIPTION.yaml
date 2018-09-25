@@ -1,4 +1,4 @@
---- # Clothes Recommender Py
+--- # Clothes Recommender 
 meta:
   name         : clothes-recommender
   title        : Clothes recommendation using CNN/SVM.
@@ -12,7 +12,7 @@ meta:
   filename     : pool/main/c/clothes-recommender/clothes-recommender_1.1.2.mlm
   date         : 2018-09-17 14:18:27
 commands:
-  print : visualize the structure of the model
-  demo : apply the model to a sample image dataset
-  score : apply the model to the supplied images
-  display : display the demo image recommendation
+  print   : Visualize the structure of the model.
+  demo    : Apply the model to a sample image dataset.
+  score   : Apply the model to the supplied images.
+  display : Display the demo image recommendation.
