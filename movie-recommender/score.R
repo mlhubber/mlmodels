@@ -44,6 +44,7 @@ map <- read.csv(file.path(data_dir, "/ml-latest-small/map.csv"), header = TRUE)
 mapu <- join(map, recu2, type="right")
 recu2$title <- mapu$title
 
+nid <- length(unique(recu2[, 1]))
 nuser <- 2
 cat("\nThe model is applied to", nid, "users to suggest their next movies to watch.")
 cat("\nHere we show a random", nuser, "users, listing watched movies and recommendation.\n\n")
