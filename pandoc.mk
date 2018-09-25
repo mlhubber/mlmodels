@@ -55,7 +55,7 @@ help::
 	@echo "$$PANDOC_HELP"
 
 %.txt: %.rst
-	pandoc $< -o $@
+	pandoc -t plain $< | perl -00pe0 > $@
 
 %.txt: %.md
 	pandoc $< -o $@
