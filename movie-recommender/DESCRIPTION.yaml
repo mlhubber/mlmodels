@@ -1,7 +1,7 @@
 --- # Movie Recommender
 meta:
   name        : movie-recommender
-  title       : Movie recommendation using SAR package.
+  title       : Movie recommendation using the SAR algorthm.
   languages   : R
   keywords    : recommendation, R, SAR, movie recommendation
   modeller    : SAR
@@ -14,8 +14,8 @@ meta:
   filename     : pool/main/m/movie-recommender/movie-recommender_1.1.1.mlm
   date         : 2018-09-18 09:22:31
 commands:
-  demo     : Apply the model to a sample dataset
-  print    : Print a textual summary of the model
-  display  : Display a graphical representaiton of the model
-  score    : Apply the model to a supplied dataset
+  demo     : Apply the model to a sample dataset.
+  print    : Print a textual summary of the model.
+  display  : Display a graphical representaiton of the model.
+  score    : Apply the model to a supplied dataset.
   train    : Build a new model on your own data with columns representing userid, itemid, rating, time, title, genres.
