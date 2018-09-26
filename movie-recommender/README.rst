@@ -11,8 +11,8 @@ movieId, rating, timestamp, title, and genres. The goal is to build a
 recommendation model to recommend new movies to users.
 
 This pre-built model has used the R language to build a recommendation
-model to represent the knowledge discovered using a so-called Smart
-Adaptive Recommendations (SAR) algorithm. The knowledge representation
-is easy to understand. The computation time is of the order of seconds
-on the GPU based Azure Deep Learning Virtual Machine whilst it is
-hours on the CPU based Azure Data Science Virtual Machine.
+model to represent the knowledge discovered using a Smart Adaptive
+Recommendations (SAR) algorithm. The knowledge representation is easy
+to understand. The computation time is of the order of seconds on the
+GPU based Azure Deep Learning Virtual Machine whilst it is hours on
+the CPU based Azure Data Science Virtual Machine.
