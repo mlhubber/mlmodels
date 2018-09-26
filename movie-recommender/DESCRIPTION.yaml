@@ -6,15 +6,16 @@ meta:
   keywords    : recommendation, R, SAR, movie recommendation
   modeller    : SAR
   type        : SAR local count
-  version     : 1.1.1
+  version     : 1.1.2
+  display     : display
   section     : ecommence, entertainment
   maintainer  : Fang Zhou <zhouf@microsoft.com>
   dependencies: R, SAR, caret, plyr, dplyr
   filename     : pool/main/m/movie-recommender/movie-recommender_1.1.1.mlm
   date         : 2018-09-18 09:22:31
 commands:
+  demo     : Apply the model to a sample dataset
   print    : Print a textual summary of the model
   display  : Display a graphical representaiton of the model
-  demo     : Apply the model to a sample dataset
   score    : Apply the model to a supplied dataset
   train    : Build a new model on your own data with columns representing userid, itemid, rating, time, title, genres.
