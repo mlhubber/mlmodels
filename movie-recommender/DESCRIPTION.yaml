@@ -16,7 +16,6 @@ meta:
 commands:
   demo     : Apply the model to a sample dataset.
   print    : Print a textual summary of the model.
-  display  : Display a graphical representaiton of the model.
   score    :
     description: Apply the model to a supplied dataset.
     required: <csv file> The name of a CSV file containing a header and 6 columns.
