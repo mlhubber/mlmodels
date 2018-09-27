@@ -6,12 +6,38 @@ This repository collects together an archive of pre-built machine
 learning models that can be readily shared for individuals to download
 and to demonstrate the model in action. 
 
-The sample R pre-built models *rain-tomorrow*, *iris-r*, and
+The sample R pre-built models *rain-tomorrow*, *iris*, and
 *clothes-recommender* serve as templates which model package authors
-can mimic.
+can mimic. The model package file *.mlm* is simply a zip archive
+containing scripts like *demo.R* or *demo.py*, and the required
+support files. The *DESCRIPTION.yaml* file contains meta-information
+about the package and is used by the mlhub command line tool.
 
 DESCRIPTION.yaml
 ================
+
+A sample DESCRIPTION.yaml file is::
+
+  meta:
+    name        : iris
+    title       : Classical iris plant species classifier.
+    keywords    : r, iris, biology, decision tree, rpart, classification
+    languages   : R
+    modeller    : rpart
+    type        : decision tree
+    display     : display
+    version     : 1.1.6
+    maintainer  : Graham Williams <Graham.Williams@microsoft.com>
+    dependencies:
+      R: rpart, magrittr, caret, rpart.plot, RColorBrewer
+  commands:
+    demo    : Apply the model to a sample dataset.
+    print   : Print a textual summary of the model.
+    display : Display a graphical representation of the model.
+    score   :
+      description: Apply the model to interactive or supplied dataset.
+      optional: <csv file> A CSV file with columns as noted in README.
+
 
 license
 -------
