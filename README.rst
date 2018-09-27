@@ -6,7 +6,7 @@ This repository collects together an archive of pre-built machine
 learning models that can be readily shared for individuals to download
 and to demonstrate the model in action. 
 
-The sample R pre-built models *rain-tomorrow*, *iris*, and
+The sample R pre-built models *rain*, *iris*, and
 *clothes-recommender* serve as templates which model package authors
 can mimic. The model package file *.mlm* is simply a zip archive
 containing scripts like *demo.R* or *demo.py*, and the required
@@ -19,26 +19,25 @@ DESCRIPTION.yaml
 A sample DESCRIPTION.yaml file is::
 
   meta:
-    name        : iris
-    title       : Classical iris plant species classifier.
-    keywords    : r, iris, biology, decision tree, rpart, classification
-    languages   : R
-    modeller    : rpart
-    type        : decision tree
-    display     : display
-    version     : 1.1.6
-    maintainer  : Graham Williams <Graham.Williams@microsoft.com>
-    dependencies:
-      R: rpart, magrittr, caret, rpart.plot, RColorBrewer
+    name         : rain
+    title        : Predict likelihood of rain tomorrow using decision tree.
+    languages    : R
+    license      : gpl3
+    display      : display
+    version      : 1.1.5
+    author       : Graham Williams <Graham.Williams@togaware.com>
+    keywords     : r, prediction, classification, decision tree,
+                   introductory, weather, climate
+    dependencies :
+      R: rpart, magrittr, dplyr, tidyr, rattle
   commands:
-    demo    : Apply the model to a sample dataset.
-    print   : Print a textual summary of the model.
-    display : Display a graphical representation of the model.
-    score   :
-      description: Apply the model to interactive or supplied dataset.
+    demo   : Run the model and present performance metrics.
+    print  : View a textual representation of the model.
+    display: View a graphic represetnation of the model.
+    score  :
+      description: Predict rain tomorrow interactive or supplied dataset.
       optional: <csv file> A CSV file with columns as noted in README.
-
-
+  
 license
 -------
 
