@@ -13,6 +13,17 @@ recommendation model to recommend new movies to users.
 This pre-built model has used the R language to build a recommendation
 model to represent the knowledge discovered using a Smart Adaptive
 Recommendations (SAR) algorithm. The knowledge representation is easy
-to understand. The computation time is of the order of seconds on the
-GPU based Azure Deep Learning Virtual Machine whilst it is hours on
-the CPU based Azure Data Science Virtual Machine.
+to understand.
+
+The **demo** command applies the pre-built model to a demo data set
+with records from 10 users and shows the recommendation results for 2
+users.
+
+The **print** command will display a textual summary of the model and
+its build parameters.
+
+The **score** command applies the pre-built model to a supplied data
+set and shows the recommendation results for 2 users. Example
+**score** command::
+
+  $ ml score movie-recommender user10.csv
