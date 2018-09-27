@@ -2,7 +2,7 @@
 
 library(rpart)
 
-load("rain-tomorrow.RData")
+load("rain.RData")
 
 # The following code based on rpart::printcp()
 # Copyright (c) Brian Ripley

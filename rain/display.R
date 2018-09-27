@@ -9,7 +9,7 @@ suppressMessages(
   library(rpart)        # Decision tree modeller.
 })
 
-load("rain-tomorrow.RData")
+load("rain.RData")
 
 cat("\nTo display the decision tree press <Enter>: ")
 invisible(readChar("stdin", 1))

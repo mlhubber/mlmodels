@@ -16,7 +16,7 @@ DESCRIPTIONS = 					\
 	movie-recommender/DESCRIPTION.yaml	\
 	object-recognition/DESCRIPTION.yaml	\
 	ports-plots/DESCRIPTION.yaml		\
-	rain-tomorrow/DESCRIPTION.yaml		\
+	rain/DESCRIPTION.yaml		\
 	scatter-plot/DESCRIPTION.yaml		\
 
 INC_BASE    = .

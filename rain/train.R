@@ -27,9 +27,9 @@ model <- rpart(target ~ ., data=ds, parms=list(prior=c(0.6, 0.4)))
 
 cat("====================\nModel Saved as RData\n====================\n\n")
 
-save(model, file="rain-tomorrow.RData")
+save(model, file="rain.RData")
 
 # Suggest next step.
 
 cat("\nYou may like to evaluate the model performance by running the demo:\n",
-    "\n  $ ml demo rain-tomorrow\n\n")
+    "\n  $ ml demo rain\n\n")

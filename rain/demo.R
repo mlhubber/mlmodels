@@ -17,7 +17,7 @@ suppressMessages(
 
 set.seed(423)
 
-load("rain-tomorrow.RData")
+load("rain.RData")
 
 cat("\n=====================\nPredict Rain Tomorrow\n=====================\n\n")
 

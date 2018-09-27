@@ -31,7 +31,7 @@ ds %<>%
 
 names(ds)[which(names(ds) == "rain_tomorrow")] <- "target"
 
-load("rain-tomorrow.RData")
+load("rain.RData")
 
 cat("\n===========================================\n",
     "Provide values for the following variables",
