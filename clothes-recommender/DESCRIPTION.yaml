@@ -10,7 +10,7 @@ meta:
   section      : ecommerce, fashion
   maintainer   : Fang.Zhou@microsoft.com
   filename     : pool/main/c/clothes-recommender/clothes-recommender_1.1.2.mlm
-  date         : 2018-09-26 14:50:48
+  date         : 2018-09-26 14:58:46
 commands:
   demo    : Apply the model to a sample image dataset.
   print   : Visualize the structure of the model.
