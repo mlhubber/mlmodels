@@ -1,15 +1,17 @@
 --- # SCATTER PLOT
 meta:
-  name         : scatter-plot
-  version      : 1.1.3
+  name         : scatter
+  version      : 1.2.2
   keywords     : r, graphics, visualisation, plot, scatter plot, basics
   languages    : R
   license      : gpl3
   display      : demo
+  dependencies :
+    R: magrittr, rattle, ggplot2, dplyr, randomForest
   title        : Demonstrate the concept of scatter plots.
   author       : Graham.Williams@togaware.com
-  filename     : pool/main/s/scatter-plot/scatter-plot_1.1.3.mlm
-  date         : 2018-09-21 15:27:12
+  filename     : pool/main/s/scatter/scatter_1.2.2.mlm
+  date         : 2018-09-29 14:27:04
 commands:
   demo  : Step through alternative options for scatter plots.
-  print : Display the actual code.
+  print : Display the R code used to generate the plots.

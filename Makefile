@@ -17,7 +17,7 @@ DESCRIPTIONS = 					\
 	object-recognition/DESCRIPTION.yaml	\
 	ports-plots/DESCRIPTION.yaml		\
 	rain/DESCRIPTION.yaml		\
-	scatter-plot/DESCRIPTION.yaml		\
+	scatter/DESCRIPTION.yaml		\
 
 INC_BASE    = .
 INC_PANDOC  = $(INC_BASE)/pandoc.mk

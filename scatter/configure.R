@@ -30,3 +30,22 @@ if (length(install))
   cat("\nNo additional generic R packages need to be installed.")
 }
 cat("\n")
+
+# Additional specific packages, often as an interim measure.
+
+# if rattle version is < 5.2.0 then install downloaded packge from togaware.
+
+if (packageVersion("rattle") < "5.2.0")
+{
+
+  cat("\nWe also need to install these specific packages...\n")
+
+  pkgs <- c("https://togaware.com/access/rattle_5.2.5.tar.gz")
+  for (pkg in pkgs)
+  {
+    cat("  ", pkg, "\n")
+    install.packages(pkg, repos=NULL, lib=lib)
+  }
+
+  cat("\n")
+}

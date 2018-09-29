@@ -1,7 +1,9 @@
 ########################################################################
 # Introduce the concept of scatter plots through ML Hub
 #
-# Copyright 2018 Graham.Williams@togaware.com
+# Copyright (c) 2018 Graham.Williams@togaware.com
+#
+# License GPLv3
 
 #-----------------------------------------------------------------------
 # Load required packages from local library into the R session.
@@ -11,7 +13,6 @@ suppressMessages(
 {
 library(magrittr)     # Data pipelines: %>% %<>% %T>% equals().
 library(rattle)       # Support: normVarNames(), weatherAUS. 
-library(rattle.data)  # Temporaray - weatherAUS.
 library(ggplot2)      # Visualise data.
 library(dplyr)        # Wrangling: tbl_df(), group_by(), print().
 library(randomForest) # Model: randomForest() na.roughfix() for missing data.
@@ -37,6 +38,9 @@ dsname    <- "iris"
 ds        <- get(dsname)
 names(ds) %<>% normVarNames()
 
+xv <- "sepal_length"
+yv <- "sepal_width"
+
 cat("We begin with a basic scatter plot of points for two dimensions (variables): ")
 invisible(readChar("stdin", 1))
 
@@ -45,7 +49,7 @@ invisible(readChar("stdin", 1))
 fname <- "iris_scatter.pdf"
 pdf(file=fname, width=8)
 ds %>%
-  ggplot(aes(x=sepal_length, y=sepal_width)) +
+  ggplot(aes_string(x=xv, y=yv)) +
   geom_point()
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
@@ -60,7 +64,7 @@ invisible(readChar("stdin", 1))
 fname <- "iris_scatter_line.pdf"
 pdf(file=fname, width=8)
 ds %>%
-  ggplot(aes(x=sepal_length, y=sepal_width)) +
+  ggplot(aes_string(x=xv, y=yv)) +
   geom_point() +
   geom_line()
 invisible(dev.off())
@@ -76,7 +80,7 @@ invisible(readChar("stdin", 1))
 fname <- "iris_scatter_smooth.pdf"
 pdf(file=fname, width=8)
 ds %>%
-  ggplot(aes(x=sepal_length, y=sepal_width)) +
+  ggplot(aes_string(x=xv, y=yv)) +
   geom_point() +
   stat_smooth(method="loess")
 invisible(dev.off())
@@ -92,7 +96,7 @@ invisible(readChar("stdin", 1))
 fname <- "iris_scatter_colour.pdf"
 pdf(file=fname, width=8)
 ds %>%
-  ggplot(aes(x=sepal_length, y=sepal_width, colour=species)) +
+  ggplot(aes_string(x=xv, y=yv, colour="species")) +
   geom_point()
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
@@ -177,3 +181,6 @@ ds %>%
   theme(axis.text.x=element_text(angle=45, hjust=1))
 invisible(dev.off())
 system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+
+cat("\nThe MLHub model 'beeswarm' provides further sophisticated examples.\n")
+cat("Give it a go.... $ ml install beeswarm.\n")
