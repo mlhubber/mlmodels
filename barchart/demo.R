@@ -58,6 +58,11 @@ vars   <- setdiff(vars, ignore)
 
 ds[vars] %<>% na.roughfix()
 
+# Template variables for the plots.
+
+xv   <- "wind_dir_3pm"
+fill <- "rain_tomorrow"
+
 #-----------------------------------------------------------------------
 # A simple bar chart.
 #-----------------------------------------------------------------------
@@ -65,7 +70,7 @@ ds[vars] %<>% na.roughfix()
 fname <- "weather_bar_basic.pdf"
 pdf(file=fname, width=8)
 ds %>%
-  ggplot(aes(x=wind_dir_3pm)) +
+  ggplot(aes_string(x=xv)) +
   scale_y_continuous(labels=comma) +
   geom_bar()
 invisible(dev.off())
@@ -81,7 +86,7 @@ invisible(readChar("stdin", 1))
 fname <- "weather_bar_stacked.pdf"
 pdf(file=fname, width=8)
 ds %>%
-  ggplot(aes(x=wind_dir_3pm, fill=rain_tomorrow)) +
+  ggplot(aes_string(x=xv, fill=fill)) +
   scale_y_continuous(labels=comma) +
   geom_bar()
 invisible(dev.off())
@@ -97,7 +102,7 @@ invisible(readChar("stdin", 1))
 fname <- "weather_bar_dodged.pdf"
 pdf(file=fname, width=8)
 ds %>%
-  ggplot(aes(x=wind_dir_3pm, fill=rain_tomorrow)) +
+  ggplot(aes(x=xv, fill=fill)) +
   scale_y_continuous(labels=comma) +
   geom_bar(position="dodge")
 invisible(dev.off())
@@ -120,7 +125,7 @@ num_locations
 fname <- "weather_bar_informative.pdf"
 pdf(file=fname, width=8)
 ds %>%
-  ggplot(aes(x=wind_dir_3pm, fill=rain_tomorrow)) +
+  ggplot(aes_string(x=xv, fill=fill)) +
   geom_bar(position="dodge") +
   scale_fill_manual(values = blues2,
                     labels = c("No Rain", "Rain")) +
