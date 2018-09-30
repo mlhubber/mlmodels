@@ -9,6 +9,7 @@ VER=1.0.0
 
 DESCRIPTIONS = 					\
 	barchart/DESCRIPTION.yaml		\
+	beeswarm/DESCRIPTION.yaml		\
 	clothes-recommender/DESCRIPTION.yaml \
 	colorize/DESCRIPTION.yaml 		\
 	dogs-cats/DESCRIPTION.yaml 		\
