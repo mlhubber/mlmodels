@@ -1,8 +1,14 @@
 # Import required libraries.
 print("\nLoading the required Python modules for the ResNet152 model.")
+
+from objreg_utils import (
+    to_img,
+    img_url_to_json,
+    plot_predictions,
+    plot_single_prediction,
+    get_model_api,
+)
 import glob
-from testing_utilities import to_img, img_url_to_json, plot_predictions, plot_single_prediction
-from driver import get_model_api
 import json
 import os
 

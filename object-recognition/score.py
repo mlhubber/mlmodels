@@ -1,15 +1,23 @@
 # Import required libraries.
 
+print("\nLoading the required Python modules for the ResNet152 model.")
+
+from objreg_utils import (
+    to_img,
+    img_url_to_json,
+    plot_predictions,
+    plot_single_prediction,
+    get_model_api,
+    tab_complete_path,
+)
+
 import glob
-from testing_utilities import to_img, img_url_to_json, plot_predictions, plot_single_prediction
-from driver import get_model_api
 import json
 import os
 import sys
+import readline
 
-# Load model
-
-predict_for = get_model_api()
+# Utilities
 
 def _score_for_one_img(img, label='image'):
     """Score for a single image in url.
@@ -40,16 +48,24 @@ def _score_for(url):
     else:
         _score_for_one_img(url, label=url)
 
+# Load model
+
+predict_for = get_model_api()
+
+
+# Setup input path completion
+
+readline.set_completer_delims('\t')
+readline.parse_and_bind("tab: complete")
+readline.set_completer(tab_complete_path)
+
+# Scoring
 
 if len(sys.argv) < 2:
-    url = None
-    print('\nGive me a path or URL of the images to recognize:', end='\n> ')
-    url = input()
+    url = input('\nGive me a path or URL of the images to recognize:\n> ')
     while url != '':
         _score_for(url)
-        print('\nGive me another path or URL of the images to recognize:', end='\n> ')
-        url = input()
-        
+        url = input('\nGive me another path or URL of the images to recognize:\n> ')
 else:
     for url in sys.argv[1:]:
         _score_for(url)
