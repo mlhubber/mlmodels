@@ -13,6 +13,8 @@ MODEL_FILES = 			\
 	DESCRIPTION.yaml	\
 	images			\
 	resources		\
+	objreg_utils.py         \
+	score.py                \
 
 include ../mlhub.mk
 include ../git.mk
