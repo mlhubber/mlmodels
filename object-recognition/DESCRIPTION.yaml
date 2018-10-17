@@ -1,13 +1,15 @@
 --- # ResNet152 Image Object Recognition
 meta:
   name         : object-recognition
-  languages    : python
+  languages    : py
   version      : 1.1.0
   keywords     : image classification, python3, computer vision, imagenet, resnet, dnn, prediction, classification
   license      : gpl3
   title        : Image object recognition using resnet152.
+  display      : demo, score
   author       : Graham.Williams@togaware.com
   filename     : pool/main/o/object-recognition/object-recognition_1.1.0.mlm
   date         : 2018-09-21 17:10:39
 commands:
-  demo : Run the model on sample images.
+  demo  : Run the model on sample images.
+  score : Run the model on images provided.
