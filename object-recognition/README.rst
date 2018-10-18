@@ -17,5 +17,5 @@ model is used. Sample images are provided, pre-processed to the required
 format and classified using the model.
 
 Visit the `github repository
-<https://Github.com/mlhubber/mlmodels/tree/master/resnet152>`_.  for
+<https://Github.com/mlhubber/mlmodels/tree/master/object-recognition>`_.  for
 the sample code.
