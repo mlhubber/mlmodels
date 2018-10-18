@@ -68,10 +68,20 @@ readline.set_completer(tab_complete_path)
 # Scoring
 
 if len(sys.argv) < 2:
-    url = input('\nPath or URL of images to recognize:\n> ')
+    try:
+        url = input('\nPath or URL of images to recognize:\n> ')
+    except EOFError:
+        print()
+        sys.exit(0)
+
     while url != '':
         _score_for(url)
-        url = input('\nPath or URL of images to recognize:\n> ')
+
+        try:
+            url = input('\nPath or URL of images to recognize:\n> ')
+        except EOFError:
+            print()
+            sys.exit(0)
 else:
     for url in sys.argv[1:]:
         _score_for(url)
