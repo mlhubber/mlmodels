@@ -9,6 +9,7 @@ from objreg_utils import (
     plot_single_prediction,
     get_model_api,
     tab_complete_path,
+    validateURL,
 )
 
 import glob
@@ -40,13 +41,18 @@ def _score_for(url):
         url (str): a url to an image, or a path to an image, or a dir for images.
     """
 
-    url = os.path.expanduser(url)
-    if os.path.isdir(url):
-        for img in os.listdir(url):
-            img_file = os.path.join(url, '', img)
-            _score_for_one_img(img_file, label=img_file)
-    else:
+    if validateURL(url):
         _score_for_one_img(url, label=url)
+    else:
+        url = os.path.abspath(os.path.expanduser(url))
+
+        if os.path.isdir(url):
+            for img in os.listdir(url):
+                img_file = os.path.join(url, '', img)
+                _score_for_one_img(img_file, label=img_file)
+        else:
+            _score_for_one_img(url, label=url)
+
 
 # Load model
 

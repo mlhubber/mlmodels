@@ -120,19 +120,26 @@ def get_model_api():
 # I/O and plot functions
 # ----------------------------------------------------------------------
 
-urlregex = re.compile(
-           r'^(?:http|ftp)s?://' # http:// or https://
-           r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|' #domain...
-           r'localhost|' #localhost...
-           r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' # ...or ip
-           r'(?::\d+)?' # optional port
-           r'(?:/?|[/?]\S+)$', re.IGNORECASE)
+def validateURL(url):
+    """Check if url is a valid URL."""
 
+    urlregex = re.compile(
+        r'^(?:http|ftp)s?://' # http:// or https://
+        r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|' #domain...
+        r'localhost|' #localhost...
+        r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' # ...or ip
+        r'(?::\d+)?' # optional port
+        r'(?:/?|[/?]\S+)$', re.IGNORECASE)
+
+    if re.match(urlregex, url) is not None:
+        return True
+    else:
+        return False
 
 def read_image_from(url):
     return toolz.pipe(
         url,
-        urllib.request.urlopen if re.match(urlregex, url) is not None else lambda x: open(x, 'rb'),
+        urllib.request.urlopen if validateURL(url) else lambda x: open(x, 'rb'),
         lambda x: x.read(),
         BytesIO)
 
