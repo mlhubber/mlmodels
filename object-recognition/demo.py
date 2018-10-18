@@ -16,7 +16,7 @@ folder = os.path.dirname(os.path.realpath(__file__))
 images = glob.glob("images/*.jpg")
 images.sort()
 
-print("\nThe ResNet152 model will be used for recognizing the images in '{}'".format(folder))
+print("\nThe ResNet152 model will be used for recognizing the images in\n'{}'".format(folder))
 
 results = []
 

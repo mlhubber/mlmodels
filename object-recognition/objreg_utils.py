@@ -100,7 +100,7 @@ def get_model_api():
 
         results = {}
         for key, base64_img_string in images_dict.items():
-            print("\nRecognizing the image '{}'".format(key))
+            print("\nRecognizing the image\n'{}'".format(key))
             rgb_image = _base64img_to_numpy(base64_img_string)
             batch_image = np.expand_dims(rgb_image, 0)
             results[key] = scoring_func(batch_image, number_results=_NUMBER_RESULTS)
@@ -111,7 +111,7 @@ def get_model_api():
         print("    {}".format(timemsg))
         print("    Predictions:")
         for l, p in results[key]:
-            print("        {0:>5.2f}%: {1}".format(p*100, ' '.join(l.split()[1:])))
+            print("      {0:>5.2f}%: {1}".format(p*100, ' '.join(l.split()[1:])))
 
         return (results, timemsg)
     return process_and_score

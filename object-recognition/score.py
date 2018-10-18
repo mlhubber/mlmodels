@@ -1,6 +1,6 @@
 # Import required libraries.
 
-print("\nLoading the required Python modules for the ResNet152 model.")
+print("Loading the required Python modules for the ResNet152 model.")
 
 from objreg_utils import (
     to_img,
@@ -62,10 +62,10 @@ readline.set_completer(tab_complete_path)
 # Scoring
 
 if len(sys.argv) < 2:
-    url = input('\nGive me a path or URL of the images to recognize:\n> ')
+    url = input('\nPath or URL of images to recognize:\n> ')
     while url != '':
         _score_for(url)
-        url = input('\nGive me another path or URL of the images to recognize:\n> ')
+        url = input('\nPath or URL of images to recognize:\n> ')
 else:
     for url in sys.argv[1:]:
         _score_for(url)

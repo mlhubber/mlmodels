@@ -1,6 +1,6 @@
-==============================
-Object Classification
-==============================
+==================
+Object Recognition
+==================
 
 This model is based on the `deep learning kubernetes
 tutorial <https://blogs.technet.microsoft.com/machinelearning/2018/04/19/deploying-deep-learning-models-on-kubernetes-with-gpus/>`__
