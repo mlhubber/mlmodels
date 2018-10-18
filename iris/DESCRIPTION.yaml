@@ -1,4 +1,4 @@
---- # Iris
+--- # IRIS
 meta:
   name        : iris
   title       : Classical iris plant species classifier.
@@ -7,12 +7,15 @@ meta:
   modeller    : rpart
   type        : decision tree
   display     : display
+  license     : gpl3
   version     : 1.1.6
+  author      : Graham.Williams@togaware.com
   maintainer  : Graham Williams <Graham.Williams@microsoft.com>
-  dependencies: rpart, magrittr, caret, rpart.plot, RColorBrewer
   filename     : pool/main/i/iris/iris_1.1.6.mlm
   date         : 2018-09-25 13:46:13
+  dependencies: 
+    R: rpart, magrittr, caret, rpart.plot, RColorBrewer
 commands:
   demo    : Apply the model to a sample dataset.
-  print   : Print a textual summary of the model.
-  display : Display a graphical representation of the model.
+  print   : View a textual summary of the model.
+  display : View a graphical representation of the model.
