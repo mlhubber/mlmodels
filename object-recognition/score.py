@@ -18,6 +18,9 @@ import os
 import sys
 import readline
 
+# The working dir of the command which invokes this script.
+CMD_CWD=os.environ.get('CMD_CWD', '')
+
 # Utilities
 
 def _score_for_one_img(img, label='image'):
@@ -44,7 +47,15 @@ def _score_for(url):
     if validateURL(url):
         _score_for_one_img(url, label=url)
     else:
+        # Change to the dir of command which invokes this script
+        if CMD_CWD != '':
+            oldwd = os.getcwd()
+            os.chdir(CMD_CWD)
+
         url = os.path.abspath(os.path.expanduser(url))
+
+        if CMD_CWD != '':
+            os.chdir(oldwd)
 
         if os.path.isdir(url):
             for img in os.listdir(url):
