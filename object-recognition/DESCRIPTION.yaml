@@ -12,4 +12,5 @@ meta:
   date         : 2018-10-18 11:20:54
 commands:
   demo  : Run the model on sample images.
+  print : View a textual representation of the model.
   score : Run the model on images provided.
