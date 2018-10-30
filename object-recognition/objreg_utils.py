@@ -49,7 +49,12 @@ def _load_tf_model(checkpoint_file):
     
     saver = tf.train.Saver()
     saver.restore(sess, checkpoint_file)
-    
+    return (sess, logits, probabilities, input_tensor)
+
+
+def _get_tf_model(checkpoint_file):
+    sess, logits, probabilities, input_tensor = _load_tf_model(checkpoint_file)
+
     def predict_for(image):
         pred, pred_proba = sess.run([logits,probabilities], feed_dict={input_tensor: image})
         return pred_proba
@@ -78,7 +83,7 @@ def create_scoring_func(model_path=_MODEL_FILE, label_path=_LABEL_FILE):
     print("\nLoading the pre-trained ResNet v1 152 model with 1000 classes.")
     start = t.default_timer()
     labels_for = _create_label_lookup(label_path)
-    predict_for = _load_tf_model(model_path)
+    predict_for = _get_tf_model(model_path)
     end = t.default_timer()
 
     loadTimeMsg = "    Model loading time: {0} ms".format(round((end-start)*1000, 2))
@@ -603,3 +608,12 @@ def ResNet152(include_top=True, weights=None,
     model = Model(inputs, x, name='resnet152')
     
     return model
+
+
+def _save_tf_modeo_graph(checkpoint_file):
+    sess, _, _, _ = _load_tf_model(checkpoint_file)
+    logdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tf_logs")
+    file_writer = tf.summary.FileWriter(logdir, sess.graph)
+    file_writer.close()
+    return logdir
+

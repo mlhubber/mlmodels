@@ -11,6 +11,7 @@ meta:
   filename     : pool/main/o/object-recognition/object-recognition_1.2.0.mlm
   date         : 2018-10-18 11:20:54
 commands:
-  demo  : Run the model on sample images.
-  print : View a textual representation of the model.
-  score : Run the model on images provided.
+  demo    : Run the model on sample images.
+  print   : View a textual representation of the model.
+  display : Visualize the model graph in a browser.
+  score   : Run the model on images provided.
