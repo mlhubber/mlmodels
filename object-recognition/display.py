@@ -13,7 +13,7 @@ logdir = _save_tf_modeo_graph(_MODEL_FILE)
 
 
 # Run TensorBoard for visualization
-print("Opening TensorBoard for visualizing the model graph.")
+print("\nStarting TensorBoard for visualizing the model graph.")
 tb_proc = subprocess.Popen(
     "exec tensorboard --logdir={}".format(logdir),
     shell=True,

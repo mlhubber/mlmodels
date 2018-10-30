@@ -6,7 +6,7 @@ meta:
   keywords     : image classification, python3, computer vision, imagenet, resnet, dnn, prediction, classification
   license      : gpl3
   title        : Image object recognition using resnet152.
-  display      : demo, score
+  display      : demo, score, display
   author       : Graham.Williams@togaware.com
   filename     : pool/main/o/object-recognition/object-recognition_1.2.0.mlm
   date         : 2018-10-18 11:20:54
