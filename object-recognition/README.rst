@@ -44,19 +44,23 @@ Usage
   $ ml configure object-recognition
   $ ml demo object-recognition
 
-* To classify images:
+* To classify:
 
   - An image from a local file::
 
-    $ ml score object-recognition ~/.mlhub/object-recognition/images/lynx.jpg
+      $ ml score object-recognition ~/.mlhub/object-recognition/images/lynx.jpg
 
   - Images in a folder::
 
-    $ ml score object-recognition ~/.mlhub/object-recognition/images/
+      $ ml score object-recognition ~/.mlhub/object-recognition/images/
 
   - An image from the web (See https://en.wikipedia.org/wiki/Aciagrion_occidentale) ::
 
-    $ ml score object-recognition https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Aciagrion_occidentale-Kadavoor-2017-05-08-002.jpg/440px-Aciagrion_occidentale-Kadavoor-2017-05-08-002.jpg
+      $ ml score object-recognition https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Aciagrion_occidentale-Kadavoor-2017-05-08-002.jpg/440px-Aciagrion_occidentale-Kadavoor-2017-05-08-002.jpg
+
+  - Interatively without repeatedly reloading the model::
+
+      $ ml score object-recognition
 
 * To visualise the network graph of the model::
 
@@ -64,3 +68,4 @@ Usage
 
   The default browser will be opened to display the graph rendered by
   `TensorBoard <https://www.tensorflow.org/guide/graph_viz>`__.
+
