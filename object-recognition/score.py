@@ -19,19 +19,20 @@ import sys
 import readline
 
 # The working dir of the command which invokes this script.
-CMD_CWD=os.environ.get('CMD_CWD', '')
+CMD_CWD = os.environ.get('CMD_CWD', '')
 
 # Utilities
+
 
 def _score_for_one_img(img, label='image'):
     """Score for a single image in url.
 
     Args:
-        url (str): a url to an image, or a path to an image.
+        img (str): a url to an image, or a path to an image.
     """
 
     jsonimg = img_url_to_json(img, label=label)
-    json_lod= json.loads(jsonimg)
+    json_lod = json.loads(jsonimg)
     output = predict_for(json_lod)
     plot_single_prediction(img, output)
     return output

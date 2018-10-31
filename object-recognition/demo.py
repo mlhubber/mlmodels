@@ -28,13 +28,13 @@ predict_for = get_model_api()
 
 for image in images:
     jsonimg = img_url_to_json(image, label=os.path.join(folder, image))
-    json_lod= json.loads(jsonimg)
+    json_lod = json.loads(jsonimg)
     output = predict_for(json_lod)
 
     # Plot the result
 
     plot_single_prediction(image, output)
-    results += [output,]
+    results += [output, ]
 
 # Plot the results together
 
