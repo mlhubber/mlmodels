@@ -44,7 +44,7 @@ Usage
   $ ml configure object-recognition
   $ ml demo object-recognition
 
-* To classify images::
+* To classify images:
 
   - An image from a local file::
 
