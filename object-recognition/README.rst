@@ -60,6 +60,7 @@ Usage
 
 * To visualise the network graph of the model::
 
-  $ ml display object-recognition
+    $ ml display object-recognition
 
-
+  The default browser will be opened to display the graph rendered by
+  `TensorBoard <https://www.tensorflow.org/guide/graph_viz>`__.
