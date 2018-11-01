@@ -12,7 +12,7 @@ def predict(gray):
 
     img_rows, img_cols = gray.shape[:2]
 
-    model_path = 'models/model.08-5.7380.hdf5'
+    model_path = 'models/model.06-2.5489.hdf5'
     model = load_model(model_path)
 
     q_ab = np.load("data/pts_in_hull.npy")
