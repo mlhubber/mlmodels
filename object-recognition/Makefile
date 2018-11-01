@@ -14,6 +14,8 @@ MODEL_FILES = 			\
 	images			\
 	resources		\
 	objreg_utils.py         \
+	print.py		\
+	display.py		\
 	score.py                \
 
 include ../mlhub.mk
