@@ -12,7 +12,6 @@ from objreg_utils import (
     validateURL,
 )
 
-import glob
 import json
 import os
 import sys
