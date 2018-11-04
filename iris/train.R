@@ -1,5 +1,5 @@
 # A sample model build using the traditional iris dataset. We
-# illustrate the model build and then saving to model to file so that
+# illustrate the model build and then saving model to file so that
 # we can later load the model and use it to score new datasets.
 
 library(rpart)
