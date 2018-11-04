@@ -8,11 +8,11 @@ meta:
   type        : decision tree
   display     : display
   license     : gpl3
-  version     : 1.1.5
+  version     : 1.1.6
   author      : Graham.Williams@togaware.com
   maintainer  : Graham Williams <Graham.Williams@microsoft.com>
-  filename    : pool/main/r/rain/rain_1.1.5.mlm
-  date        : 2018-09-27 10:54:07
+  filename     : pool/main/r/rain/rain_1.1.6.mlm
+  date         : 2018-11-04 21:02:17
   dependencies:
     R: rpart, magrittr, dplyr, tidyr, rattle, rpart.plot
 commands:

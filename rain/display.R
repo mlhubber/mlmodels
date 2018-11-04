@@ -18,7 +18,7 @@ fname <- "dtree.pdf"
 pdf(fname)
 fancyRpartPlot(model, sub="")
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 cat("\nTo display the vairable importance plot press <Enter>: ")
 invisible(readChar("stdin", 1))
@@ -27,4 +27,4 @@ fname <- "varimp.pdf"
 pdf(fname)
 print(ggVarImp(model))
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
