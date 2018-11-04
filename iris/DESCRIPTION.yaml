@@ -8,12 +8,13 @@ meta:
   type        : decision tree
   display     : display
   license     : gpl3
-  version     : 1.1.7
+  version     : 1.1.8
   author      : Graham.Williams@togaware.com
   maintainer  : Graham Williams <Graham.Williams@microsoft.com>
-  filename     : pool/main/i/iris/iris_1.1.7.mlm
-  date         : 2018-10-31 19:13:29
-  dependencies: 
+  filename     : pool/main/i/iris/iris_1.1.8.mlm
+  date         : 2018-11-04 20:55:09
+  dependencies:
+    sh: atril
     R: rpart, magrittr, caret, rpart.plot, RColorBrewer
 commands:
   demo    : Apply the model to a sample dataset.

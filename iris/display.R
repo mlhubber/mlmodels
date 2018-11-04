@@ -11,5 +11,5 @@ if (Sys.getenv("DISPLAY") != "")
   pdf(fname)
   fancyRpartPlot(m$finalModel, sub="")
   invisible(dev.off())
-  system(paste("evince --preview", fname))
+  system(paste("atril --preview", fname))
 }

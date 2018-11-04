@@ -1,6 +1,6 @@
-cat("=======================================================",
-    "\nIris Model Applied to a Dataset to Predict Iris Species",
-    "\n=======================================================\n\n")
+cat(  "=============================================================",
+    "\nIris Model Applied to a Dataset to Predict Iris Plant Species",
+    "\n=============================================================\n\n")
 
 suppressMessages(
 {

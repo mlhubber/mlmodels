@@ -3,6 +3,10 @@
 # avoid the need for sys admin access from within mlhub. R is
 # often operating system installed.
 
+# Use atril to display PDF files.
+
+system("sudo apt-get install atril", ignore.stderr=TRUE, ignore.stdout=TRUE)
+
 # Identify the required packages.
 
 packages <- c("rpart", "magrittr", "caret", "rpart.plot", "RColorBrewer")
@@ -27,7 +31,7 @@ if (length(install))
   install.packages(install, lib=lib)
 } else
 {
-  cat("\nNo additional generic R packages need to be installed.")
+  cat("No additional generic R packages need to be installed.")
 }
 cat("\n\n")
 
