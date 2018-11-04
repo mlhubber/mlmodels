@@ -30,7 +30,7 @@ recognise `1000 different kinds of classes
   n01518878 ostrich, Struthio camelus
 
 Visit the `github repository
-<https://Github.com/mlhubber/mlmodels/tree/master/object-recognition>`_.  for
+<https://Github.com/mlhubber/mlmodels/tree/master/object-recognition>`_  for
 the sample code.
 
 -----
