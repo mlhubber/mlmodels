@@ -32,4 +32,4 @@ clean::
 	rm -rf README.txt output
 
 realclean:: clean
-	rm -rf rain-tomorrow_*.mlm
+	rm -rf *.mlm
