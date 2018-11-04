@@ -41,7 +41,7 @@ easily and quickly exploring the models. Feedback is welcome through
 <tbody>
 BODY
 
-ml avail |\
+ml available |\
   grep ' : ' |\
   perl -pe 's|^(.)([^ ]*) +: +([^ ]*) +: +(.*?) *$|
 <tr>
