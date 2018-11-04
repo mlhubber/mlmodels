@@ -8,11 +8,11 @@ meta:
   type        : decision tree
   display     : display
   license     : gpl3
-  version     : 1.1.6
+  version     : 1.1.7
   author      : Graham.Williams@togaware.com
   maintainer  : Graham Williams <Graham.Williams@microsoft.com>
-  filename     : pool/main/i/iris/iris_1.1.6.mlm
-  date         : 2018-09-25 13:46:13
+  filename     : pool/main/i/iris/iris_1.1.7.mlm
+  date         : 2018-10-31 19:13:29
   dependencies: 
     R: rpart, magrittr, caret, rpart.plot, RColorBrewer
 commands:
