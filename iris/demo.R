@@ -2,10 +2,13 @@ cat("=======================================================",
     "\nIris Model Applied to a Dataset to Predict Iris Species",
     "\n=======================================================\n\n")
 
+suppressMessages(
+{
 library(rpart)
 library(magrittr)
 library(dplyr)
 library(rattle)
+})
 
 load("iris_model.RData")
 
