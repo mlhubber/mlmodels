@@ -1,4 +1,4 @@
-print("Loading the required Python modules for the ResNet152 model.")
+print("Loading the required Python modules for the ResNet152 model ...")
 from objreg_utils import (
     _save_tf_modeo_graph,
     _MODEL_FILE,
@@ -8,19 +8,23 @@ import subprocess
 import signal
 import time
 
-print("\nLoading the pre-trained ResNet v1 152 model.")
+print("\nLoading the pre-trained ResNet v1 152 model ...")
 logdir = _save_tf_modeo_graph(_MODEL_FILE)
 
 
 # Run TensorBoard for visualization
-print("\nStarting TensorBoard for visualizing the model graph.")
+print("\nStarting TensorBoard ...")
 tb_proc = subprocess.Popen(
     "exec tensorboard --logdir={}".format(logdir),
     shell=True,
     stderr=subprocess.PIPE)
 
 # Wait 1 secs for tensorboard fully started
-time.sleep(1)
+
+print("\nOpening browser for visualizing the model graph ..."
+      "\n    (Please refresh the browser if fail to connect localhost:6006.)")
+
+time.sleep(2)
 
 br_proc = subprocess.Popen(
     "xdg-open http://localhost:6006",
