@@ -2,6 +2,9 @@ import cv2 as cv
 import keras.backend as K
 import numpy as np
 from keras.models import load_model
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+import matplotlib.gridspec as gridspec
 
 
 def predict(gray):
@@ -55,3 +58,27 @@ def predict(gray):
     K.clear_session()
 
     return out_bgr
+
+
+def _plot_image(ax, img, cmap=None, label=''):
+    ax.imshow(img, cmap)
+    ax.tick_params(axis='both',
+                   which='both',
+                   bottom='off',
+                   top='off',
+                   left='off',
+                   right='off',
+                   labelleft='off',
+                   labelbottom='off')
+    ax.set_xlabel(label)
+
+
+def plot_bw_color_comparison(bw, color):
+    gs = gridspec.GridSpec(6, 13)
+    gs.update(hspace=0.1, wspace=0.001)
+    fig = plt.figure(figsize=(7, 3))
+    ax = fig.add_subplot(gs[:, 0:6])
+    _plot_image(ax, bw, cmap='gray', label='original image')
+    ax = fig.add_subplot(gs[:, 7:13])
+    _plot_image(ax, color, label='colorized result')
+    plt.show()

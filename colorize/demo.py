@@ -4,7 +4,8 @@ import os
 import cv2 as cv
 import glob
 
-from utils import predict
+from utils import predict, plot_bw_color_comparison
+
 
 if __name__ == '__main__':
     image_folder = 'images'
@@ -17,5 +18,4 @@ if __name__ == '__main__':
         print("Colorize " + os.path.join(cwd, image))
         gray = cv.imread(image, 0)
         out = predict(gray)
-        cv.imwrite(image.replace("bw", "color"), out)
-
+        plot_bw_color_comparison(gray, cv.cvtColor(out, cv.COLOR_BGR2RGB))
