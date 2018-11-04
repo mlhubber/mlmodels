@@ -13,7 +13,7 @@ meta:
     R:
       CRAN: magrittr, dplyr, caret, e1017, shiny, shinyjs, V8, devtools, httr
       github: rstudio/tfruns, rstudio/reticulate, rstudio/keras
-    python: tensorflow, keras, Image
+    py: tensorflow, keras, Image
   filename     : pool/main/d/dogs-cats/dogs-cats_1.1.6.mlm
   date         : 2018-09-27 09:15:45
 commands:
@@ -22,5 +22,9 @@ commands:
   display : Display a graphical representation of the model.
   score   :
     description: Apply the model to a supplied dataset and show result via shiny.
-    required: <path> Path to a folder of images.
+    required:
+      path : Path to a folder of images.
+    optional:
+      csv file  : Filename of CSV file
+      threshold : Decision threshold
   train   : Build a new model on your own image data with training set and validation set provided.
