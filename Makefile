@@ -8,16 +8,17 @@ APP=mlmodels
 VER=1.0.0
 
 DESCRIPTIONS = 					\
+	audit/DESCRIPTION.yaml			\
 	barchart/DESCRIPTION.yaml		\
 	beeswarm/DESCRIPTION.yaml		\
-	clothes-recommender/DESCRIPTION.yaml \
+	clothes-recommender/DESCRIPTION.yaml  	\
 	colorize/DESCRIPTION.yaml 		\
 	dogs-cats/DESCRIPTION.yaml 		\
 	iris/DESCRIPTION.yaml	 		\
 	movie-recommender/DESCRIPTION.yaml	\
 	object-recognition/DESCRIPTION.yaml	\
 	ports-plots/DESCRIPTION.yaml		\
-	rain/DESCRIPTION.yaml		\
+	rain/DESCRIPTION.yaml			\
 	scatter/DESCRIPTION.yaml		\
 
 INC_BASE    = .
