@@ -16,6 +16,10 @@ the knowledge discovered using a so-called recursive partitioning
 algorithm. The knowledge representation language (decision tree) is
 recognised as an easily understandable language.
 
+-----
+Usage
+-----
+
 To install and run the pre-built model::
 
   $ pip install mlhub
