@@ -23,6 +23,10 @@ content of the model is used to guide the tree construction. Decision
 trees are a popular knowledge representation because they are easy to
 understand and explain.
 
+-----
+Usage
+-----
+
 To install and run the pre-built model::
 
   $ pip install mlhub
