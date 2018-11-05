@@ -73,7 +73,7 @@ help::
 	pandoc -t plain $< | perl -00pe0 > $@
 
 %.txt: %.md
-	pandoc -t plain $< | perl -00pe0 $@
+	pandoc -t plain $< | perl -00pe0 > $@
 
 %.md: %.rst
 	pandoc $< -o $@
