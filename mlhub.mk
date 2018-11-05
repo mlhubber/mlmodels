@@ -94,3 +94,10 @@ $(MODEL_YAML): $(MODEL_YML)
 .PHONY: clean
 clean::
 	rm -f $(MODEL)_*.mlm README.txt README.html TMP.R
+
+%.txt: %.rst
+	pandoc -t plain $< | awk '/^Usage$$/{exit}{print}' | perl -00pe0 > $@
+
+%.txt: %.md
+	pandoc -t plain $< | awk '/^Usage$$/{exit}{print}' | perl -00pe0 > $@
+
