@@ -16,7 +16,7 @@ DESCRIPTIONS = 					\
 	dogs-cats/DESCRIPTION.yaml 		\
 	iris/DESCRIPTION.yaml	 		\
 	movie-recommender/DESCRIPTION.yaml	\
-	object-recognition/DESCRIPTION.yaml	\
+	objects/DESCRIPTION.yaml		\
 	ports-plots/DESCRIPTION.yaml		\
 	rain/DESCRIPTION.yaml			\
 	scatter/DESCRIPTION.yaml		\
