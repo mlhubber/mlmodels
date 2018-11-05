@@ -30,4 +30,4 @@ clean::
 	rm -rf README.txt dtree.pdf varimp.pdf
 
 realclean:: clean
-	rm -rf rain_*.mlm
+	rm -rf $(MODEL)_*.mlm $(MODEL).RData
