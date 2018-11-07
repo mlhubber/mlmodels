@@ -5,7 +5,7 @@
 
 # Use atril to display PDF files.
 
-system("sudo apt-get install atril", ignore.stderr=TRUE, ignore.stdout=TRUE)
+system("sudo apt-get install -y atril", ignore.stderr=TRUE, ignore.stdout=TRUE)
 
 # Identify the required packages.
 
@@ -14,6 +14,15 @@ packages <- c("rpart", "magrittr", "caret", "rpart.plot", "RColorBrewer")
 # Determine which need to be installed.
 
 install  <- packages[!(packages %in% installed.packages()[,"Package"])]
+
+# Report on what is already installed.
+
+already <- setdiff(packages, install)
+if (length(already))
+{
+    cat("The following required R packages are already installed:\n",
+        paste(already, collapse="', '"))
+}
 
 # Identify where they will be installed - the user's local R library.
 
@@ -29,9 +38,6 @@ if (length(install))
 {
   cat(sprintf("\nInstalling '%s' into '%s'...", paste(install, collapse="', '"), lib))
   install.packages(install, lib=lib)
-} else
-{
-  cat("No additional generic R packages need to be installed.")
 }
 cat("\n\n")
 
@@ -39,7 +45,7 @@ cat("\n\n")
 
 cat("We also need to install these specific packages...\n")
 
-pkgs <- c("https://cran.r-project.org/src/contrib/rpart.plot_3.0.4.tar.gz")
+pkgs <- c("https://cran.r-project.org/src/contrib/Archive/rpart.plot/rpart.plot_3.0.4.tar.gz")
 for (pkg in pkgs)
 {
   cat("  ", pkg, "\n")

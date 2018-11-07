@@ -17,7 +17,7 @@ DESCRIPTIONS = 					\
 	iris/DESCRIPTION.yaml	 		\
 	movie-recommender/DESCRIPTION.yaml	\
 	objects/DESCRIPTION.yaml		\
-	ports-plots/DESCRIPTION.yaml		\
+	ports/DESCRIPTION.yaml			\
 	rain/DESCRIPTION.yaml			\
 	scatter/DESCRIPTION.yaml		\
 
@@ -91,6 +91,12 @@ localhub: Packages.yaml
 mlhub: Packages.yaml Packages.html
 	rsync -avzh $^ $(REPO_SSH):$(BASE_PATH)/
 	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/
+
+allmlhub:
+	for p in $(DESCRIPTIONS:/DESCRIPTION.yaml=); do \
+	  echo "==========> $$p <=========="; \
+	  (cd $$p; make mlhub); \
+	done
 
 Packages.yaml: $(DESCRIPTIONS)
 	cat $^ > $@
