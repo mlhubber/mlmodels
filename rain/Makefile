@@ -6,22 +6,22 @@
 
 # List the files to be included in the .mlm package.
 
-MODEL_FILES = 		\
-	rain.RData	\
-	configure.R	\
-	train.R		\
-	demo.R 		\
-	print.R		\
-	display.R	\
-	score.R		\
-	README.txt	\
-	DESCRIPTION.yaml
+MODEL_FILES = 			\
+	train.R			\
+	configure.R		\
+	demo.R 			\
+	print.R			\
+	display.R		\
+	score.R			\
+	README.txt		\
+	DESCRIPTION.yaml	\
+	rain.RData
 
 # Include standard Makefile templates.
 
-include ../mlhub.mk
 include ../git.mk
 include ../pandoc.mk
+include ../mlhub.mk
 
 $(MODEL).RData: train.R
 	Rscript $<
