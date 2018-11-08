@@ -5,6 +5,7 @@
 
 # Use atril to display PDF files.
 
+cat("Install system dependencises if needed...\n atril\n\n")
 system("sudo apt-get install -y atril", ignore.stderr=TRUE, ignore.stdout=TRUE)
 
 # Identify the required packages.
@@ -21,7 +22,7 @@ already <- setdiff(packages, install)
 if (length(already))
 {
     cat("The following required R packages are already installed:\n",
-        paste(already, collapse="', '"))
+        paste(already, collapse=" "))
 }
 
 # Identify where they will be installed - the user's local R library.
@@ -43,11 +44,11 @@ cat("\n\n")
 
 # Additional specific packages, often as an interim measure.
 
-cat("We also need to install these specific packages...\n")
+cat("We also need to install these specific package versions...\n")
 
 pkgs <- c("https://cran.r-project.org/src/contrib/Archive/rpart.plot/rpart.plot_3.0.4.tar.gz")
 for (pkg in pkgs)
 {
-  cat("  ", pkg, "\n")
+  cat("", basename(pkg), "\n")
   install.packages(pkg, repos=NULL, lib=lib)
 }

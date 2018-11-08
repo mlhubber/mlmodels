@@ -21,4 +21,4 @@ if (!length(base_dir)) base_dir <- "."
 
 # FIXME Should save backup model first...
 
-save(m, file=file.path(base_dir, "iris_model.RData"))
+save(m, file=file.path(base_dir, "iris_rpart_caret_model.RData"))

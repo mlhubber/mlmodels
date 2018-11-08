@@ -1,7 +1,12 @@
 library(caret)
 library(rpart)
 
-load("iris_model.RData")
+load("iris_rpart_caret_model.RData")
+
+model <- m$finalModel
 
 print(m)
-print(m$finalModel)
+print(model)
+
+cat("\nPress Enter to continue: ")
+invisible(readChar("stdin", 1))

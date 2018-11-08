@@ -1,23 +1,23 @@
 ########################################################################
 #
-# Makefile for iris r pre-build ML model
+# Makefile for audit pre-built ML model
 #
 ########################################################################
 
 # List the files to be included in the .mlm package.
 
-MODEL_FILES = 		\
-	iris_model.RData\
-	configure.R 	\
-	demo.R 		\
-	score.R 	\
-	print.R 	\
-	display.R 	\
-	train.R		\
-	iris.csv	\
-	data.csv 	\
-	README.txt	\
-	DESCRIPTION.yaml
+MODEL_FILES = 				\
+	train.R				\
+	configure.R 			\
+	demo.R 				\
+	print.R 			\
+	display.R 			\
+	score.R 			\
+	README.txt			\
+	DESCRIPTION.yaml		\
+	iris.csv			\
+	data.csv 			\
+	iris_rpart_caret_model.RData	\
 
 # Include standard Makefile templates.
 
@@ -25,11 +25,11 @@ include ../git.mk
 include ../pandoc.mk
 include ../mlhub.mk
 
-$(MODEL).RData: train.R iris.csv
+$(MODEL)_rpart_caret_model.RData: train.R iris.csv
 	Rscript $<
 
 clean::
 	rm -rf README.txt output
 
 realclean:: clean
-	rm -rf *.mlm
+	rm -rf $(MODEL)_*.mlm $(MODEL)_rpart_caret_model.RData

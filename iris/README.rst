@@ -16,6 +16,9 @@ the knowledge discovered using a so-called recursive partitioning
 algorithm. The knowledge representation language (decision tree) is
 recognised as an easily understandable language.
 
+Visit the github repository for examples of its usage:
+https://github.com/mlhubber/mlmodels/tree/master/iris
+
 -----
 Usage
 -----
