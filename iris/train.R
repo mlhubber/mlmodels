@@ -2,8 +2,11 @@
 # illustrate the model build and then saving model to file so that
 # we can later load the model and use it to score new datasets.
 
+suppressMessages(
+{
 library(rpart)
 library(caret)
+})
 
 # write.csv(iris, file="iris.csv", row.names=FALSE)
 
