@@ -11,7 +11,7 @@ meta:
   title        : Demonstrate the concept of scatter plots.
   author       : Graham.Williams@togaware.com
   filename     : pool/main/s/scatter/scatter_1.2.2.mlm
-  date         : 2018-11-05 19:11:47
+  date         : 2018-11-09 17:32:37
 commands:
   demo  : Step through alternative options for scatter plots.
   print : Display the R code used to generate the plots.

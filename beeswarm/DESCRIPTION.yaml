@@ -11,7 +11,7 @@ meta:
     R: ggbeeswarm, rattle
   author       : Graham.Williams@togaware.com
   filename     : pool/main/b/beeswarm/beeswarm_1.0.0.mlm
-  date         : 2018-11-05 19:06:50
+  date         : 2018-11-09 17:29:10
 commands:
   demo  : Step through examples of bee swarm plots.
   print : Display the code used for the demo.
