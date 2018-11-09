@@ -3,6 +3,11 @@
 # avoid the need for sys admin access from within mlhub. R is
 # often operating system installed.
 
+# Use atril to display PDF files.
+
+cat("Install system dependencises if needed...\n atril\n\n")
+system("sudo apt-get install -y atril", ignore.stderr=TRUE, ignore.stdout=TRUE)
+
 # Identify the required packages. Remove rattle.data eventually as
 # datasets moved back into rattle. 20180918.
 

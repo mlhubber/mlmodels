@@ -106,3 +106,9 @@ Packages.html: pkgidx kwdidx.R pandoc.css Packages.yaml
 
 realclean::
 	rm -f Packages.html Packages.yaml Packages.rst
+
+allstatus:
+	for p in audit iris rain colorize objects; do \
+	  echo "==========> $$p <=========="; \
+	  (cd $$p; make status); \
+	done

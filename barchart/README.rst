@@ -9,8 +9,7 @@ effective approach to understanding the narrative the data can tell
 us.
 
 The examples come from the `Essentials of Data Science`_ by Graham
-Williams. Further support
-material is also available from `Togaware`_.
+Williams. Further support material is also available from `Togaware`_.
 
 -----
 Usage

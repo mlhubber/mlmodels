@@ -52,7 +52,7 @@ ds %>%
   ggplot(aes_string(x=xv, y=yv)) +
   geom_point()
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # Add a line to the scatter plot.
@@ -68,7 +68,7 @@ ds %>%
   geom_point() +
   geom_line()
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # Add a smoothed fitted line to the scatter plot.
@@ -84,7 +84,7 @@ ds %>%
   geom_point() +
   stat_smooth(method="loess")
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # Colour the dots on the scatter plot.
@@ -99,7 +99,7 @@ ds %>%
   ggplot(aes_string(x=xv, y=yv, colour="species")) +
   geom_point()
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # Identify the weatherAUS dataset as the template dataset now.
@@ -144,7 +144,7 @@ ds %>%
   geom_point() +
   scale_colour_brewer(palette="Set2")
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # Identify structure in the data from a scatter plot.
@@ -162,7 +162,7 @@ ds %>%
   geom_point(shape=".") +
   geom_smooth(method="gam", formula=y~s(x, bs="cs"))
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # A faceted plot of scatter plots.
@@ -180,7 +180,7 @@ ds %>%
   facet_wrap(~location) +
   theme(axis.text.x=element_text(angle=45, hjust=1))
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 cat("\nThe MLHub model 'beeswarm' provides further sophisticated examples.\n")
 cat("Give it a go.... $ ml install beeswarm.\n")

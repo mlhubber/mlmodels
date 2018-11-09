@@ -74,7 +74,7 @@ ds %>%
   scale_y_continuous(labels=comma) +
   geom_bar()
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # Incorporate stacked bars.
@@ -90,7 +90,7 @@ ds %>%
   scale_y_continuous(labels=comma) +
   geom_bar()
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # Replace stacked bars with dodged bars.
@@ -106,7 +106,7 @@ ds %>%
   scale_y_continuous(labels=comma) +
   geom_bar(position="dodge")
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # A carefully crafted bar chart.
@@ -142,4 +142,4 @@ ds %>%
        y        = "Number of Days",
        fill     = "Tomorrow")
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)

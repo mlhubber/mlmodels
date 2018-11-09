@@ -60,7 +60,7 @@ ds %>%
   ggplot(aes_string(x=xv, y=yv)) +
   geom_point()
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # Compare that to a basic jitter plot
@@ -77,7 +77,7 @@ ds %>%
   ggplot(aes_string(x=xv, y=yv)) +
   geom_jitter()
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # Compare it to a quasirandom layout
@@ -92,7 +92,7 @@ ds %>%
   ggplot(aes_string(x=xv, y=yv)) +
   geom_quasirandom()
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # Compare it to a deeswarm layout
@@ -107,7 +107,7 @@ ds %>%
   ggplot(aes_string(x=xv, y=yv)) +
   geom_beeswarm()
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # A tukey plot.
@@ -122,7 +122,7 @@ ds %>%
   ggplot(aes_string(x=xv, y=yv)) +
   geom_quasirandom(method="tukey")
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
 
 #-----------------------------------------------------------------------
 # A smiley plot.
@@ -137,4 +137,4 @@ ds %>%
   ggplot(aes_string(x=xv, y=yv)) +
   geom_quasirandom(method="smiley")
 invisible(dev.off())
-system(sprintf("evince --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
+system(sprintf("atril --preview %s", fname), ignore.stderr=TRUE, wait=FALSE)
