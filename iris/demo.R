@@ -1,3 +1,8 @@
+########################################################################
+# Introduce the concept of decision tree model through MLHub
+#
+# Copyright 2018 Graham.Williams@togaware.com
+
 cat("==========================
 Predict Iris Plant Species
 ==========================
@@ -6,7 +11,7 @@ Below we show the predictions of species using the pre-built model.
 
 ")
 
-# Load model, predict on a small dataset, present evaluation.
+# Load required packages.
 
 suppressMessages(
 {
@@ -16,7 +21,9 @@ library(dplyr)        # Wrangling: tbl_df(), group_by(), print().
 library(rattle)       # Support: normVarNames(), riskchart(), errorMatrix().
 })
 
+#-----------------------------------------------------------------------
 # Load the pre-built model.
+#-----------------------------------------------------------------------
 
 load("iris_rpart_caret_model.RData")
 
@@ -37,7 +44,9 @@ read.csv("data.csv") %T>%
   {sample_n(., 15) %>% print()} ->
 ev
 
+#-----------------------------------------------------------------------
 # Produce confusion matrix using Rattle.
+#-----------------------------------------------------------------------
 
 cat("\nPress Enter to continue on to the Confusion Matrix: ")
 invisible(readChar("stdin", 1))

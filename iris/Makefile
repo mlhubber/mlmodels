@@ -15,7 +15,7 @@ MODEL_FILES = 				\
 	score.R 			\
 	README.txt			\
 	DESCRIPTION.yaml		\
-	iris.csv			\
+	$(MODEL).csv			\
 	data.csv 			\
 	iris_rpart_caret_model.RData	\
 
@@ -25,7 +25,7 @@ include ../git.mk
 include ../pandoc.mk
 include ../mlhub.mk
 
-$(MODEL)_rpart_caret_model.RData: train.R iris.csv
+$(MODEL)_rpart_caret_model.RData: train.R $(MODEL).csv
 	Rscript $<
 
 clean::
@@ -33,3 +33,4 @@ clean::
 
 realclean:: clean
 	rm -rf $(MODEL)_*.mlm $(MODEL)_rpart_caret_model.RData
+	rm -f  	$(MODEL)_rpart_caret_model.RData
