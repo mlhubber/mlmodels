@@ -11,11 +11,11 @@ DESCRIPTIONS = 					\
 	audit/DESCRIPTION.yaml			\
 	barchart/DESCRIPTION.yaml		\
 	beeswarm/DESCRIPTION.yaml		\
-	clothes-recommender/DESCRIPTION.yaml  	\
+	clothes/DESCRIPTION.yaml  		\
 	colorize/DESCRIPTION.yaml 		\
-	dogs-cats/DESCRIPTION.yaml 		\
+	pets/DESCRIPTION.yaml 			\
 	iris/DESCRIPTION.yaml	 		\
-	movie-recommender/DESCRIPTION.yaml	\
+	movies/DESCRIPTION.yaml			\
 	objects/DESCRIPTION.yaml		\
 	ports/DESCRIPTION.yaml			\
 	rain/DESCRIPTION.yaml			\
