@@ -108,7 +108,15 @@ realclean::
 	rm -f Packages.html Packages.yaml Packages.rst
 
 allstatus:
-	for p in audit iris rain colorize objects; do \
+	@for p in $(DESCRIPTIONS:/DESCRIPTION.yaml=); do \
 	  echo "==========> $$p <=========="; \
-	  (cd $$p; make status); \
+	  (cd $$p; make status \
+		| grep -v '^git status' \
+		| grep -v 'nothing to commit' \
+		| grep -v -- '-----------------' \
+		| egrep -v '^$$' \
+		| egrep -v ' \(use ' \
+		| grep -v 'Entering directory' \
+		| grep -v 'Leaving directory' \
+	  ); \
 	done
