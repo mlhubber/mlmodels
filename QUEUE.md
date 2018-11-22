@@ -1,5 +1,10 @@
 # MODEL QUEUE
 
+## fast objects
+* Object recognition
+* https://medium.com/@rockyxu399/faster-r-cnn-object-detection-implemented-by-keras-for-custom-data-from-googles-open-images-125f62b9141a
+* https://github.com/RockyXu66/Faster_RCNN_for_Open_Images_Dataset_Keras
+
 ## soccer
 * Visualise soccer plays
 * https://github.com/Torvaney/ggsoccer
