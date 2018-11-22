@@ -1,5 +1,13 @@
 # MODEL QUEUE
 
+## soccer
+* Visualise soccer plays
+* https://github.com/Torvaney/ggsoccer
+
+## faq
+* Frequently asked questions (FAQ) matching model
+* https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/ai/realtime-scoring-python
+
 ## segment
 * demonstrate baidu segmentation
 * https://github.com/foamliu/Baidu-Segmentation-Test
@@ -7,6 +15,9 @@
 ## mask
 * demonstrate the facebook mask rcnn model to identify masks in images
 * https://github.com/facebookresearch/maskrcnn-benchmark
+
+## anomaly
+* https://github.com/Azure/BatchAIAnomalyDetection
 
 ## people
 * recognise people in image
@@ -47,3 +58,14 @@
 
 ## handwriting
 * https://github.com/sjvasquez/handwriting-synthesis
+
+## text cognitive service
+* https://azure.microsoft.com/en-gb/blog/public-preview-named-entity-recognition-in-the-cognitive-services-text-analytics-api/
+* free for 5000 per month
+
+## emlpoyee attrition
+* https://github.com/Microsoft/acceleratoRs/tree/master/EmployeeAttritionPrediction
+* Consider each accelerator as a candidate model
+
+## movies
+* Add RBM example and compare
