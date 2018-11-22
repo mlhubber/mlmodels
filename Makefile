@@ -8,6 +8,7 @@ APP=mlmodels
 VER=1.0.0
 
 DESCRIPTIONS = 					\
+	animate/DESCRIPTION.yaml		\
 	audit/DESCRIPTION.yaml			\
 	barchart/DESCRIPTION.yaml		\
 	beeswarm/DESCRIPTION.yaml		\
@@ -119,4 +120,10 @@ allstatus:
 		| grep -v 'Entering directory' \
 		| grep -v 'Leaving directory' \
 	  ); \
+	done
+
+allfetch:
+	@for p in $(DESCRIPTIONS:/DESCRIPTION.yaml=); do \
+	  echo "==========> $$p <=========="; \
+	  (cd $$p; git fetch); \
 	done
