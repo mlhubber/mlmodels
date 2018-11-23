@@ -1,5 +1,9 @@
 # MODEL QUEUE
 
+## ranger
+* Replicate the model and images from the paper
+* https://arxiv.org/pdf/1508.04409.pdf
+
 ## fast objects
 * Object recognition
 * https://medium.com/@rockyxu399/faster-r-cnn-object-detection-implemented-by-keras-for-custom-data-from-googles-open-images-125f62b9141a
