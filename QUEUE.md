@@ -17,6 +17,10 @@
 * Frequently asked questions (FAQ) matching model
 * https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/ai/realtime-scoring-python
 
+## causalgraphs
+* Demonstrate how Causal Models work
+* https://github.com/NickCH-K/causalgraphs
+
 ## segment
 * demonstrate baidu segmentation
 * https://github.com/foamliu/Baidu-Segmentation-Test
