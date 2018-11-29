@@ -1,5 +1,10 @@
 # MODEL QUEUE
 
+Below is simply a list of material that could be potential MLHub
+packages. In each case the license of the source must be considered,
+and permission of the author obtained. If a github repository then
+fork and then work through pull requests to the author
+
 ## ranger
 * Replicate the model and images from the paper
 * https://arxiv.org/pdf/1508.04409.pdf
@@ -8,6 +13,13 @@
 * Object recognition
 * https://medium.com/@rockyxu399/faster-r-cnn-object-detection-implemented-by-keras-for-custom-data-from-googles-open-images-125f62b9141a
 * https://github.com/RockyXu66/Faster_RCNN_for_Open_Images_Dataset_Keras
+
+## efdt
+* Geoff Webb's extremely fast decision trees
+* Demo might build and compare to slower methods
+* Maybe it even takes Geoff's two variable binary example that
+  compares with VFDT
+* https://github.com/doubleplusplus/incremental_decision_tree-CART-Random_Forest_python/blob/master/efdt.py
 
 ## soccer
 * Visualise soccer plays
@@ -20,6 +32,14 @@
 ## causalgraphs
 * Demonstrate how Causal Models work
 * https://github.com/NickCH-K/causalgraphs
+
+## cluster
+* Build a cluster analysis example, end up using gganimate
+* E.g. https://www.datanovia.com/en/blog/clustering-example-4-steps-you-should-know/
+
+## ggplot plus
+* Examples of nice extensions of ggplot
+* https://blog.modeanalytics.com/r-ggplot-extension-packages/
 
 ## segment
 * demonstrate baidu segmentation
@@ -58,6 +78,7 @@
   
 ## xray
 * chest xray model
+* Can we take an xray pre-built model and demonstrate that?
 * https://blogs.technet.microsoft.com/machinelearning/2018/03/07/using-microsoft-ai-to-build-a-lung-disease-prediction-model-using-chest-x-ray-images/
 * https://healthcareinamerica.us/detecting-diseases-in-chest-x-ray-using-deep-learning-8f454961575f?gi=34a8c4d32031
 
