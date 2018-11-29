@@ -26,10 +26,11 @@ A sample DESCRIPTION.yaml file is::
     display      : display
     version      : 1.1.5
     author       : Graham Williams <Graham.Williams@togaware.com>
-    keywords     : r, prediction, classification, decision tree,
-                   introductory, weather, climate
-    dependencies :
-      R: rpart, magrittr, dplyr, tidyr, rattle
+    keywords     : r, prediction, classification, decision tree
+  dependencies :
+    linux: R, atril
+    cran: rpart, magrittr, dplyr, tidyr, rattle
+    rgithub: gganimate
   commands:
     demo   : Run the model and present performance metrics.
     print  : View a textual representation of the model.
