@@ -7,20 +7,21 @@
 APP=mlmodels
 VER=1.0.0
 
-DESCRIPTIONS = 					\
-	animate/DESCRIPTION.yaml		\
-	audit/DESCRIPTION.yaml			\
-	barchart/DESCRIPTION.yaml		\
-	beeswarm/DESCRIPTION.yaml		\
-	clothes/DESCRIPTION.yaml  		\
-	colorize/DESCRIPTION.yaml 		\
-	pets/DESCRIPTION.yaml 			\
-	iris/DESCRIPTION.yaml	 		\
-	movies/DESCRIPTION.yaml			\
-	objects/DESCRIPTION.yaml		\
-	ports/DESCRIPTION.yaml			\
-	rain/DESCRIPTION.yaml			\
-	scatter/DESCRIPTION.yaml		\
+DESCRIPTIONS = 				\
+	animate/MLHUB.yaml		\
+	audit/MLHUB.yaml		\
+	barchart/MLHUB.yaml		\
+	beeswarm/MLHUB.yaml		\
+	colorize/MLHUB.yaml 		\
+	iris/MLHUB.yaml	 		\
+	movies/MLHUB.yaml		\
+	objects/MLHUB.yaml		\
+	ports/MLHUB.yaml		\
+	rain/MLHUB.yaml			\
+	scatter/MLHUB.yaml		\
+
+#	clothes/MLHUB.yaml  		\
+#	pets/MLHUB.yaml 		\
 
 INC_BASE    = .
 INC_PANDOC  = $(INC_BASE)/pandoc.mk
@@ -60,12 +61,12 @@ endif
 
 .PHONY: all
 all:
-	for p in $(DESCRIPTIONS:/DESCRIPTION.yaml=); do \
+	for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
 	  (cd $$p; make mlhub); \
 	done
 
 allclean: realclean
-	for p in $(DESCRIPTIONS:/DESCRIPTION.yaml=); do \
+	for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
 	  (cd $$p; make realclean); \
 	done
 
@@ -94,7 +95,7 @@ mlhub: Packages.yaml Packages.html
 	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/
 
 allmlhub:
-	for p in $(DESCRIPTIONS:/DESCRIPTION.yaml=); do \
+	for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
 	  echo "==========> $$p <=========="; \
 	  (cd $$p; make mlhub); \
 	done
@@ -109,7 +110,7 @@ realclean::
 	rm -f Packages.html Packages.yaml Packages.rst
 
 allstatus:
-	@for p in $(DESCRIPTIONS:/DESCRIPTION.yaml=); do \
+	@for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
 	  echo "==========> $$p <=========="; \
 	  (cd $$p; make status \
 		| grep -v '^git status' \
@@ -123,7 +124,14 @@ allstatus:
 	done
 
 allfetch:
-	@for p in $(DESCRIPTIONS:/DESCRIPTION.yaml=); do \
+	@for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
 	  echo "==========> $$p <=========="; \
 	  (cd $$p; git fetch); \
 	done
+
+alldiff:
+	@for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
+	  echo "==========> $$p <=========="; \
+	  (cd $$p; git diff); \
+	done
+
