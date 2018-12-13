@@ -38,7 +38,11 @@ REPO_SSH  = $(REPO_USER)@$(REPO_HOST)
 # MODEL ARCHIVE
 ########################################################################
 
-DESCRIPTION = DESCRIPTION.yaml
+ifneq ("$(wildcard MLHUB.yaml)","")
+  DESCRIPTION = MLHUB.yaml
+else
+  DESCRIPTION = DESCRIPTION.yaml
+endif
 
 MODEL = $(shell basename `pwd`)
 INIT_CHAR = $(shell printf %.1s "$(MODEL)")
