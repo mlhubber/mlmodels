@@ -5,6 +5,14 @@ packages. In each case the license of the source must be considered,
 and permission of the author obtained. If a github repository then
 fork and then work through pull requests to the author
 
+## text to speech
+* ml score txtspeak "This is a substantially different effort"
+* use MS cognitive service
+
+## microsoft pix
+* map photos in different ways - add water movement for example, or
+  candles that flicker, etc
+
 ## ranger
 * Replicate the model and images from the paper
 * https://arxiv.org/pdf/1508.04409.pdf
