@@ -70,26 +70,6 @@ local: $(MODEL_MLM)
 cleanlocal:
 	rm -rf ~/.mlhub/$(MODEL)/
 
-dist: $(MODEL_MLM)
-
-.PHONY: localhub
-localhub: $(MODEL_MLM)
-	sudo mkdir -p $(BASE_PATH)/$(MODEL_PATH)
-	sudo cp $^ $(BASE_PATH)/$(MODEL_PATH)/
-	sudo chmod -R a+rX $(BASE_PATH)/$(REPO_PATH)
-
-.PHONY: mlhub
-mlhub: $(MODEL_MLM) $(README_HTML)
-	ssh $(REPO_SSH) mkdir -p $(BASE_PATH)/$(MODEL_PATH)
-	rsync -avzh $^ $(REPO_SSH):$(BASE_PATH)/$(MODEL_PATH)/
-	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/$(REPO_PATH)
-	(cd ..; make mlhub)
-
-$(MODEL_MLM): $(MODEL_FILES)
-	perl -pi -e 's|  filename.*$$|$(MODEL_FILENAME)|' $(DESCRIPTION)
-	perl -pi -e 's|  date.*$$|$(MODEL_DATE)|' $(DESCRIPTION)
-	(cd ..; zip -r $(MODEL)/$@ $(addprefix $(MODEL)/,$(MODEL_FILES)))
-
 $(MODEL_YAML): $(MODEL_YML)
 	sed -e "s|meta:|meta:\\n$(MODEL_FILENAME)|g" $^ |\
 	tr -d "'" > $@
