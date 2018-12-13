@@ -129,6 +129,12 @@ allfetch:
 	  (cd $$p; git fetch); \
 	done
 
+allpush:
+	@for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
+	  echo "==========> $$p <=========="; \
+	  (cd $$p; git push); \
+	done
+
 alldiff:
 	@for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
 	  echo "==========> $$p <=========="; \
