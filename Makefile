@@ -59,11 +59,11 @@ ifneq ("$(wildcard $(INC_CLEAN))","")
   include $(INC_CLEAN)
 endif
 
-.PHONY: all
-all:
-	for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
-	  (cd $$p; make mlhub); \
-	done
+# .PHONY: all
+# all:
+# 	for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
+# 	  (cd $$p; make mlhub); \
+# 	done
 
 allclean: realclean
 	for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
@@ -107,7 +107,7 @@ Packages.html: pkgidx kwdidx.R pandoc.css Packages.yaml
 	./pkgidx > $@
 
 realclean::
-	rm -f Packages.html Packages.yaml Packages.rst
+	rm -f Packages.html Packages.rst
 
 allstatus:
 	@for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
