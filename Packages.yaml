@@ -1,0 +1,214 @@
+--- # ANIMATE
+meta:
+  name         : animate
+  title        : Tell a data narative through animations
+  keywords     : r, animation, plot
+  version      : 2.0.0
+  languages    : R
+  modeller     : gganimate
+  type         : plot
+  display      : demo
+  license      : gpl3
+  author       : Vincent Yu
+  maintainer   : Graham.Williams@togaware.com
+  url          : https://github.com/gjwgit/animate
+  filename     : pool/main/a/animate/animate_1.0.8.mlm
+dependencies:
+  system : eom, cargo
+  cran   : progress, png, tidyverse, RColorBrewer, gifski, farver, tweenr
+  github : thomasp85/gganimate, ellisp/ggflags
+  files  : animate_800.gif
+commands:
+  demo   : Step through a series of animation demos.
+--- # AUDIT
+meta:
+  name         : audit
+  title        : Classic financial audit predictive classification model.
+  keywords     : r, decision tree, rpart, classification
+  version      : 3.0.2
+  languages    : R
+  modeller     : rpart
+  type         : decision tree
+  display      : demo, display
+  license      : gpl3
+  author       : Graham.Williams@togaware.com
+  maintainer   : Graham.Williams@togaware.com
+  url          : https://github.com/gjwgit/audit
+  filename     : pool/main/a/audit/audit_2.2.1.mlm
+dependencies:
+  system : atril
+  cran   : rpart, magrittr, rpart.plot, RColorBrewer
+  files  : data.csv, audit_rpart_model.RData
+commands:
+  demo    : Apply model to a sample dataset and evaluate.
+  print   : View a textual summary of the model.
+  display : View a graphical representation of the model.
+--- # BAR CHART
+meta:
+  name         : barchart
+  title        : Demonstrate the concept of barcharts.
+  keywords     : graphics, visualisation, plot, bar chart, basics
+  version      : 2.0.0
+  languages    : R
+  display      : demo
+  license      : gpl3
+  author       : Graham.Williams@togaware.com
+  url          : https://github.com/gjwgit/barchart
+  filename     : pool/main/b/barchart/barchart_2.0.0.mlm
+dependencies:
+  system : atril
+  cran   : rpart, magrittr, rpart.plot, RColorBrewer, rattle, ggplot2, randomForest, scales, stringi
+commands:
+  demo  : Step through alternative options for barcharts.
+  print : Display the code used for the demo.
+--- # BEE SWARM
+meta:
+  name         : beeswarm
+  version      : 2.0.0
+  keywords     : scatter plot, graphics, visualisation, plot
+  languages    : R
+  license      : gpl3
+  title        : Demonstrate the concept of bee swarm charts.
+  display      : demo
+  author       : Graham.Williams@togaware.com
+  filename     : pool/main/b/beeswarm/beeswarm_1.0.0.mlm
+dependencies :
+  cran: ggbeeswarm, rattle
+commands:
+  demo  : Step through examples of bee swarm plots.
+  print : Display the code used for the demo.
+--- # SIMPLE COLOURIZER
+meta:
+  name         : colorize
+  version      : 1.2.2
+  keywords     : python, graphics, colorize
+  languages    : py
+  dependencies : numpy, tensorflow, keras, opencv
+  license      : gpl3
+  title        : Demonstrate the concept of photo colorization.
+  author       : Yang Liu
+  maintainer   : Simon Zhao
+  url          : https://github.com/mlhubber/colorize
+  filename     : pool/main/c/colorize/colorize_1.2.2.mlm
+commands:
+  demo   : Demonstrate colorization on sample black-and-white images.
+  print  : View a textual representation of the colorization model.
+  display: Visualise the model graph.
+  score  : Colorize images given by a path or URL.
+--- # IRIS
+meta:
+  name         : iris
+  title        : Classical iris plant species classifier.
+  keywords     : r, iris, biology, decision tree, rpart, classification
+  version      : 2.1.0
+  languages    : R
+  modeller     : rpart
+  type         : decision tree
+  display      : display
+  license      : gpl3
+  author       : Graham.Williams@togaware.com
+  maintainer   : Graham.Williams@togaware.com
+  url          : https://github.com/gjwgit/iris
+  filename     : pool/main/i/iris/iris_2.1.0.mlm
+  dependencies:
+    sh: atril
+    R: rpart, magrittr, caret, rpart.plot, RColorBrewer
+commands:
+  demo    : Apply model to a sample dataset and evaluate.
+  print   : View a textual summary of the model.
+  display : View a graphical representation of the model.
+--- # Movie Recommender
+meta:
+  name        : movies
+  title       : Movie recommendation using the SAR algorthm.
+  languages   : R
+  keywords    : recommendation, R, SAR, movie recommendation
+  modeller    : SAR
+  type        : SAR local count
+  version     : 2.0.0
+  display     : display
+  section     : ecommence, entertainment
+  author      : Fang Zhou <zhouf@microsoft.com>
+  maintainer  : Graham.Williams@togaware.com
+  filename    : pool/main/m/movies/movies_1.2.3.mlm
+dependencies:
+  cran : SAR, caret, plyr, dplyr
+commands:
+  demo     : Apply the model to a sample dataset.
+--- # ResNet152 Image Object Recognition
+meta:
+  name         : objects
+  title        : Recognise objects in an image using resnet152.
+  languages    : py
+  version      : 1.4.1
+  keywords     : image classification, python3, computer vision, imagenet, resnet, dnn, prediction, classification
+  license      : gpl3
+  title        : Image object recognition using resnet152.
+  display      : demo, score, display
+  author       : Graham.Williams@togaware.com
+  filename     : pool/main/o/objects/objects_1.4.1.mlm
+commands:
+  demo    : Run the model on sample images.
+  print   : View a textual representation of the model.
+  display : Visualize the model graph in a browser.
+  score   : Run the model on images provided.
+--- # PORTS
+meta:
+  name       : ports
+  version    : 2.0.0
+  keywords   : graphics, visualisation, plot, bar chart, scatter plot, ggplot2, ports
+  languages  : R
+  license    : gpl3
+  display    : demo
+  title      : Demostrate the concept of visualising data.
+  author     : Graham.Williams@togaware.com
+  maintainer : Graham.Williams@togaware.com
+  url        : https://github.com/gjwgit/ports
+  filename   : pool/main/p/ports/ports_1.1.7.mlm
+dependencies:
+  cran: directlabels, dplyr, ggplot2, grid, magrittr, rattle, readr, readxl,
+        scales, stringi, stringr, tidyr
+commands:
+  demo  : Step through the various plots.
+  print : Display the actual code.
+--- # RAIN
+meta:
+  name         : rain
+  title        : Predict rain tomorrow using.
+  keywords     : r, prediction, classification, decision tree, introductory, weather, climate
+  version      : 3.0.0
+  languages    : R
+  modeller     : rpart
+  type         : decision tree
+  display      : display
+  license      : gpl3
+  author       : Graham.Williams@togaware.com
+  maintainer   : Graham.Williams@togaware.com
+  url          : https://github.com/gjwgit/rain
+  filename     : pool/main/r/rain/rain_2.1.0.mlm
+dependencies :
+  system : atril
+  cran   : rpart, magrittr, dplyr, tidyr, rattle, rpart.plot
+commands:
+  demo   : Run the model and present performance metrics.
+  print  : View a textual representation of the model.
+  display: View a graphical representation of the model.
+  score  : Predict rain tomorrow on your data.
+--- # SCATTER
+meta:
+  name         : scatter
+  version      : 2.0.0
+  keywords     : r, graphics, visualisation, plot, scatter plot, basics
+  languages    : R
+  license      : gpl3
+  display      : demo
+  title        : Demonstrate the concept of scatter plots.
+  author       : Graham.Williams@togaware.com
+  url          : https://github.com/gjwgit/scatter
+  filename     : pool/main/s/scatter/scatter_1.2.2.mlm
+dependencies:
+  system : atril
+  cran   : magrittr, rattle, ggplot2, dplyr, randomForest
+commands:
+  demo  : Step through alternative options for scatter plots.
+  print : Display the R code used to generate the plots.
