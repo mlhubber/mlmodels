@@ -5,6 +5,9 @@ packages. In each case the license of the source must be considered,
 and permission of the author obtained. If a github repository then
 fork and then work through pull requests to the author
 
+## rkube
+* https://blog.revolutionanalytics.com/2018/12/azurecontainers.html
+
 ## text to speech
 * ml score txtspeak "This is a substantially different effort"
 * use MS cognitive service
