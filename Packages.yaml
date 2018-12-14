@@ -3,7 +3,7 @@ meta:
   name         : animate
   title        : Tell a data narative through animations
   keywords     : r, animation, plot
-  version      : 2.0.0
+  version      : 1.0.8
   languages    : R
   modeller     : gganimate
   type         : plot
@@ -25,7 +25,7 @@ meta:
   name         : audit
   title        : Classic financial audit predictive classification model.
   keywords     : r, decision tree, rpart, classification
-  version      : 3.0.2
+  version      : 2.2.1
   languages    : R
   modeller     : rpart
   type         : decision tree
@@ -64,7 +64,7 @@ commands:
 --- # BEE SWARM
 meta:
   name         : beeswarm
-  version      : 2.0.0
+  version      : 1.0.0
   keywords     : scatter plot, graphics, visualisation, plot
   languages    : R
   license      : gpl3
@@ -125,7 +125,7 @@ meta:
   keywords    : recommendation, R, SAR, movie recommendation
   modeller    : SAR
   type        : SAR local count
-  version     : 2.0.0
+  version     : 1.2.3
   display     : display
   section     : ecommence, entertainment
   author      : Fang Zhou <zhouf@microsoft.com>
@@ -155,7 +155,7 @@ commands:
 --- # PORTS
 meta:
   name       : ports
-  version    : 2.0.0
+  version    : 1.1.7
   keywords   : graphics, visualisation, plot, bar chart, scatter plot, ggplot2, ports
   languages  : R
   license    : gpl3
@@ -176,7 +176,7 @@ meta:
   name         : rain
   title        : Predict rain tomorrow using.
   keywords     : r, prediction, classification, decision tree, introductory, weather, climate
-  version      : 3.0.0
+  version      : 2.1.0
   languages    : R
   modeller     : rpart
   type         : decision tree
@@ -197,7 +197,7 @@ commands:
 --- # SCATTER
 meta:
   name         : scatter
-  version      : 2.0.0
+  version      : 1.2.2
   keywords     : r, graphics, visualisation, plot, scatter plot, basics
   languages    : R
   license      : gpl3
