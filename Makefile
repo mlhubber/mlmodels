@@ -18,6 +18,7 @@ DESCRIPTIONS = 				\
 	objects/MLHUB.yaml		\
 	ports/MLHUB.yaml		\
 	rain/MLHUB.yaml			\
+	recommenders/MLHUB.yaml		\
 	scatter/MLHUB.yaml		\
 
 #	clothes/MLHUB.yaml  		\
