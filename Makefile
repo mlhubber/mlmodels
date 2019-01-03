@@ -105,10 +105,10 @@ allmlhub:
 #	cat $^ > $@
 
 Packages.yaml: MLMODELS.yaml
-	@python -c "import mlhub;\
-                    mlhub.utils.gen_packages_yaml(\
-                        mlmodelsyaml='MLMODELS.yaml',\
-                        packagesyaml='Packages.yaml')"
+	@python3 -c "import mlhub;\
+                     mlhub.utils.gen_packages_yaml(\
+                         mlmodelsyaml='MLMODELS.yaml',\
+                         packagesyaml='Packages.yaml')"
 
 Packages.html: pkgidx kwdidx.R pandoc.css Packages.yaml
 	./pkgidx > $@
