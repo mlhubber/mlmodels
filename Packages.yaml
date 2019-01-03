@@ -1,4 +1,4 @@
---- # ANIMATE
+--- # animate
 meta:
   name         : animate
   title        : Tell a data narative through animations
@@ -36,7 +36,7 @@ dependencies:
     - README.md
 commands:
   demo : Step through a series of animation demos.
---- # AUDIT
+--- # audit
 meta:
   name         : audit
   title        : Classic financial audit predictive classification model.
@@ -50,6 +50,7 @@ meta:
   author       : Graham.Williams@togaware.com
   maintainer   : Graham.Williams@togaware.com
   url          : https://github.com/gjwgit/audit
+  filename     : pool/main/a/audit/audit_2.2.1.mlm
 dependencies:
   system:
     - atril       # PDF viewer.
@@ -79,7 +80,7 @@ commands:
   demo    : Apply model to a sample dataset and evaluate.
   print   : View a textual summary of the model.
   display : View a graphical representation of the model.
---- # BAR CHART
+--- # barchart
 meta:
   name         : barchart
   title        : Demonstrate the concept of barcharts.
@@ -98,7 +99,7 @@ dependencies:
 commands:
   demo  : Step through alternative options for barcharts.
   print : Display the code used for the demo.
---- # BEE SWARM
+--- # beeswarm
 meta:
   name         : beeswarm
   version      : 2.0.1
@@ -115,7 +116,25 @@ dependencies :
 commands:
   demo  : Step through examples of bee swarm plots.
   print : Display the code used for the demo.
---- # SIMPLE COLOURIZER
+--- # clothes
+meta:
+  name         : clothes
+  title        : Clothes recommendation using CNN/SVM.
+  keywords     : computer vision, recommendation, dnn
+  languages    : py
+  dependencies : python3, cv2, metrics, calibration, cntk
+  modeller     : cnn & svm
+  version      : 1.2.0
+  section      : ecommerce, fashion
+  author       : Fang.Zhou@microsoft.com
+  maintainer   : Graham.Williams@togaware.com
+  filename     : pool/main/c/clothes/clothes_1.2.0.mlm
+commands:
+  demo    : Apply the model to a sample image dataset.
+  print   : Visualize the structure of the model.
+  display : Display the demo image recommendation.
+  score   : Apply the model to the supplied images.
+--- # colorize
 meta:
   name         : colorize
   version      : 1.2.2
@@ -144,7 +163,7 @@ commands:
   print  : View a textual representation of the colorization model.
   display: Visualise the model graph.
   score  : Colorize images given by a path or URL.
---- # IRIS
+--- # iris
 meta:
   name         : iris
   title        : Classic iris plant species classifier.
@@ -167,7 +186,7 @@ commands:
   demo    : Apply model to a sample dataset and evaluate.
   print   : View a textual summary of the model.
   display : View a graphical representation of the model.
---- # Movie Recommender
+--- # movies
 meta:
   name        : movies
   title       : Movie recommendation using the SAR algorthm.
@@ -196,7 +215,8 @@ dependencies:
     - train.R
     - SAR_0.0.1.tar.gz: deps/
 commands:
-  demo     : Apply the model to a sample dataset.--- # ResNet152 Image Object Recognition
+  demo     : Apply the model to a sample dataset.
+--- # objects
 meta:
   name         : objects
   title        : Recognise objects in an image using resnet152.
@@ -230,7 +250,28 @@ commands:
   print   : View a textual representation of the model.
   display : Visualize the model graph in a browser.
   score   : Run the model on images provided.
---- # PORTS
+--- # pets
+meta:
+  name        : pets
+  title       : Dogs and cats image classification using keras.
+  version     : 1.2.2
+  display     : display
+  languages   : R
+  modeller    : CNN
+  type        : vgg16
+  section     : image
+  maintainer  : Fang Zhou <zhouf@microsoft.com>
+  dependencies:
+    R:
+      CRAN: magrittr, dplyr, caret, e1017, shiny, shinyjs, V8, devtools, httr
+      github: rstudio/tfruns, rstudio/reticulate, rstudio/keras
+    py: tensorflow, keras, Image
+  filename     : pool/main/p/pets/pets_1.2.2.mlm
+commands:
+  demo    : Apply the model to a supplied dataset of images of dogs and cats.
+  print   : Print a textual summary of the model.
+  display : Display a graphical representation of the model.
+--- # ports
 meta:
   name       : ports
   version    : 2.0.0
@@ -250,7 +291,7 @@ dependencies:
 commands:
   demo  : Step through the various plots.
   print : Display the actual code.
---- # RAIN
+--- # rain
 meta:
   name         : rain
   title        : Predict rain tomorrow using.
@@ -289,7 +330,31 @@ commands:
   print  : View a textual representation of the model.
   display: View a graphical representation of the model.
   score  : Predict rain tomorrow on your data.
---- # SCATTER
+--- # sar
+meta:
+  name         : sar
+  title        : The Microsoft recommender toolkit demo of SAR
+  keywords     : recommendation
+  version      : 1.0.2
+  languages    : python
+  modeller     : SAR
+  type         : smart adaptive recommendation
+  license      : mit
+  author       : Graham.Williams@togaware.com
+  maintainer   : Graham.Williams@togaware.com
+  url          : https://github.com/gjwgit/recommenders
+  yaml         : gjwgit/recommenders:mlhub/sar.yaml
+dependencies:
+  python3:
+    - scipy
+    - sklearn
+  files:
+    - reco_utils/
+    - mlhub/sar.py: demo.py
+    - README.md
+commands:
+  demo    : Demo the SAR model to build/evaluate it.
+--- # scatter
 meta:
   name         : scatter
   version      : 2.0.0
