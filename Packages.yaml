@@ -3,7 +3,7 @@ meta:
   name         : animate
   title        : Tell a data narative through animations
   keywords     : r, animation, plot
-  version      : 1.0.8
+  version      : 2.0.1
   languages    : R
   modeller     : gganimate
   type         : plot
@@ -12,20 +12,36 @@ meta:
   author       : Vincent Yu
   maintainer   : Graham.Williams@togaware.com
   url          : https://github.com/gjwgit/animate
-  filename     : pool/main/a/animate/animate_1.0.8.mlm
 dependencies:
-  system : eom, cargo
-  cran   : progress, png, tidyverse, RColorBrewer, gifski, farver, tweenr
-  github : thomasp85/gganimate, ellisp/ggflags
-  files  : animate_800.gif
+  system:
+    - eom
+    - cargo
+  cran:
+    - progress
+    - png
+    - tidyverse
+    - RColorBrewer
+    - gifski=0.8.6
+  cran-2018-12-01:
+    - farver
+    - tweenr
+  github:
+    - ellisp/ggflags
+    - thomasp85/gganimate
+  files:
+    - animate_800.gif
+    - demo.R
+    - iaaf.csv
+    - iaaf.R
+    - README.md
 commands:
-  demo   : Step through a series of animation demos.
+  demo : Step through a series of animation demos.
 --- # AUDIT
 meta:
   name         : audit
   title        : Classic financial audit predictive classification model.
   keywords     : r, decision tree, rpart, classification
-  version      : 2.2.1
+  version      : 3.0.3
   languages    : R
   modeller     : rpart
   type         : decision tree
@@ -34,11 +50,31 @@ meta:
   author       : Graham.Williams@togaware.com
   maintainer   : Graham.Williams@togaware.com
   url          : https://github.com/gjwgit/audit
-  filename     : pool/main/a/audit/audit_2.2.1.mlm
 dependencies:
-  system : atril
-  cran   : rpart, magrittr, rpart.plot, RColorBrewer
-  files  : data.csv, audit_rpart_model.RData
+  system:
+    - atril       # PDF viewer.
+    - r-base      # Should be mlhub dependency.
+    - libxml2-dev # For rattle install from source.
+    - r-cran-devtools # Should be mlhub dependency.
+  cran:
+    - nosuchpackage # TESTING - should fail.
+    - rpart
+    - magrittr
+    - rpart.plot
+    - RColorBrewer
+    - dplyr
+    - rattle
+  files:
+    - audit.csv
+    - audit_rpart_model.RData
+    - data.csv
+    - demo.R
+    - display.R
+    - LICENSE
+    - print.R
+    - README.md
+    - score.R
+    - train.R
 commands:
   demo    : Apply model to a sample dataset and evaluate.
   print   : View a textual summary of the model.
@@ -58,22 +94,24 @@ meta:
 dependencies:
   system : atril
   cran   : rpart, magrittr, rpart.plot, RColorBrewer, rattle, ggplot2, randomForest, scales, stringi
+  files  : demo.R, print.R, README.md
 commands:
   demo  : Step through alternative options for barcharts.
   print : Display the code used for the demo.
 --- # BEE SWARM
 meta:
   name         : beeswarm
-  version      : 1.0.0
+  version      : 2.0.1
+  title        : Demonstrate the concept of bee swarm charts.
   keywords     : scatter plot, graphics, visualisation, plot
   languages    : R
-  license      : gpl3
-  title        : Demonstrate the concept of bee swarm charts.
   display      : demo
+  license      : gpl3
   author       : Graham.Williams@togaware.com
-  filename     : pool/main/b/beeswarm/beeswarm_1.0.0.mlm
+  url          : https://github.com/gjwgit/beeswarm
 dependencies :
-  cran: ggbeeswarm, rattle
+  cran  : ggbeeswarm, rattle, randomForest
+  files : demo.R, print.R, README.md
 commands:
   demo  : Step through examples of bee swarm plots.
   print : Display the code used for the demo.
@@ -83,13 +121,24 @@ meta:
   version      : 1.2.2
   keywords     : python, graphics, colorize
   languages    : py
-  dependencies : numpy, tensorflow, keras, opencv
   license      : gpl3
   title        : Demonstrate the concept of photo colorization.
   author       : Yang Liu
   maintainer   : Simon Zhao
   url          : https://github.com/mlhubber/colorize
   filename     : pool/main/c/colorize/colorize_1.2.2.mlm
+dependencies:
+  conda: numpy, tensorflow, keras, opencv, pydot, graphviz, matplotlib
+  files:
+    - https://github.com/foamliu/Simple-Colorization/releases/download/v1.0/model.06-2.5489.hdf5: cache/models/
+    - data
+    - demo.py
+    - display.py
+    - images
+    - print.py
+    - README.md
+    - score.py
+    - utils.py
 commands:
   demo   : Demonstrate colorization on sample black-and-white images.
   print  : View a textual representation of the colorization model.
@@ -98,7 +147,7 @@ commands:
 --- # IRIS
 meta:
   name         : iris
-  title        : Classical iris plant species classifier.
+  title        : Classic iris plant species classifier.
   keywords     : r, iris, biology, decision tree, rpart, classification
   version      : 2.1.0
   languages    : R
@@ -111,8 +160,9 @@ meta:
   url          : https://github.com/gjwgit/iris
   filename     : pool/main/i/iris/iris_2.1.0.mlm
   dependencies:
-    sh: atril
-    R: rpart, magrittr, caret, rpart.plot, RColorBrewer
+    sh    : atril
+    R     : rpart, magrittr, caret, rpart.plot, RColorBrewer, rattle
+    files : data.csv, demo.R, display.R, iris.csv, iris_rpart_caret_model.RData, print.R, README.md, score.R, train.R
 commands:
   demo    : Apply model to a sample dataset and evaluate.
   print   : View a textual summary of the model.
@@ -125,28 +175,56 @@ meta:
   keywords    : recommendation, R, SAR, movie recommendation
   modeller    : SAR
   type        : SAR local count
-  version     : 1.2.3
+  version     : 2.0.2
   display     : display
   section     : ecommence, entertainment
   author      : Fang Zhou <zhouf@microsoft.com>
   maintainer  : Graham.Williams@togaware.com
-  filename    : pool/main/m/movies/movies_1.2.3.mlm
+  url         : https://github.com/gjwgit/movies
 dependencies:
-  cran : SAR, caret, plyr, dplyr
+  cran: ggplot2, caret, plyr, dplyr
+  R: deps/SAR_0.0.1.tar.gz
+  files:
+    - data
+    - data.R
+    - demo.R
+    - movie-recommender.R
+    - print.R
+    - README.md
+    - sar_model.RData
+    - score.R
+    - train.R
+    - SAR_0.0.1.tar.gz: deps/
 commands:
-  demo     : Apply the model to a sample dataset.
---- # ResNet152 Image Object Recognition
+  demo     : Apply the model to a sample dataset.--- # ResNet152 Image Object Recognition
 meta:
   name         : objects
   title        : Recognise objects in an image using resnet152.
   languages    : py
-  version      : 1.4.1
+  version      : 1.4.2
   keywords     : image classification, python3, computer vision, imagenet, resnet, dnn, prediction, classification
   license      : gpl3
   title        : Image object recognition using resnet152.
   display      : demo, score, display
   author       : Graham.Williams@togaware.com
-  filename     : pool/main/o/objects/objects_1.4.1.mlm
+  url          : https://github.com/mlhubber/objects
+dependencies:
+  conda: toolz=0.9.0, pillow=5.2.0, ipython, matplotlib=2.2.2, tensorflow=1.9.0, keras=2.2.0, packaging
+  files:
+    - http://download.tensorflow.org/models/resnet_v1_152_2016_08_28.tar.gz: cache/resources/
+    - http://data.dmlc.ml/mxnet/models/imagenet/synset.txt: cache/resources/
+    - https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Lynx_lynx_poing.jpg/220px-Lynx_lynx_poing.jpg: cache/images/lynx.jpg
+    - https://upload.wikimedia.org/wikipedia/commons/3/3a/Roadster_2.5_windmills_trimmed.jpg: cache/images/sportscar.jpg
+    - http://www.worldshipsociety.org/wp-content/themes/construct/lib/scripts/timthumb/thumb.php?src=http://www.worldshipsociety.org/wp-content/uploads/2013/04/stock-photo-5495905-cruise-ship.jpg&w=570&h=370&zc=1&q=100: cache/images/ship.jpg
+    - http://yourshot.nationalgeographic.com/u/ss/fQYSUbVfts-T7pS2VP2wnKyN8wxywmXtY0-FwsgxpiZv_E9ZfPsNV5B0ER8-bOdruvNfMD5EbP4SznWz4PYn/: cache/images/croc.jpg
+    - https://cdn.arstechnica.net/wp-content/uploads/2012/04/bohol_tarsier_wiki-4f88309-intro.jpg: cache/images/tarsier.jpg
+    - http://i.telegraph.co.uk/multimedia/archive/03233/BIRDS-ROBIN_3233998b.jpg: cache/images/robin.jpg
+    - demo.py
+    - display.py
+    - objreg_utils.py
+    - print.py
+    - README.md
+    - score.py
 commands:
   demo    : Run the model on sample images.
   print   : View a textual representation of the model.
@@ -155,7 +233,7 @@ commands:
 --- # PORTS
 meta:
   name       : ports
-  version    : 1.1.7
+  version    : 2.0.0
   keywords   : graphics, visualisation, plot, bar chart, scatter plot, ggplot2, ports
   languages  : R
   license    : gpl3
@@ -166,8 +244,9 @@ meta:
   url        : https://github.com/gjwgit/ports
   filename   : pool/main/p/ports/ports_1.1.7.mlm
 dependencies:
-  cran: directlabels, dplyr, ggplot2, grid, magrittr, rattle, readr, readxl,
-        scales, stringi, stringr, tidyr
+  system : xpdf
+  cran   : directlabels, dplyr, ggplot2, grid, magrittr, rattle, readr, readxl,
+           scales, stringi, stringr, tidyr
 commands:
   demo  : Step through the various plots.
   print : Display the actual code.
@@ -176,7 +255,7 @@ meta:
   name         : rain
   title        : Predict rain tomorrow using.
   keywords     : r, prediction, classification, decision tree, introductory, weather, climate
-  version      : 2.1.0
+  version      : 3.0.3
   languages    : R
   modeller     : rpart
   type         : decision tree
@@ -187,8 +266,24 @@ meta:
   url          : https://github.com/gjwgit/rain
   filename     : pool/main/r/rain/rain_2.1.0.mlm
 dependencies :
-  system : atril
-  cran   : rpart, magrittr, dplyr, tidyr, rattle, rpart.plot
+  system:
+    - atril       # For viewing generated PDF plots
+    - libxml2-dev # For rattle source package install.
+  cran:
+    - rpart
+    - magrittr
+    - dplyr
+    - tidyr
+    - rattle
+    - rpart.plot
+  files:
+    - demo.R
+    - display.R
+    - print.R
+    - rain_rpart_model.RData
+    - README.md
+    - score.R
+    - train.R
 commands:
   demo   : Run the model and present performance metrics.
   print  : View a textual representation of the model.
@@ -197,7 +292,7 @@ commands:
 --- # SCATTER
 meta:
   name         : scatter
-  version      : 1.2.2
+  version      : 2.0.0
   keywords     : r, graphics, visualisation, plot, scatter plot, basics
   languages    : R
   license      : gpl3
@@ -209,6 +304,7 @@ meta:
 dependencies:
   system : atril
   cran   : magrittr, rattle, ggplot2, dplyr, randomForest
+  files  : demo.R, print.R, README.md
 commands:
   demo  : Step through alternative options for scatter plots.
   print : Display the R code used to generate the plots.
