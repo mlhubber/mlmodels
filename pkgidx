@@ -41,7 +41,7 @@ easily and quickly exploring the models. Feedback is welcome through
 <tbody>
 BODY
 
-ml available |\
+${HOME}/.local/bin/ml available |\
   grep ' : ' |\
   perl -pe 's|^(.)([^ ]*) +: +([^ ]*) +: +(.*?) *$|
 <tr>
