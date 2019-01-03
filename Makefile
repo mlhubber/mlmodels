@@ -148,3 +148,9 @@ alldiff:
 	  (cd $$p; git diff); \
 	done
 
+allrebase:
+	@for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
+	  echo "==========> $$p <=========="; \
+	  (cd $$p; git rebase); \
+	done
+
