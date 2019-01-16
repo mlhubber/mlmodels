@@ -1,17 +1,18 @@
 # This is a list of available model packages for MLHUB.
 # 'https://mlhub.ai/Packages.yaml' will be generated from this list.
 
-animate  : gjwgit/animate
-audit    : gjwgit/audit
-barchart : gjwgit/barchart
-beeswarm : gjwgit/beeswarm
-clothes  : gjwgit/clothes
-colorize : mlhubber/colorize
-iris     : gjwgit/iris
-movies   : gjwgit/movies
-objects  : mlhubber/objects
-pets     : gjwgit/pets
-ports    : gjwgit/ports
-rain     : gjwgit/rain
-sar      : gjwgit/recommenders:mlhub/sar.yaml
-scatter  : gjwgit/scatter
+animate    : gjwgit/animate
+audit      : gjwgit/audit
+barchart   : gjwgit/barchart
+beeswarm   : gjwgit/beeswarm
+clothes    : gjwgit/clothes
+colorize   : mlhubber/colorize
+facedetect : simonzhaoms/facedetect
+iris       : gjwgit/iris
+movies     : gjwgit/movies
+objects    : mlhubber/objects
+pets       : gjwgit/pets
+ports      : gjwgit/ports
+rain       : gjwgit/rain
+sar        : gjwgit/recommenders:mlhub/sar.yaml
+scatter    : gjwgit/scatter
