@@ -25,15 +25,15 @@ cat <<BODY
 
 <h1 id="mlhub-pre-built-model-catalogue">MLHub Pre Built Model Catalogue</h1>
 
-<p>This repository hosts the following pre-built machine learning
-models.  Please try them out and let us know of any issues you have in
-easily and quickly exploring the models. Feedback is welcome through
-<a href="https://github.com/mlhubber/mlmodels">github</a>.</p>
+<p>This repository indexes the following pre-built machine learning
+models.  Please try them out and let us know of any issues you have. 
+They should be easily and quickly installed and demonstrated.
+Feedback is welcome through <a href="https://github.com/mlhubber/mlmodels">github</a>.</p>
 
 <table>
 <thead>
 <tr class="header">
-<th align="left">Title</th>
+<th align="left">Name</th>
 <th align="left">Version</th>
 <th align="left">Description</th>
 </tr>
@@ -41,15 +41,23 @@ easily and quickly exploring the models. Feedback is welcome through
 <tbody>
 BODY
 
+cat Packages.yaml |\
+  egrep '^ +(name|url)' |\
+  paste -s -d' \n' |\
+  perl -pe 's|^ +name *: ||' |\
+  perl -pe 's| +url *: *| |' > Packages.url
+
 ${HOME}/.local/bin/ml available |\
-  grep ' : ' |\
-  perl -pe 's|^(.)([^ ]*) +: +([^ ]*) +: +(.*?) *$|
+  egrep '^([[:alpha:]]|[[:digit:]])+ +[[:digit:]]' > Packages.tbl
+
+join Packages.url Packages.tbl |\
+   perl -pe 's|^(.)([^ ]*) +([^ ]*) +([^ ]*) +(.*?) *$|
 <tr>
 <td align="left">
-  <a href="https://mlhub.ai/pool/main/$1/$1$2/">$1$2</a>
+  <a href="$3">$1$2</a>
 </td>
-<td align="left">$3</td>
 <td align="left">$4</td>
+<td align="left">$5</td>
 </tr>|'
   
 #  sed 's|^|<tr>\n<td align="left"><a href="https://mlhub.ai/pool/main/">|' |\
