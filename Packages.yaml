@@ -3,7 +3,7 @@ meta:
   name         : animate
   title        : Tell a data narative through animations
   keywords     : r, animation, plot
-  version      : 2.0.1
+  version      : 2.0.2
   languages    : R
   modeller     : gganimate
   type         : plot
@@ -26,11 +26,12 @@ dependencies:
     - farver
     - tweenr
   github:
+    - gganimate.tar.gz # Snapshot local copy original from github
     - ellisp/ggflags
-    - thomasp85/gganimate
   files:
     - animate_800.gif
     - demo.R
+    - gganimate.tar.gz
     - iaaf.csv
     - iaaf.R
     - README.md
@@ -41,7 +42,7 @@ meta:
   name         : audit
   title        : Classic financial audit predictive classification model.
   keywords     : r, decision tree, rpart, classification
-  version      : 3.0.3
+  version      : 3.0.4
   languages    : R
   modeller     : rpart
   type         : decision tree
@@ -50,15 +51,12 @@ meta:
   author       : Graham.Williams@togaware.com
   maintainer   : Graham.Williams@togaware.com
   url          : https://github.com/gjwgit/audit
-  filename     : pool/main/a/audit/audit_2.2.1.mlm
 dependencies:
   system:
     - atril       # PDF viewer.
-    - r-base      # Should be mlhub dependency.
-    - libxml2-dev # For rattle install from source.
-    - r-cran-devtools # Should be mlhub dependency.
   cran:
-    - nosuchpackage # TESTING - should fail.
+    # These will download from CRAN if later than r-cran- version
+    # Eventually introduce r: so uses r-cran- version instead
     - rpart
     - magrittr
     - rpart.plot
@@ -80,6 +78,35 @@ commands:
   demo    : Apply model to a sample dataset and evaluate.
   print   : View a textual summary of the model.
   display : View a graphical representation of the model.
+--- # azspeech2txt
+meta:
+  name         : azspeech2txt
+  title        : Azure Speech to Text cognitive services on the cloud.
+  keywords     : azure, speech
+  version      : 0.0.2
+  languages    : py
+  license      : mit
+  author       : Graham.Williams@togaware.com
+  url          : https://github.com/gjwgit/azspeech2txt
+dependencies:
+  pip3: azure-cognitiveservices-speech
+commands:
+  score   : Use the functionalitry of speech to text.
+--- # aztext
+meta:
+  name         : aztext
+  title        : Azure Text Analytics cognitive services on the cloud.
+  keywords     : azure, text analytics
+  version      : 0.0.6
+  languages    : py
+  license      : mit
+  author       : Graham.Williams@togaware.com
+  url          : https://github.com/gjwgit/aztext
+dependencies:
+  python3: requests
+commands:
+  demo    : Demonstrate the functionalitry of text analytics.
+  score   : Prompts for text and analyses it.
 --- # barchart
 meta:
   name         : barchart
@@ -116,28 +143,10 @@ dependencies :
 commands:
   demo  : Step through examples of bee swarm plots.
   print : Display the code used for the demo.
---- # clothes
-meta:
-  name         : clothes
-  title        : Clothes recommendation using CNN/SVM.
-  keywords     : computer vision, recommendation, dnn
-  languages    : py
-  dependencies : python3, cv2, metrics, calibration, cntk
-  modeller     : cnn & svm
-  version      : 1.2.0
-  section      : ecommerce, fashion
-  author       : Fang.Zhou@microsoft.com
-  maintainer   : Graham.Williams@togaware.com
-  filename     : pool/main/c/clothes/clothes_1.2.0.mlm
-commands:
-  demo    : Apply the model to a sample image dataset.
-  print   : Visualize the structure of the model.
-  display : Display the demo image recommendation.
-  score   : Apply the model to the supplied images.
 --- # colorize
 meta:
   name         : colorize
-  version      : 1.2.2
+  version      : 1.2.6
   keywords     : python, graphics, colorize
   languages    : py
   license      : gpl3
@@ -147,7 +156,16 @@ meta:
   url          : https://github.com/mlhubber/colorize
   filename     : pool/main/c/colorize/colorize_1.2.2.mlm
 dependencies:
-  conda: numpy, tensorflow, keras, opencv, pydot, graphviz, matplotlib
+  python3: # Operating system installed packages
+    - numpy # pip install tensorflow overrides this unfortunately
+    - keras
+    - opencv
+    - pydot
+    - graphviz
+    - matplotlib
+  pip3:
+    - tensorflow
+    - numpy==1.13.3 # tensorflow pip installs 1.16 and fails to run
   files:
     - https://github.com/foamliu/Simple-Colorization/releases/download/v1.0/model.06-2.5489.hdf5: cache/models/
     - data
@@ -162,7 +180,42 @@ commands:
   demo   : Demonstrate colorization on sample black-and-white images.
   print  : View a textual representation of the colorization model.
   display: Visualise the model graph.
-  score  : Colorize images given by a path or URL.
+  score  :
+    description: Colorize images given by a path or URL.
+    required:
+      image: Path or URL to images.
+--- # facedetect
+meta:
+  name      : facedetect
+  title     : Simple face detection.
+  languages : py
+  version   : 0.2.5
+  keywords  : face detection, python3, computer vision
+  license   : gpl3
+  display   : demo, score, live
+  url       : https://github.com/simonzhaoms/facedetect
+dependencies:
+  python3:
+    - matplotlib
+    - toolz
+  pip3:
+    - opencv-contrib-python==4.0.0.21
+    - numpy==1.14.5
+  files:
+    - demo.py
+    - utils.py
+    - score.py
+    - live.py
+    - images/
+    - haarcascade_frontalface_default.xml
+    - README.md
+commands:
+  demo: Demostrate face detection on sample images.
+  score:
+    description: Detect faces on provided image files or URL.
+    required:
+      image: Path or URL to an image.
+  live: Detect faces from live webcam.
 --- # iris
 meta:
   name         : iris
@@ -192,17 +245,19 @@ meta:
   title       : Movie recommendation using the SAR algorthm.
   languages   : R
   keywords    : recommendation, R, SAR, movie recommendation
-  modeller    : SAR
-  type        : SAR local count
-  version     : 2.0.2
-  display     : display
+  version     : 2.0.3
   section     : ecommence, entertainment
   author      : Fang Zhou <zhouf@microsoft.com>
   maintainer  : Graham.Williams@togaware.com
   url         : https://github.com/gjwgit/movies
 dependencies:
-  cran: ggplot2, caret, plyr, dplyr
-  R: deps/SAR_0.0.1.tar.gz
+  cran:
+    - ggplot2
+    - caret
+    - plyr
+    - dplyr
+  R:
+    - SAR_0.0.1.tar.gz
   files:
     - data
     - data.R
@@ -213,15 +268,15 @@ dependencies:
     - sar_model.RData
     - score.R
     - train.R
-    - SAR_0.0.1.tar.gz: deps/
+    - SAR_0.0.1.tar.gz
 commands:
-  demo     : Apply the model to a sample dataset.
+  demo : Apply the model to a sample dataset.
 --- # objects
 meta:
   name         : objects
   title        : Recognise objects in an image using resnet152.
   languages    : py
-  version      : 1.4.2
+  version      : 1.4.5
   keywords     : image classification, python3, computer vision, imagenet, resnet, dnn, prediction, classification
   license      : gpl3
   title        : Image object recognition using resnet152.
@@ -229,7 +284,8 @@ meta:
   author       : Graham.Williams@togaware.com
   url          : https://github.com/mlhubber/objects
 dependencies:
-  conda: toolz=0.9.0, pillow=5.2.0, ipython, matplotlib=2.2.2, tensorflow=1.9.0, keras=2.2.0, packaging
+  python3: packaging, ipython, toolz, matplotlib, keras
+  pip3: pillow, tensorflow, numpy==1.13.3
   files:
     - http://download.tensorflow.org/models/resnet_v1_152_2016_08_28.tar.gz: cache/resources/
     - http://data.dmlc.ml/mxnet/models/imagenet/synset.txt: cache/resources/
@@ -249,28 +305,10 @@ commands:
   demo    : Run the model on sample images.
   print   : View a textual representation of the model.
   display : Visualize the model graph in a browser.
-  score   : Run the model on images provided.
---- # pets
-meta:
-  name        : pets
-  title       : Dogs and cats image classification using keras.
-  version     : 1.2.2
-  display     : display
-  languages   : R
-  modeller    : CNN
-  type        : vgg16
-  section     : image
-  maintainer  : Fang Zhou <zhouf@microsoft.com>
-  dependencies:
-    R:
-      CRAN: magrittr, dplyr, caret, e1017, shiny, shinyjs, V8, devtools, httr
-      github: rstudio/tfruns, rstudio/reticulate, rstudio/keras
-    py: tensorflow, keras, Image
-  filename     : pool/main/p/pets/pets_1.2.2.mlm
-commands:
-  demo    : Apply the model to a supplied dataset of images of dogs and cats.
-  print   : Print a textual summary of the model.
-  display : Display a graphical representation of the model.
+  score   :
+    description: Run the model on images provided.
+    required:
+      image: Path or URL to images.
 --- # ports
 meta:
   name       : ports
@@ -309,7 +347,6 @@ meta:
 dependencies :
   system:
     - atril       # For viewing generated PDF plots
-    - libxml2-dev # For rattle source package install.
   cran:
     - rpart
     - magrittr
@@ -335,7 +372,7 @@ meta:
   name         : sar
   title        : The Microsoft recommender toolkit demo of SAR
   keywords     : recommendation
-  version      : 1.0.2
+  version      : 1.1.3
   languages    : python
   modeller     : SAR
   type         : smart adaptive recommendation
@@ -348,10 +385,18 @@ dependencies:
   python3:
     - scipy
     - sklearn
+    - pandas
+  pip3:
+    - imdbpy
+    - toolz # DLVM does not have python3-toolz so do pip
   files:
     - reco_utils/
     - mlhub/sar.py: demo.py
-    - README.md
+    - mlhub/recutils.py
+    - mlhub/na.jpg
+    - mlhub/sample.png
+    - mlhub/sar.md: README.md
+    - http://files.grouplens.org/datasets/movielens/ml-100k/u.item: titles.txt
 commands:
   demo    : Demo the SAR model to build/evaluate it.
 --- # scatter
@@ -373,3 +418,31 @@ dependencies:
 commands:
   demo  : Step through alternative options for scatter plots.
   print : Display the R code used to generate the plots.
+--- # tapwater
+meta:
+  name         : tapwater
+  title        : Factor analysis for understanding customers
+  keywords     : r, factor analysis, psych, consumer involvement
+  version      : 0.0.2
+  languages    : R
+  display      : demo
+  license      : gpl3
+  author       : Peter Prevos
+  source       : https://lucidmanager.org/measuring-consumer-involvement/
+  packager     : Graham.Williams@togaware.com
+  url          : gjwgit/r.prevos.net:Marketing/tapwater.yaml
+dependencies:
+  system:
+    - eom
+  cran:
+    - tidyverse
+    - psych
+    - magrittr
+    - gparotation
+  files:
+    - Marketing/tapwater.md: README.md
+    - Marketing/tapwater.license: LICENSE
+    - Marketing/tapwater.R: demo.R
+    - Marketing/customers_quan.csv
+commands:
+  demo    : Perform a factor analysis on customer data.
