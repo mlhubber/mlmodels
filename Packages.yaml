@@ -438,7 +438,6 @@ dependencies:
     - tidyverse
     - psych
     - magrittr
-    - gparotation
   files:
     - Marketing/tapwater.md: README.md
     - Marketing/tapwater.license: LICENSE
