@@ -16,3 +16,4 @@ ports        : gjwgit/ports
 rain         : gjwgit/rain
 sar          : gjwgit/recommenders:mlhub/sar.yaml
 scatter      : gjwgit/scatter
+tapwater     : gjwgit/r.prevos.net:Marketing/tapwater.yaml
