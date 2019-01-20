@@ -7,22 +7,19 @@
 APP=mlmodels
 VER=1.0.0
 
-DESCRIPTIONS = 				\
-	animate/MLHUB.yaml		\
-	audit/MLHUB.yaml		\
-	barchart/MLHUB.yaml		\
-	beeswarm/MLHUB.yaml		\
-	colorize/MLHUB.yaml 		\
-	iris/MLHUB.yaml	 		\
-	movies/MLHUB.yaml		\
-	objects/MLHUB.yaml		\
-	ports/MLHUB.yaml		\
-	rain/MLHUB.yaml			\
-	recommenders/MLHUB.yaml		\
-	scatter/MLHUB.yaml		\
-
-#	clothes/MLHUB.yaml  		\
-#	pets/MLHUB.yaml 		\
+MODELS = 		\
+	animate		\
+	audit		\
+	barchart	\
+	beeswarm	\
+	colorize	\
+	iris		\
+	movies		\
+	objects		\
+	ports		\
+	rain		\
+	recommenders	\
+	scatter		\
 
 INC_BASE    = $(HOME)/.local/share/make
 INC_PANDOC  = $(INC_BASE)/pandoc.mk
@@ -62,12 +59,12 @@ endif
 
 # .PHONY: all
 # all:
-# 	for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
+# 	for p in $(MODELS); do \
 # 	  (cd $$p; make mlhub); \
 # 	done
 
 allclean: realclean
-	for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
+	for p in $(MODELS); do \
 	  (cd $$p; make realclean); \
 	done
 
@@ -96,13 +93,10 @@ mlhub: Packages.yaml Packages.html
 	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/
 
 allmlhub:
-	for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
+	for p in $(MODELS); do \
 	  echo "==========> $$p <=========="; \
 	  (cd $$p; make mlhub); \
 	done
-
-#Packages.yaml: $(DESCRIPTIONS)
-#	cat $^ > $@
 
 Packages.yaml: MLMODELS.yaml
 	@python3 -c "import mlhub;\
@@ -117,7 +111,7 @@ realclean::
 	rm -f Packages.html Packages.rst
 
 allstatus:
-	@for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
+	@for p in $(MODELS); do \
 	  echo "==========> $$p <=========="; \
 	  (cd $$p; make status \
 		| grep -v '^git status' \
@@ -131,25 +125,25 @@ allstatus:
 	done
 
 allfetch:
-	@for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
+	@for p in $(MODELS); do \
 	  echo "==========> $$p <=========="; \
 	  (cd $$p; git fetch); \
 	done
 
 allpush:
-	@for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
+	@for p in $(MODELS); do \
 	  echo "==========> $$p <=========="; \
 	  (cd $$p; git push); \
 	done
 
 alldiff:
-	@for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
+	@for p in $(MODELS); do \
 	  echo "==========> $$p <=========="; \
 	  (cd $$p; git diff); \
 	done
 
 allrebase:
-	@for p in $(DESCRIPTIONS:/MLHUB.yaml=); do \
+	@for p in $(MODELS); do \
 	  echo "==========> $$p <=========="; \
 	  (cd $$p; git rebase); \
 	done
