@@ -108,7 +108,7 @@ Packages.html: pkgidx kwdidx.R pandoc.css Packages.yaml
 	./pkgidx > $@
 
 realclean::
-	rm -f Packages.html Packages.rst Packages.yaml
+	rm -f Packages.html Packages.rst Packages.yaml Packages.tbl Packages.url
 
 allstatus:
 	@for p in $(MODELS); do \
