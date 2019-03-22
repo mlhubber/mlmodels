@@ -3,7 +3,8 @@
 
 animate      : gjwgit/animate
 audit        : gjwgit/audit
-azlang       : gjwgit/azlang
+azface       : simonzhaoms/azface
+azlang       : gjwgit/aztext
 azspeech2txt : gjwgit/azspeech2txt
 aztext       : gjwgit/aztext
 barchart     : gjwgit/barchart
