@@ -23,12 +23,18 @@ cat <<BODY
 </head>
 <body>
 
-<h1 id="mlhub-pre-built-model-catalogue">MLHub Pre Built Model Catalogue</h1>
+<h1 id="mlhub-pre-built-model-catalogue">MLHub Currated Pre Built Model Catalogue</h1>
 
-<p>This repository indexes the following pre-built machine learning
+<p>This repository indexes the following currated pre-built machine learning
 models.  Please try them out and let us know of any issues you have. 
 They should be easily and quickly installed and demonstrated.
-Feedback is welcome through <a href="https://github.com/mlhubber/mlmodels">github</a>.</p>
+Feedback is welcome through <a href="https://github.com/mlhubber/mlmodels">github</a>.
+Visit <a href="https://mlhub.ai">MLHub.ai</a> for details.</p>
+
+<p>Whilst anyone can create a MLHub model simply by including a
+MLHUB.yaml file in their github repository, the models listed here are
+regarded as currated in the sense that they have been vetted by MLHub 
+volunteers. If you find any issues do be sure to report them though.</p>
 
 <table>
 <thead>
