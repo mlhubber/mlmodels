@@ -11,11 +11,13 @@ barchart     : gjwgit/barchart
 beeswarm     : gjwgit/beeswarm
 colorize     : mlhubber/colorize
 facedetect   : simonzhaoms/facedetect
+facematch    : simonzhaoms/facematch
 iris         : gjwgit/iris
 movies       : gjwgit/movies
 objects      : mlhubber/objects
 ports        : gjwgit/ports
 rain         : gjwgit/rain
+rbm          : gjwgit/recommenders:mlhub/rbm.yaml
 sar          : gjwgit/recommenders:mlhub/sar.yaml
 scatter      : gjwgit/scatter
 tapwater     : gjwgit/r.prevos.net:Marketing/tapwater.yaml
