@@ -4,9 +4,9 @@
 animate      : gjwgit/animate
 audit        : gjwgit/audit
 azface       : simonzhaoms/azface
-azlang       : gjwgit/aztext
 azspeech2txt : gjwgit/azspeech2txt
 aztext       : gjwgit/aztext
+aztranslate  : gjwgit/aztranslate
 barchart     : gjwgit/barchart
 beeswarm     : gjwgit/beeswarm
 colorize     : mlhubber/colorize
