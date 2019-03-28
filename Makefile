@@ -10,8 +10,10 @@ VER=1.0.0
 MODELS = 		\
 	animate		\
 	audit		\
-	aztext		\
+	azface		\
 	azspeech2txt	\
+	aztext		\
+	aztranslate	\
 	barchart	\
 	beeswarm	\
 	colorize	\
