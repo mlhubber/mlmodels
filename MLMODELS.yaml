@@ -3,6 +3,7 @@
 
 animate      : gjwgit/animate
 audit        : gjwgit/audit
+azanomaly    : gjwgit/azanomaly
 azface       : gjwgit/azface
 azspeech2txt : gjwgit/azspeech2txt
 aztext       : gjwgit/aztext
