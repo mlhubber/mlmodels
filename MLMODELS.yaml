@@ -18,8 +18,8 @@ iris         : gjwgit/iris
 movies       : gjwgit/movies
 objects      : mlhubber/objects
 ports        : gjwgit/ports
-rain         : gjwgit/rain:raindt.yaml
-rainrf       : gjwgit/rain:rainrf.yaml
+rain_dt      : gjwgit/rain:rain_dt.yaml
+rain_rf      : gjwgit/rain:rain_rf.yaml
 rbm          : gjwgit/recommenders:mlhub/rbm.yaml
 sar          : gjwgit/recommenders:mlhub/sar.yaml
 scatter      : gjwgit/scatter
