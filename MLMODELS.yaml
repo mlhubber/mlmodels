@@ -5,6 +5,7 @@ animate      : gjwgit/animate
 audit        : gjwgit/audit
 azanomaly    : gjwgit/azanomaly
 azface       : gjwgit/azface
+azlang       : gjwgit/azlang
 azspeech2txt : gjwgit/azspeech2txt
 aztext       : gjwgit/aztext
 aztranslate  : gjwgit/aztranslate
@@ -17,7 +18,8 @@ iris         : gjwgit/iris
 movies       : gjwgit/movies
 objects      : mlhubber/objects
 ports        : gjwgit/ports
-rain         : gjwgit/rain
+rain         : gjwgit/rain:raindt.yaml
+rainrf       : gjwgit/rain:rainrf.yaml
 rbm          : gjwgit/recommenders:mlhub/rbm.yaml
 sar          : gjwgit/recommenders:mlhub/sar.yaml
 scatter      : gjwgit/scatter
