@@ -10,6 +10,7 @@ VER=1.0.0
 MODELS = 		\
 	animate		\
 	audit		\
+	azanomaly	\
 	azface		\
 	azspeech2txt	\
 	aztext		\
@@ -31,23 +32,6 @@ INC_GIT     = $(INC_BASE)/git.mk
 INC_AZURE   = $(INC_BASE)/azure.mk
 INC_CLEAN   = $(INC_BASE)/clean.mk
 
-define HELP
-Makefile for Hub of Machine Learning Models.
-
-Local targets:
-
-  localhub	Generate and install Packages.yaml on localhost.
-  mlhub		Generate and install Packages.yaml on mlhub.ai.
-  Packages.yaml Generate meta-data file for the repository.
-  allclean	Clean all package subfolders.
-  all		Update all packages and upload to mlhub.
-
-endef
-export HELP
-
-help::
-	@echo "$$HELP"
-
 ifneq ("$(wildcard $(INC_PANDOC))","")
   include $(INC_PANDOC)
 endif
@@ -60,6 +44,24 @@ endif
 ifneq ("$(wildcard $(INC_CLEAN))","")
   include $(INC_CLEAN)
 endif
+
+define HELP
+Makefile for Hub of Machine Learning Models.
+
+Local targets:
+
+  localhub	Generate and install Packages.yaml on localhost.
+  mlhub		Generate and install Packages.yaml on mlhub.ai.
+  Packages.yaml Generate meta-data file for the repository.
+  allclean	Clean all package subfolders.
+  all		Update all packages and upload to mlhub.
+  allstatus     Check status of all individual models.
+
+endef
+export HELP
+
+help::
+	@echo "$$HELP"
 
 # .PHONY: all
 # all:
