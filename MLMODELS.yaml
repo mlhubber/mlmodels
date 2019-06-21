@@ -4,9 +4,10 @@
 animate      : gjwgit/animate
 audit        : gjwgit/audit
 azanomaly    : gjwgit/azanomaly
+azcv         : Azure/azcv
 azface       : gjwgit/azface
 azlang       : gjwgit/azlang
-azspeech2txt : gjwgit/azspeech2txt
+azspeech2txt : Azure/azspeech2txt
 aztext       : gjwgit/aztext
 aztranslate  : gjwgit/aztranslate
 barchart     : gjwgit/barchart
