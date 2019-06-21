@@ -54,7 +54,7 @@ cat Packages.yaml |\
   perl -pe 's| +url *: *| |' > Packages.url
 
 ${HOME}/.local/bin/ml available |\
-  egrep '^([[:alpha:]]|[[:digit:]])+ +[[:digit:]]' > Packages.tbl
+  egrep '^([[:alpha:]]|[[:digit:]]|_)+ +[[:digit:]]' > Packages.tbl
 
 join Packages.url Packages.tbl |\
    perl -pe 's|^(.)([^ ]*) +([^ ]*) +([^ ]*) +(.*?) *$|
