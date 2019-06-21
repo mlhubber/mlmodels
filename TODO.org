@@ -1,6 +1,7 @@
 Backlog Models for MLHub
 ========================
 
+* https://github.com/zihangdai/xlnet
 * Azure Machine Learning
 * XDeepFM
 * https://deepctr-doc.readthedocs.io/en/latest/
