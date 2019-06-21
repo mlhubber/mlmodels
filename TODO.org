@@ -1,0 +1,21 @@
+Backlog Models for MLHub
+========================
+
+* Azure Machine Learning
+* XDeepFM
+* https://deepctr-doc.readthedocs.io/en/latest/
+* Computer Vision Best Practice
+* https://github.com/zziz/pwc
+* aztext2speech
+* https://github.com/danielsc/azureml-and-r
+* Minecraft
+* Deep Speech
+* irispydt
+* cancerpydt
+* Batch Audio in azspeech2text
+* Chest X-Ray https://github.com/Azure/AzureChestXRay
+* https://github.com/google-research/bert
+* AzureRMR using kusto
+* https://github.com/Azure/AMLSDKOperationalizationRModels
+* https://github.com/ehrlinger/BatchSparkScoringPredictiveMaintenance
+
