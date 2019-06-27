@@ -9,7 +9,7 @@ azface       : Azure/azface
 azlang       : gjwgit/azlang
 azspeech2txt : Azure/azspeech2txt
 aztext       : gjwgit/aztext
-aztranslate  : gjwgit/aztranslate
+aztranslate  : Azure/aztranslate
 barchart     : gjwgit/barchart
 beeswarm     : gjwgit/beeswarm
 colorize     : mlhubber/colorize
