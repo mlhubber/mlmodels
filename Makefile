@@ -50,12 +50,12 @@ Makefile for Hub of Machine Learning Models.
 
 Local targets:
 
-  localhub	Generate and install Packages.yaml on localhost.
   mlhub		Generate and install Packages.yaml on mlhub.ai.
   Packages.yaml Generate meta-data file for the repository.
   allclean	Clean all package subfolders.
   all		Update all packages and upload to mlhub.
   allstatus     Check status of all individual models.
+  localhub	Generate and install Packages.yaml on localhost.
 
 endef
 export HELP
@@ -79,8 +79,8 @@ allclean: realclean
 # PACKAGES
 ########################################################################
 
-#REPO_HOST = mlhub.ai
-REPO_HOST = mlhub.togaware.com
+REPO_HOST = mlhub.ai
+#REPO_HOST = mlhub.togaware.com
 #BASE_PATH = /var/www/html
 BASE_PATH = webapps/mlhub2
 REPO_PATH = pool/main
@@ -88,22 +88,14 @@ REPO_PATH = pool/main
 REPO_USER = gjw
 REPO_SSH  = $(REPO_USER)@$(REPO_HOST)
 
-.PHONY: localhub
-localhub: Packages.yaml
-	sudo cp $< $(BASE_PATH)/
-	sudo chmod -R a+rX $(BASE_PATH)/
-
 .PHONY: mlhub
 mlhub: Packages.yaml Packages.html
 	rsync -avzh $^ $(REPO_SSH):$(BASE_PATH)/
 	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/
 
-allmlhub:
-	for p in $(MODELS); do \
-	  echo "==========> $$p <=========="; \
-	  (cd $$p; make mlhub); \
-	done
+# Always recreate Packages.yaml
 
+.PHONY: Packages.yaml
 Packages.yaml: MLMODELS.yaml
 	@python3 -c "import mlhub;\
                      mlhub.utils.gen_packages_yaml(\
@@ -112,6 +104,17 @@ Packages.yaml: MLMODELS.yaml
 
 Packages.html: pkgidx kwdidx.R pandoc.css Packages.yaml
 	./pkgidx > $@
+
+.PHONY: localhub
+localhub: Packages.yaml
+	sudo cp $< $(BASE_PATH)/
+	sudo chmod -R a+rX $(BASE_PATH)/
+
+allmlhub:
+	for p in $(MODELS); do \
+	  echo "==========> $$p <=========="; \
+	  (cd $$p; make mlhub); \
+	done
 
 realclean::
 	rm -f Packages.html Packages.rst Packages.yaml Packages.tbl Packages.url
