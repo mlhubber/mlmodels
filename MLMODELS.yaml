@@ -26,3 +26,4 @@ rbm          : gjwgit/recommenders:mlhub/rbm.yaml
 sar          : gjwgit/recommenders:mlhub/sar.yaml
 scatter      : gjwgit/scatter
 tapwater     : gjwgit/r.prevos.net:Marketing/tapwater.yaml
+webcam       : gitlab:kayontoga/webcam
