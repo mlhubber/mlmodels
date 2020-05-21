@@ -12,6 +12,7 @@ aztext       : gjwgit/aztext
 aztranslate  : gjwgit/aztranslate
 barchart     : gjwgit/barchart
 beeswarm     : gjwgit/beeswarm
+cars         : gitlab:kayontoga/cars
 colorize     : mlhubber/colorize
 cvbp         : gjwgit/cvbp
 facedetect   : simonzhaoms/facedetect
