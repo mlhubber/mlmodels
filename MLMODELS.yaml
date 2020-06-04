@@ -20,6 +20,7 @@ facematch    : simonzhaoms/facematch
 iris         : gjwgit/iris
 movies       : gjwgit/movies
 objects      : mlhubber/objects
+ocsvm        : gitlab:kayontoga/ocsvm
 ports        : gjwgit/ports
 rain         : gjwgit/rain
 rainrf       : gjwgit/rain:rainrf.yaml
