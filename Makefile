@@ -46,12 +46,9 @@ ifneq ("$(wildcard $(INC_CLEAN))","")
 endif
 
 define HELP
-Makefile for Hub of Machine Learning Models.
-
-Local targets:
+MLHub:
 
   mlhub		Generate and install Packages.yaml on mlhub.ai.
-  Packages.yaml Generate meta-data file for the repository.
   allclean	Clean all package subfolders.
   all		Update all packages and upload to mlhub.
   allstatus     Check status of all individual models.
@@ -90,6 +87,7 @@ REPO_SSH  = $(REPO_USER)@$(REPO_HOST)
 
 .PHONY: mlhub
 mlhub: Packages.yaml Packages.html
+	chmod a+rX $^
 	rsync -avzh $^ $(REPO_SSH):$(BASE_PATH)/
 	ssh $(REPO_SSH) chmod -R a+rX $(BASE_PATH)/
 
