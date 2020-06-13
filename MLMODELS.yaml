@@ -21,11 +21,13 @@ iris         : gjwgit/iris
 movies       : gjwgit/movies
 objects      : mlhubber/objects
 ocsvm        : gitlab:kayontoga/ocsvm
+opencv       : gjwgit/opencv
 ports        : gjwgit/ports
 rain         : gjwgit/rain
 rainrf       : gjwgit/rain:rainrf.yaml
 rbm          : gjwgit/recommenders:mlhub/rbm.yaml
 sar          : gjwgit/recommenders:mlhub/sar.yaml
 scatter      : gjwgit/scatter
+sgnc         : gitlab:kayontoga/sgnc
 tapwater     : gjwgit/r.prevos.net:Marketing/tapwater.yaml
 webcam       : gitlab:kayontoga/webcam
