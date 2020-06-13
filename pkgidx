@@ -33,8 +33,47 @@ Visit <a href="https://mlhub.ai">MLHub.ai</a> for details.</p>
 
 <p>Whilst anyone can create a MLHub model simply by including a
 MLHUB.yaml file in their github repository, the models listed here are
-regarded as currated in the sense that they have been vetted by MLHub 
-volunteers. If you find any issues do be sure to report them though.</p>
+currated in that they have been vetted by MLHub. If you find any
+issues do be sure to report them though.</p>
+
+<p>First we showcase a few of the more mature and demonstrative MLHub
+models in the following broad categories:</p>
+
+<h2>VISUALISE<h2>
+
+<a href="https://github.com/gjwgit/animate">animate</a> &mdash;
+<a href="https://github.com/gjwgit/barchart">barchart</a> &mdash;
+<a href="https://github.com/gjwgit/scatter">scatter</a> &mdash;
+<a href="https://github.com/gjwgit/beeswarm">beeswarm</a> &mdash;
+<a href="https://github.com/gjwgit/ports">ports</a>
+
+<h2>PREDICTION</h2>
+
+<a href="https://github.com/gjwgit/rain">rain</a> &mdash;
+<a href="https://github.com/gjwgit/audit">audit</a> &mdash;
+<a href="https://github.com/gjwgit/iris">iris</a> &mdash;
+<a href="https://github.com/gjwgit/movies">movies</a> &mdash;
+<a href="https://gitlab.com/kayontoga/ocsvm">ocsvm</a>
+
+<h2>IMAGE PROCESSING</h2>
+
+<a href="https://gitlab.com/kayontoga/cars">cars</a> &mdash;
+<a href="https://github.com/mlhubber/objects">objects</a> &mdash;
+<a href="https://github.com/gjwgit/opencv">opencv</a> &mdash;
+<a href="https://github.com/mlhubber/colorize">colorize</a> &mdash;
+<a href="https://github.com/simonzhaoms/facedetect">facedetect</a>
+
+<h2>AZURE CLOUD AI</h2>
+
+<a href="https://github.com/gjwgit/azcv">azcv</a> &mdash;
+<a href="https://github.com/gjwgit/aztext">aztext</a> &mdash;
+<a href="https://github.com/gjwgit/aztranslate">aztranslate</a> &mdash;
+<a href="https://github.com/gjwgit/azface">azface</a> &mdash;
+<a href="https://github.com/gjwgit/azspeech2txt">azspeech2txt</a> &mdash;
+<a href="https://github.com/gjwgit/azanomaly">azanomaly</a> &mdash;
+<a href="https://github.com/gjwgit/azlang">azlang</a>
+
+<h1 id="mlhub-pre-built-model-catalogue">Catalogue</h1>
 
 <table>
 <thead>
