@@ -80,7 +80,7 @@ for (k in kwd)
   if (k[1] != current)
   {
     current <- k[1]
-    cat(sprintf('%s\n<h2 class="shade">%s</h2>\n\n<ul>\n', pend, k[1]))
+    cat(sprintf('%s\n<h4 class="shade">%s</h4>\n\n<ul>\n', pend, k[1]))
     sep <- ""
     pend <- "</ul>\n"
   }
