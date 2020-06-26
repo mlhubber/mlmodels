@@ -7,7 +7,7 @@ azanomaly    : gjwgit/azanomaly
 azcv         : gjwgit/azcv
 azface       : gjwgit/azface
 azlang       : gjwgit/azlang
-azspeech2txt : gjwgit/azspeech2txt
+azspeech     : gjwgit/azspeech
 aztext       : gjwgit/aztext
 aztranslate  : gjwgit/aztranslate
 barchart     : gjwgit/barchart
@@ -29,5 +29,6 @@ rbm          : gjwgit/recommenders:mlhub/rbm.yaml
 sar          : gjwgit/recommenders:mlhub/sar.yaml
 scatter      : gjwgit/scatter
 sgnc         : gitlab:kayontoga/sgnc
+speech2txt   : gitlab:kayontoga/speech2txt
 tapwater     : gjwgit/r.prevos.net:Marketing/tapwater.yaml
 webcam       : gitlab:kayontoga/webcam
