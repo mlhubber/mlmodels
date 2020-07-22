@@ -15,6 +15,7 @@ beeswarm     : gjwgit/beeswarm
 cars         : gitlab:kayontoga/cars
 colorize     : mlhubber/colorize
 cvbp         : gjwgit/cvbp
+easyocr      : gjwgit/easyocr
 facedetect   : simonzhaoms/facedetect
 facematch    : simonzhaoms/facematch
 iris         : gjwgit/iris
@@ -22,6 +23,7 @@ movies       : gjwgit/movies
 objects      : mlhubber/objects
 ocsvm        : gitlab:kayontoga/ocsvm
 opencv       : gjwgit/opencv
+patientpaths : gjwgit/patientpaths
 ports        : gjwgit/ports
 pyiris       : gjwgit/pyiris
 rain         : gjwgit/rain
