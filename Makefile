@@ -162,3 +162,8 @@ allrebase:
 	  (cd $$p; git rebase); \
 	done
 
+test:
+	@for p in pytempl cars pyiris; do \
+	  echo "==========> $$p <=========="; \
+	  (cd $$p; make test); \
+	done
