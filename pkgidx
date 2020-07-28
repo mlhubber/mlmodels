@@ -37,43 +37,6 @@ href="https://mlhub.ai">MLHub.ai</a> for details.</p>
 here are currated in by MLHub administrators. If you find any issues
 do be sure to report them.</p>
 
-<p>We first showcase a few of the more mature and demonstrative MLHub
-models in the following broad categories:</p>
-
-<h4>VISUALISATION</h4>
-
-<a href="https://github.com/gjwgit/animate">animate</a> &mdash;
-<a href="https://github.com/gjwgit/barchart">barchart</a> &mdash;
-<a href="https://github.com/gjwgit/scatter">scatter</a> &mdash;
-<a href="https://github.com/gjwgit/beeswarm">beeswarm</a> &mdash;
-<a href="https://github.com/gjwgit/ports">ports</a>
-
-<h4>PREDICTION</h4>
-
-<a href="https://github.com/gjwgit/rain">rain</a> &mdash;
-<a href="https://github.com/gjwgit/audit">audit</a> &mdash;
-<a href="https://github.com/gjwgit/iris">iris</a> &mdash;
-<a href="https://github.com/gjwgit/movies">movies</a> &mdash;
-<a href="https://gitlab.com/kayontoga/ocsvm">ocsvm</a>
-
-<h4>COMPUTER VISION</h4>
-
-<a href="https://gitlab.com/kayontoga/cars">cars</a> &mdash;
-<a href="https://github.com/mlhubber/objects">objects</a> &mdash;
-<a href="https://github.com/gjwgit/opencv">opencv</a> &mdash;
-<a href="https://github.com/mlhubber/colorize">colorize</a> &mdash;
-<a href="https://github.com/simonzhaoms/facedetect">facedetect</a>
-
-<h4>AZURE CLOUD AI</h4>
-
-<a href="https://github.com/gjwgit/azcv">azcv</a> &mdash;
-<a href="https://github.com/gjwgit/aztext">aztext</a> &mdash;
-<a href="https://github.com/gjwgit/aztranslate">aztranslate</a> &mdash;
-<a href="https://github.com/gjwgit/azface">azface</a> &mdash;
-<a href="https://github.com/gjwgit/azspeech">azspeech</a> &mdash;
-<a href="https://github.com/gjwgit/azanomaly">azanomaly</a> &mdash;
-<a href="https://github.com/gjwgit/azlang">azlang</a>
-
 <h1 id="mlhub-pre-built-model-catalogue">Catalogue</h1>
 <br>
 <table>
@@ -114,6 +77,48 @@ cat <<KWD
 
 </tbody>
 </table>
+
+<h1>Showcase</h1>
+
+<h4>Visualisation</h4>
+
+Visual presetnation of data is crucial for understanding data and
+sharing the data story with others. <a
+href="https://github.com/gjwgit/animate">Animations</a> can be quite
+effective in telling the story over time. The basic visualisations
+include the <a href="https://github.com/gjwgit/barchart">barchart</a>
+and the <a href="https://github.com/gjwgit/scatter">scatter</a>
+plot. A more informative scatter plot is the <a
+href="https://github.com/gjwgit/beeswarm">beeswarm</a>
+plot. Visualisations are effectively used in all kinds of reports as
+in this study of  <a
+href="https://github.com/gjwgit/ports">Australian sea ports</a>.
+
+<h4>Prediction</h4>
+
+<a href="https://github.com/gjwgit/rain">rain</a> &mdash;
+<a href="https://github.com/gjwgit/audit">audit</a> &mdash;
+<a href="https://github.com/gjwgit/iris">iris</a> &mdash;
+<a href="https://github.com/gjwgit/movies">movies</a> &mdash;
+<a href="https://gitlab.com/kayontoga/ocsvm">ocsvm</a>
+
+<H4>Computer Vision</h4>
+
+<a href="https://gitlab.com/kayontoga/cars">cars</a> &mdash;
+<a href="https://github.com/mlhubber/objects">objects</a> &mdash;
+<a href="https://github.com/gjwgit/opencv">opencv</a> &mdash;
+<a href="https://github.com/mlhubber/colorize">colorize</a> &mdash;
+<a href="https://github.com/simonzhaoms/facedetect">facedetect</a>
+
+<h4>Azure Cloud AI</h4>
+
+<a href="https://github.com/gjwgit/azcv">azcv</a> &mdash;
+<a href="https://github.com/gjwgit/aztext">aztext</a> &mdash;
+<a href="https://github.com/gjwgit/aztranslate">aztranslate</a> &mdash;
+<a href="https://github.com/gjwgit/azface">azface</a> &mdash;
+<a href="https://github.com/gjwgit/azspeech">azspeech</a> &mdash;
+<a href="https://github.com/gjwgit/azanomaly">azanomaly</a> &mdash;
+<a href="https://github.com/gjwgit/azlang">azlang</a>
 
 <h1>Index</h1>
 KWD
