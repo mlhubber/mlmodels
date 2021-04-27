@@ -107,8 +107,10 @@ demonstrates the task of identifying clients who should be audited for
 tax compliance, for example. The traditional example used to
 demonstration classification is the <a
 href="https://github.com/gjwgit/iris">iris</a> package using decision
-trees to predict the iris plant species. Recommendation systems also
-perform prediction to be able to suggest <a
+trees to predict the iris plant species. A variation on this using
+Python is available as <a
+href="https://github.com/gjwgit/pyiris">pyiris</a>. Recommendation
+systems also perform prediction to be able to suggest <a
 href="https://github.com/gjwgit/movies">movies</a> to watch. A one
 class support vector machine (<a
 href="https://gitlab.com/kayontoga/ocsvm">ocsvm</a>) can be used to
