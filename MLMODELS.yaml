@@ -7,14 +7,17 @@ azanomaly    : gjwgit/azanomaly
 azcv         : gjwgit/azcv
 azface       : gjwgit/azface
 azlang       : gjwgit/azlang
+azluis       : jingjingshii/azluis
 azspeech     : gjwgit/azspeech
 aztext       : gjwgit/aztext
 aztranslate  : gjwgit/aztranslate
 barchart     : gjwgit/barchart
 beeswarm     : gjwgit/beeswarm
+bing         : jingjingshii/bing
 cars         : gitlab:kayontoga/cars
 colorize     : mlhubber/colorize
 cvbp         : gjwgit/cvbp
+deepspeech   : jingjingshii/deepspeech
 easyocr      : gjwgit/easyocr
 facedetect   : simonzhaoms/facedetect
 facematch    : simonzhaoms/facematch
@@ -34,3 +37,4 @@ sgnc         : gitlab:kayontoga/sgnc
 speech2txt   : gitlab:kayontoga/speech2txt
 tapwater     : gjwgit/r.prevos.net:Marketing/tapwater.yaml
 webcam       : gitlab:kayontoga/webcam
+zynlp        : gjwgit/zynlp
