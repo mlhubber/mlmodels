@@ -59,19 +59,6 @@ $ ml cmd pkg [options] [argument]
      -v <voice>    --voice=<voice>      Selected voice.
 ```
 
-## Command Line Tools
-
-In addition to the *demo* command below, the package provides a number
-of useful command line tools.
-
-### *cmd*
-
-The *cmd* command ...
-
-```console
-$ ml cmd pkg 
-```
-
 ## Demonstration
 
 ```console
@@ -90,3 +77,17 @@ CMD
 Now ...
 
 ```
+
+## Command Line Tools
+
+In addition to the *demo* command below, the package provides a number
+of useful command line tools.
+
+### *cmd*
+
+The *cmd* command ...
+
+```console
+$ ml cmd pkg 
+```
+
