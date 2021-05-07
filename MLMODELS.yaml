@@ -29,12 +29,12 @@ opencv       : gjwgit/opencv
 patientpaths : gjwgit/patientpaths
 ports        : gjwgit/ports
 pyiris       : gjwgit/pyiris
+pyspeech     : gitlab:kayontoga/pyspeech
 rain         : gjwgit/rain
 rbm          : gjwgit/recommenders:mlhub/rbm.yaml
 sar          : gjwgit/recommenders:mlhub/sar.yaml
 scatter      : gjwgit/scatter
 sgnc         : gitlab:kayontoga/sgnc
-speech2txt   : gitlab:kayontoga/speech2txt
 tapwater     : gjwgit/r.prevos.net:Marketing/tapwater.yaml
 webcam       : gitlab:kayontoga/webcam
 zynlp        : gjwgit/zynlp
