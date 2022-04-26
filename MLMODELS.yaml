@@ -7,7 +7,6 @@ azanomaly    : gjwgit/azanomaly
 azcv         : gjwgit/azcv
 azface       : gjwgit/azface
 azlang       : gjwgit/azlang
-azluis       : jingjingshii/azluis
 azspeech     : gjwgit/azspeech
 aztext       : gjwgit/aztext
 aztranslate  : gjwgit/aztranslate
@@ -21,7 +20,9 @@ deepspeech   : jingjingshii/deepspeech
 easyocr      : gjwgit/easyocr
 facedetect   : simonzhaoms/facedetect
 facematch    : simonzhaoms/facematch
+google       : gjwgit/google
 iris         : gjwgit/iris
+kmeans       : acwkayon/kmeans
 movies       : gjwgit/movies
 objects      : mlhubber/objects
 ocsvm        : gitlab:kayontoga/ocsvm
