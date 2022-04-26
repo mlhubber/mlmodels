@@ -17,7 +17,9 @@ MODELS = 		\
 	aztranslate	\
 	barchart	\
 	beeswarm	\
+	bing		\
 	colorize	\
+	google		\
 	iris		\
 	movies		\
 	objects		\
@@ -86,7 +88,7 @@ allclean: realclean
 REPO_HOST = mlhub.ai
 #REPO_HOST = mlhub.togaware.com
 #BASE_PATH = /var/www/html
-BASE_PATH = webapps/mlhub2
+BASE_PATH = apps/mlhub2
 REPO_PATH = pool/main
 #REPO_USER = root
 REPO_USER = gjw
